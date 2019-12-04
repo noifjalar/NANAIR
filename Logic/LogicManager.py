@@ -10,28 +10,29 @@ class LogicManager :
 
     def register_employee(self):
         
-        #new_emp = Employee(name, ssn, address, role, rank, mobile, licence)
+        new_emp = Employee()
+        #name, ssn, address, role, rank, mobile, licence
 
         name = input("Name: ")
         new_emp.name = name
 
         ssn = input("SSN: ")
-        #new_emp.ssn(ssn)
+        new_emp.ssn(ssn)
 
         address = input("Address: ")
-        #new_emp.address(address)
+        new_emp.address(address)
 
         role = input("Role: ")
-        #new_emp.role(role)
+        new_emp.role(role)
 
         rank = input("Rank: ")
-        #new_emp.rank(rank)
+        new_emp.rank(rank)
 
         mobile = input("Mobile: ")
-        #new_emp.mobile(mobile)
+        new_emp.mobile(mobile)
 
         licence = input("Licence: ")
-        #new_emp.licence(licence)
+        new_emp.licence(licence)
 
         new_emp = Employee(name, ssn, address, role, rank, mobile, licence)
 
@@ -41,7 +42,7 @@ class LogicManager :
 
 
 
-        # new_emp4print = (",".join(new_emp))
+        new_emp4print = (",".join(new_emp))
         # # print(new_emp4print)
 
         # # crew_file = open("Crew.csv","a")
