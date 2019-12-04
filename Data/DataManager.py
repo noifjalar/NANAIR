@@ -1,5 +1,5 @@
 # VIRKAAAAAAAAR!
-
+# its true
 
 from Model import *
 
