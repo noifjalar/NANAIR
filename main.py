@@ -1,8 +1,8 @@
-from b_UI.A_UI_manager import A_UI_manager
+from b_UI.A_UI_manager import Manager_UI
 
 def main():
-    ui = UImanager()
-    ui.main_menu()
+    ui = Main_Menu_UI()
+    ui.print_main_menu()
 
 if __name__ == "__main__" :
     main()
