@@ -18,7 +18,7 @@ class Employee :
         ssn_in.isdigit
         self.ssn = ssn_in
 
-    def toCommaSparatedString (self):
+    def emp_comma_to_string (self):
         ret = self.ssn + ","\
               + self.name + ","\
               + self.address + ","\

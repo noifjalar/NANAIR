@@ -13,4 +13,5 @@ class EmployeeUI :
         rank = input("Rank: ")
         licence = input("Licence: ")
         phonenumber = input("Mobile: ")
-        return ssn, name, role, rank, licence, address, phonenumber
+        new_emp = Employee(ssn, name, role, rank, licence, address, phonenumber)
+        

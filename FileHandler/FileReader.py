@@ -1,1 +1,1 @@
-# virkar
+# EKKI NOTA

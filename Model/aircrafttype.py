@@ -15,3 +15,17 @@ class AircraftType :
     def __str__(self) :
         return "{planeTypeID}, {manufacturer}, {model}, {capacity}, {emptyWeight}, {maxTakeoffWeight}, {unitThrust}, {serviceCeiling}, {length}, {height}, {wingspan}"
         
+
+    def airtype_comma_to_string (self):
+        ret = self.planeTypeID + ","\
+              + self.manufacturer + ","\
+              + self.model + ","\
+              + self.capacity + ","\
+              + self.emptyWeight + ","\
+              + self.maxTakeoffWeight + ","\
+              + self.unitThrust + ","\
+              + self.serviceCeiling + ","\
+              + self.length + ","\
+              + self.height + ","\
+              + self.wingspan
+        return ret
