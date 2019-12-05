@@ -14,11 +14,11 @@ class LogicManager :
         #new_emp = Employee()
         #name, ssn, address, role, rank, mobile, licence
 
-        name = input("Name: ")
-        #new_emp.name = name
-
         ssn = input("SSN: ")
         #new_emp.ssn(ssn)
+        
+        name = input("Name: ")
+        #new_emp.name = name
 
         address = input("Address: ")
         #new_emp.address(address)
