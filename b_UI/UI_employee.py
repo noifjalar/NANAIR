@@ -1,4 +1,4 @@
-from Model.employee import Employee
+from c_Logic.A_LL_Manager import A_LL_Manager
 
 class Employee_UI :
     def __init__(self) :

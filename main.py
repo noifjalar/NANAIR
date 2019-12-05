@@ -1,4 +1,4 @@
-from b_UI.A_UImanager import A_UImanager
+from b_UI.A_UI_manager import A_UI_manager
 
 def main():
     ui = UImanager()
