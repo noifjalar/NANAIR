@@ -1,6 +1,6 @@
 #from Data.DataManager import DataManager
 from Model.employee import Employee
-from UI.UI_register_employee import EmployeeUI
+from c_Logic.LL_Employee import Employee_LL
 import os
 
 class LogicManager :
