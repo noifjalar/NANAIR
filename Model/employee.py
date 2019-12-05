@@ -13,3 +13,17 @@ class Employee :
 
     def get_ssn(self, ssn):
         return self.ssn
+
+    def set_ssn(self, ssn_in):
+        ssn_in.isdigit
+        self.ssn = ssn_in
+
+    def toCommaSparatedString (self):
+        ret = self.ssn + ","\
+              + self.name + ","\
+              + self.address + ","\
+              + self.role + ","\
+              + self.rank + ","\
+              + self.licence + ","\
+              + self.phonenumber
+        return ret
