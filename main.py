@@ -1,7 +1,7 @@
 from b_UI.A_UI_manager import Manager_UI
 
 def main():
-    ui = Main_Menu_UI()
+    ui = Manager_UI()
     ui.print_main_menu()
 
 if __name__ == "__main__" :
