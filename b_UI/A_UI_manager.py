@@ -11,3 +11,7 @@ class Manager_UI :
 
     def call_main_manu():
         return 
+
+    def print_main_menu():
+        return print_main_menu()
+        
