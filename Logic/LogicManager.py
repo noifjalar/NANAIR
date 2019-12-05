@@ -29,8 +29,6 @@ class LogicManager :
         rank = input("Rank: ")
         #new_emp.rank(rank)
 
-        
-
         licence = input("Licence: ")
         #new_emp.licence(licence)
          
