@@ -1,6 +1,6 @@
 from Model.employee import Employee
 
-class EmployeeUI :
+class Employee_UI :
     def __init__(self) :
         pass
 

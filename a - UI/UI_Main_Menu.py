@@ -1,6 +1,6 @@
 
-
-def main_menu(self) :
+class Main_Menu_UI :
+    def print_main_menu(self) :
         choice = ""
         the_instance = LogicManager()
         while choice != "q" :
