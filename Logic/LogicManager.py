@@ -8,9 +8,7 @@ class LogicManager :
         #self.__ = DataManager()
         pass 
 
-    def register_employee_LL(self):
-    
-
+    def register_employee_LL(self, emp):
         # ssn = input("SSN: ")
         # name = input("Name: ")
         # #new_emp.name = name
