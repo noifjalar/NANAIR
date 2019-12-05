@@ -29,13 +29,13 @@ class LogicManager :
         rank = input("Rank: ")
         #new_emp.rank(rank)
 
-        mobile = input("Mobile: ")
-        #new_emp.mobile(mobile)
-
         licence = input("Licence: ")
         #new_emp.licence(licence)
+         
+        phonenumber = input("Mobile: ")
+        #new_emp.mobile(mobile)
 
-        new_emp = Employee(name, ssn, address, role, rank, mobile, licence)
+        new_emp = Employee(ssn, name, role, rank, licence, address, phonenumber)
 
         print(new_emp.name + new_emp.address)
         print( os.getcwd() )

@@ -33,6 +33,7 @@ ssn,name,role,rank,licence,address,phonenumber
 0505942924,Carlton Chan,Cabincrew,Flight Attendant,N/A,Fellsmúli 32,8998832
 1110732819,Arthur Karr,Cabincrew,Flight Attendant,N/A,Fellsmúli 33,8998833
 2602806942,Teresa Thruman,Cabincrew,Flight Attendant,N/A,Fellsmúli 34,8998834
+<<<<<<< HEAD
 1107951952,Elizabeth Mcfadden,Cabincrew,Flight Attendant,N/A,Fellsmúli 35,8998835
 Gylfi was here ,123,anykey,no ,god,1,no
 smubert,11,55,22,33,44,66
@@ -42,3 +43,6 @@ r,r,r,r,r,r,r
 1,2,6,3,4,5,7
 jonval,23234442323,78332332,fallll,pilot,copilot,2
 >>>>>>> 03232ffc14fd45522e5c7ed62be1237010f9fb6b
+=======
+1107951952,Elizabeth Mcfadden,Cabincrew,Flight Attendant,N/A,Fellsmúli 35,8998835
+>>>>>>> a2ba3ec773897e6aa81e13522f065373979e97f9
