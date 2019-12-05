@@ -1,11 +1,6 @@
-from Logic.LogicManager import LogicManager
-from Data.DataManager import DataManager
-class UImanager :
-    def __init__(self) :
-        self.__ = LogicManager()
-        pass
 
-    def main_menu(self) :
+
+def main_menu(self) :
         choice = ""
         the_instance = LogicManager()
         while choice != "q" :
@@ -22,8 +17,13 @@ class UImanager :
             print("\t(6) - Register airplanes") #6
             print("\t(7) - Create voyage") #7
             print("\t Press q to quit")
-
+            
             choice = input("Select an operation with a corresponding number: ").lower()
+            
+
+
+
+
             choice = str(choice)
             if choice == "1":
                 the_instance.register_employee_LL()
