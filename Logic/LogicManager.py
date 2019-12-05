@@ -9,48 +9,25 @@ class LogicManager :
         pass 
 
 
-    def register_employee(self):
-        
-        #new_emp = Employee()
-        #name, ssn, address, role, rank, mobile, licence
+    def register_employee_LL(self):
+    
 
-        ssn = input("SSN: ")
-        #new_emp.ssn(ssn)
-        
-        name = input("Name: ")
-        #new_emp.name = name
+        # ssn = input("SSN: ")
+        # name = input("Name: ")
+        # #new_emp.name = name
+        # address = input("Address: ")
+        # role = input("Role: ")
+        # rank = input("Rank: ")
+        # licence = input("Licence: ")
+        # phonenumber = input("Mobile: ")
 
-        address = input("Address: ")
-        #new_emp.address(address)
-
-        role = input("Role: ")
-        #new_emp.role(role)
-
-        rank = input("Rank: ")
-        #new_emp.rank(rank)
-
-        licence = input("Licence: ")
-        #new_emp.licence(licence)
-         
-        phonenumber = input("Mobile: ")
-        #new_emp.mobile(mobile)
 
         new_emp = Employee(ssn, name, role, rank, licence, address, phonenumber)
 
-        print(new_emp.name + new_emp.address)
-        print( os.getcwd() )
+        #os.getcwd()
         print( new_emp.toCommaSparatedString() )
-        smu = input("halting ")
-
-        #emp = Employee(name, ssn, address)
-        #emp.write_to_csv("Crew.csv")
-
-
 
         new_emp4print = new_emp.toCommaSparatedString()
-        # # print(new_emp4print)
-         
-        # # crew_file = open("./Crew.csv","a")
        
         with open("./csv/Crew.csv","a") as crew_file:
             crew_file.write("\n")
