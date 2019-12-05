@@ -1,13 +1,12 @@
 #from Data.DataManager import DataManager
 from Model.employee import Employee
+from UI.UI_register_employee import EmployeeUI
 import os
-
 
 class LogicManager :
     def __init__(self) :
         #self.__ = DataManager()
         pass 
-
 
     def register_employee_LL(self):
     
@@ -21,7 +20,8 @@ class LogicManager :
         # licence = input("Licence: ")
         # phonenumber = input("Mobile: ")
 
-
+        UI = UI_register_employee()
+        ssn, name, role, rank, licence, address, phonenumber = UI.register_employee_UI()
         new_emp = Employee(ssn, name, role, rank, licence, address, phonenumber)
 
         #os.getcwd()
