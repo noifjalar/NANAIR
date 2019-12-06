@@ -21,14 +21,13 @@ class Employee_LL :
 
 
     def change_employee_info(self):
+        pass
         # open file
         # read file
         # insert file content into dict in a list
-        with open ("Crew.csv","r") as file_object:
-            counter = 0
-            for line in file_object:
-                counter += 1
-            new_emp_id = counter + 1
+    def new_emp_id():
+        return new_emp_id(i)
+        
 
 
 

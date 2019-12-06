@@ -9,3 +9,7 @@ class LL_API :
 
     def addnewemplyee( self, new_empl ):
         self.empll.addnewemployee( new_empl ) 
+
+    def new_emp_id():
+        return new_emp_id(i)
+        

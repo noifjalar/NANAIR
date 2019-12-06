@@ -26,8 +26,8 @@ class Employee_Data :
             counter = 0
             for line in file_object:
                 counter += 1
-            new_emp_id = counter + 1
-        return new_emp_id
+            i = counter + 1
+        return i
 
 
 

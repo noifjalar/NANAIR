@@ -14,10 +14,11 @@ class DataAPI :
         return self.demp.register_employee_Data ( new_empl )
 
     def getemployee(self) :
-        
+        pass
 
     def myprint(self):
         return "datamanager str"
 
-
+    def new_emp_id():
+        return new_emp_id(i)
         
