@@ -1,4 +1,4 @@
-class Airplane :
+class Aircraft :
     def __init__(self,planeInsignia, planeId) :
         self.planeInsignia = planeInsignia
         self.planeId = planeId

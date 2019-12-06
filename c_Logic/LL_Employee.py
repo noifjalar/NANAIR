@@ -30,10 +30,10 @@ class Employee_LL :
         # open file 
         # read file
         # insert file content into dict in a list
-    def new_emp_id(self):
-        rugl = DataAPI()
-        the_new_emp_id = rugl.new_emp_id()
-        return the_new_emp_id
+    # def new_emp_id(self):
+    #     rugl = DataAPI()
+    #     the_new_emp_id = rugl.new_emp_id()
+    #     return the_new_emp_id
         
 
 
