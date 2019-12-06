@@ -1,5 +1,5 @@
 class Employee :
-    def __init__(self, ssn, name, role, rank, licence, address, phonenumber, emp_id):
+    def __init__(self, ssn, name, role, rank, licence, address, phonenumber):
         self.ssn = ssn
         self.name = name
         self.role = role 
@@ -7,10 +7,10 @@ class Employee :
         self.licence = licence
         self.address = address
         self.phonenumber = phonenumber
-        self.emp_id = emp_id
+        #self.emp_id = emp_id
 
     def __str__(self):
-        return "Name: {self.name} - SSN: {self.ssn} - role: {self.role} - licence: {self.licence} - address: {self.address} - phonenumber: {self.phonenumber} - employee id: {self.emp_id}"
+        return "Name: {self.name} - SSN: {self.ssn} - role: {self.role} - licence: {self.licence} - address: {self.address} - phonenumber: {self.phonenumber}"
 
     def get_ssn(self, ssn):
         return self.ssn
@@ -26,8 +26,8 @@ class Employee :
               + self.role + ","\
               + self.rank + ","\
               + self.licence + ","\
-              + self.phonenumber + ","\
-              + self.emp_id
+              + self.phonenumber
+              #+ self.emp_id
         return ret
 
     # def new_emp_id (self):

@@ -5,11 +5,14 @@ from d_Data.A_Data_API import DataAPI
 class LL_API :
     def __init__(self) :
         self.__dapi = DataAPI( )
-        self.empll = Employee_LL( self.__dapi )
+        #self.empll = Employee_LL( self.__dapi )
+        self.empll = Employee_LL()
 
-    def addnewemplyee( self, new_empl ):
-        self.empll.addnewemployee( new_empl ) 
+    def addnewemplyee( self, ssn, name, role, rank, licence, address, phonenumber):
+        self.empll.addnewemployee( ssn, name, role, rank, licence, address, phonenumber ) 
 
     def new_emp_id(self):
-        return new_emp_id(i)
+        bla = Employee_LL()
+        the_new_emp_id = bla.new_emp_id()
+        return the_new_emp_id
         

@@ -2,15 +2,16 @@ from Model.employee import Employee
 
 class Employee_Data :
     def __init__(self):
-        self.filename = "./csv/Crew.csv"
+        self.filename = "./a_csv/Crew.csv"
         
 
-    def register_employee_Data(self):
-       
+    def register_employee_Data(self, ssn, name, role, rank, licence, address, phonenumber):
+        # id er hardkodad i bili
+        new_emp = Employee(ssn, name, role, rank, licence, address, phonenumber)
         try :
             with open( self.filename ,"a") as crew_file:
                 crew_file.write("\n")
-                crew_file.write(new_emp_ready_for_print)
+                crew_file.write(new_emp.emp_comma_to_string())
                 crew_file.close()      
         except FileNotFoundError :
             return None       
@@ -21,13 +22,12 @@ class Employee_Data :
     #return True 
 
     
-    def new_emp_id (self):
-        with open ("./csv/Crew.csv","r") as file_object:
+    def new_emp_id(self):
+        with open ("./a_csv/Crew.csv","r") as file_object:
             counter = 0
             for line in file_object:
                 counter += 1
-            i = counter + 1
-        return i
+        return counter
 
 
 
