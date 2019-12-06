@@ -10,7 +10,6 @@ class Manager_UI :
         self.__la = LogicManager( )
         self.mm = Main_Menu_UI( __la )
         self.em = Employee_UI( __la )
-        pass
         
     def main_menu(self) :
         choice = ""
