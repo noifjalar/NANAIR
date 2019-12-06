@@ -13,6 +13,9 @@ class DataAPI :
     def storenewemplyee (self, new_empl ):
         return self.demp.register_employee_Data ( new_empl )
 
+    def getemployee(self) :
+        
+
     def myprint(self):
         return "datamanager str"
 

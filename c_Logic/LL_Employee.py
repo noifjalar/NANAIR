@@ -11,7 +11,7 @@ class Employee_LL :
 
     def addnewemployee(self, new_empl ) :
         # first we should check if this is a doubel registration .. 
-        if ( self.dapi.getemployeee( new_empl.ssn) == None ) :
+        if ( self.dapi.getemployee( new_empl.ssn) == None ) :
             # kasta villu til baka um að notandi er þegar til. 
             pass
         
