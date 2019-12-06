@@ -5,5 +5,8 @@ import os
 
 class LogicManager :
     def __init__(self) :
-        #self.__ = DataManager()
+        self.__dapi = DataManager( )
+        self.empll = Employee_LL( __dapi )
         pass 
+    def addnewemplyee( self, new_empl ):
+        self.empll.addnewemplyee( new_empl ) 

@@ -1,9 +1,12 @@
-from c_Logic.A_LL_Manager import LogicManager
+#from c_Logic.A_LL_Manager import LogicManager
+from b_UI.UI_employee import Employee_UI
 
 class Main_Menu_UI :
     def main_menu(self) :
         choice = ""
-        the_instance = LogicManager()
+        #the_instance = LogicManager()
+        empUI = Employee_UI()
+
         while choice != "q" :
             print("\tMain Menu")
             print("")
@@ -22,19 +25,19 @@ class Main_Menu_UI :
             choice = input("Select an operation with a corresponding number: ").lower()
 
             if choice == "1":
-                the_instance.register_employee_LL()
-            elif choice == "2":
-                the_instance.change_employee_info()
-            elif choice == "3":
-                the_instance.assing_cabin_pilot_to_voyage()
-            elif choice == "4":
-                the_instance.display_voyage()
-            elif choice == "5":
-                the_instance.register_destination()
-            elif choice == "6":
-                the_instance.register_airplanes()
-            elif choice == "7":
-                the_instance.create_voyage()
+                empUI.register_employee_UI()
+            #elif choice == "2":
+                #the_instance.change_employee_info()
+            #elif choice == "3":
+                #the_instance.assing_cabin_pilot_to_voyage()
+            #elif choice == "4":
+                #the_instance.display_voyage()
+            #elif choice == "5":
+                #the_instance.register_destination()
+            #elif choice == "6":
+                #the_instance.register_airplanes()
+            #elif choice == "7":
+                #the_instance.create_voyage()
             else:
                 print("Input error! Try again")
                 self.main_menu()
