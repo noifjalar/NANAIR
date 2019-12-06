@@ -21,3 +21,4 @@ class Employee_UI :
         #emp_id = la.new_emp_id()
         #new_emp = Employee(ssn, name, role, rank, licence, address, phonenumber, emp_id)
         self.la.addnewemplyee(ssn, name, role, rank, licence, address, phonenumber)
+
