@@ -11,15 +11,9 @@ class Manager_UI :
         self.mm = Main_Menu_UI( __la )
         self.em = Employee_UI( __la )
         pass
-
-    def get_main_menu(self):
-        self.main_menu( )
         
-
     def main_menu(self) :
         choice = ""
-        #the_instance = LogicManager()
-        empUI = Employee_UI()
 
         while choice != "q" :
             print("\tMain Menu")
