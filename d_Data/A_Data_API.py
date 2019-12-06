@@ -6,7 +6,7 @@ from Model import *
 from .Data_Employee import Employee_Data
 
 
-class DataManager : 
+class DataAPI : 
     def __init__(self) :
         self.demp = Employee_Data( )
         pass
