@@ -29,3 +29,11 @@ class Employee :
               + self.phonenumber + ","\
               + self.emp_id
         return ret
+
+    def new_emp_id (self):
+        with open ("./csv/Crew.csv","r") as file_object:
+            counter = 0
+            for line in file_object:
+                counter += 1
+            new_emp_id = counter + 1
+        return new_emp_id

@@ -20,8 +20,11 @@ class Employee_Data :
             #return False
     #return True 
 
-    def getNextID( ):
-        f = open( self.filename, "r") 
-        ret = f.readlines().count
-        f.close()
-        return ret + 1 
+
+
+# Gylfi gerði counter sem enginn skilur ;)
+    # def getNextID( ):
+    #     f = open( self.filename, "r") 
+    #     ret = f.readlines().count
+    #     f.close()
+    #     return ret + 1 
