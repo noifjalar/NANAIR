@@ -20,4 +20,4 @@ class LL_API :
         return the_new_emp_id
         
     def addnewaircraft(self, planeInsignia, planeTypeId):
-        self.airc.addnewaircraft(planeInsignia, planeTypeId)
+        self.airc.addnewaircraft(nickname,planeTypeId,capacity,manufacturer)

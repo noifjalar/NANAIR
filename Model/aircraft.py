@@ -1,12 +1,18 @@
 class Aircraft :
-    def __init__(self,planeInsignia, planeId) :
-        self.planeInsignia = planeInsignia
-        self.planeId = planeId
+    def __init__(self,nickname, planeTypeId,capacity,manufacturer) :
+        self.nickname = nickname
+        self.planeTypeId = planeTypeId
+        self.capacity = capacity
+        self.manufacturer = manufacturer
 
     def __str__(self) :
-        return "planeInsignia: {self.planeInsignia} - planeID: {self.planeID}"
+        return "Nickname: {self.nickname} - Plane Type ID: {self.planeTypeId} - Capacity: {self.capacity} - Manufacturer: {self.manufacturer}"
 
     def aircraft_comma_to_string (self):
-        ret = self.planeInsignia + ","\
-              + self.planeId
+        ret = self.nickname + ","\
+              + self.planeTypeId + ","\
+              + self.capacity + ","\
+              + self.manufacturer
         return ret
+
+

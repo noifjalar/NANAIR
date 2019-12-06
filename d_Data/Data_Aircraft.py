@@ -4,7 +4,7 @@ class Aircraft_Data :
     def __init__(self):
         self.filename = "./a_csv/Aircraft.csv"
 
-    def register_aircraft_Data(self, planeInsignia, planeTypeId):
+    def register_aircraft_Data(self,nickname,planeTypeId,capacity,manufacturer):
         new_aircraft = Aircraft(planeInsignia, planeTypeId)
         try :
             with open( self.filename ,"a") as aircraft_file:
