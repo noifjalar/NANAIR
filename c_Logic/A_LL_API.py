@@ -5,7 +5,7 @@ from d_Data.A_Data_API import DataAPI
 class LL_API :
     def __init__(self) :
         self.__dapi = DataAPI( )
-        self.empll = Employee_LL( __dapi )
+        self.empll = Employee_LL( self.__dapi )
 
     def addnewemplyee( self, new_empl ):
         self.empll.addnewemployee( new_empl ) 

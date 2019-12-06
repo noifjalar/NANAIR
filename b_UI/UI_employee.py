@@ -1,4 +1,4 @@
-from c_Logic.A_LL_API import LL_API
+#from c_Logic.A_LL_API import LL_API
 from Model.employee import Employee
 
 class Employee_UI :
@@ -13,6 +13,6 @@ class Employee_UI :
         rank = input("Rank: ")
         licence = input("Licence: ")
         phonenumber = input("Mobile: ")
-        emp_id = new_emp_id()
+        emp_id = la.new_emp_id()
         new_emp = Employee(ssn, name, role, rank, licence, address, phonenumber, emp_id)
         self.la.addnewemployee( new_emp )

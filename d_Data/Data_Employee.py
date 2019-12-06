@@ -1,4 +1,4 @@
-
+from Model.employee import Employee 
 
 class Employee_Data :
     def __init__(self):
@@ -19,6 +19,15 @@ class Employee_Data :
         #finally:
             #return False
     #return True 
+
+    
+    def new_emp_id (self):
+        with open ("./csv/Crew.csv","r") as file_object:
+            counter = 0
+            for line in file_object:
+                counter += 1
+            new_emp_id = counter + 1
+        return new_emp_id
 
 
 

@@ -3,8 +3,8 @@ from b_UI.UI_employee import Employee_UI
 
 class Manager_UI :
     def __init__(self) :
-        self.__la = LL_API( )
-        self.em = Employee_UI( __la )
+        self.__la = LL_API()
+        self.em = Employee_UI( self.__la )
         
     def main_menu(self) :
         choice = ""
