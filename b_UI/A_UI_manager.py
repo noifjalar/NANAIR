@@ -6,6 +6,7 @@ class Manager_UI :
     def __init__(self) :
         self.__la = LL_API()
         self.em = Employee_UI( self.__la )
+        self.aircraft = UI_Aircraft(self.__la )
         
     def main_menu(self) :
     
@@ -39,7 +40,7 @@ class Manager_UI :
             #elif choice == "5":
                 #the_instance.register_destination()
             elif choice == "6":
-                the_instance.register_airplanes()
+                self.aircraft.register_aircraft_UI()
             #elif choice == "7":
                 #the_instance.create_voyage()
             else:

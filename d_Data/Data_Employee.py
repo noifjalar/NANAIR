@@ -6,7 +6,6 @@ class Employee_Data :
         
 
     def register_employee_Data(self, ssn, name, role, rank, licence, address, phonenumber):
-        # id er hardkodad i bili
         new_emp = Employee(ssn, name, role, rank, licence, address, phonenumber)
         try :
             with open( self.filename ,"a") as crew_file:
