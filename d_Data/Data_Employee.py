@@ -20,6 +20,6 @@ class Employee_Data :
 
     def getNextID( ):
         f = open( self.filename, "r") 
-        ret = f.readlines().count;
+        ret = f.readlines().count
         f.close()
         return ret + 1 
