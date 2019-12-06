@@ -1,14 +1,9 @@
-#from Logic.LogicManager import LogicManager
-#from Data.DataManager import DataManager
-
-#from b_UI.UI_employee import Employee_UI
-from b_UI.UI_Main_Menu import Main_Menu_UI
+from c_Logic.A_LL_API import LL_API
 from b_UI.UI_employee import Employee_UI
 
 class Manager_UI :
     def __init__(self) :
-        self.__la = LogicManager( )
-        self.mm = Main_Menu_UI( __la )
+        self.__la = LL_API( )
         self.em = Employee_UI( __la )
         
     def main_menu(self) :
