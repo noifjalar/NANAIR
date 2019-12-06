@@ -19,6 +19,6 @@ class DataAPI :
     def myprint(self):
         return "datamanager str"
 
-    def new_emp_id():
+    def new_emp_id(self):
         return new_emp_id(i)
         

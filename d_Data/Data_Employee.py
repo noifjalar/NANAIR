@@ -5,7 +5,7 @@ class Employee_Data :
         self.filename = "./csv/Crew.csv"
         
 
-    def register_employee_Data():
+    def register_employee_Data(self):
        
         try :
             with open( self.filename ,"a") as crew_file:

@@ -10,6 +10,6 @@ class LL_API :
     def addnewemplyee( self, new_empl ):
         self.empll.addnewemployee( new_empl ) 
 
-    def new_emp_id():
+    def new_emp_id(self):
         return new_emp_id(i)
         

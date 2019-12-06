@@ -25,7 +25,7 @@ class Employee_LL :
         # open file
         # read file
         # insert file content into dict in a list
-    def new_emp_id():
+    def new_emp_id(self):
         return new_emp_id(i)
         
 
