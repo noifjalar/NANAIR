@@ -21,13 +21,6 @@ class Employee_Data :
             #return False
     #return True 
 
-    
-    def new_emp_id(self):
-        with open ("./a_csv/Crew.csv","r") as file_object:
-            counter = 0
-            for line in file_object:
-                counter += 1
-        return counter
 
 
 
