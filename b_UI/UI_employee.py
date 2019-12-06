@@ -32,18 +32,19 @@ class Employee_UI :
         choice = input("Select an operation with a corresponding number: ").lower()
 
         if choice == "1":
-            self.la.
+            self.la.new_emp_id()
         elif choice == "2":
-            self.la.
+            self.la.new_emp_id()
         elif choice == "3":
-            self.la.()
+            self.la.new_emp_id()
         elif choice == "4":
-            self.la.()
+            self.la.new_emp_id()
         elif choice == "5":
-            self.la.()
+            self.la.new_emp_id()
         else :
             print("Input error! Try again")
             self.change_employee_info()
+        pass
 
         
 
