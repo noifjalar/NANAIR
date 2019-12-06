@@ -7,6 +7,7 @@ class Manager_UI :
         self.em = Employee_UI( __la )
         
     def main_menu(self) :
+    
         choice = ""
 
         while choice != "q" :
