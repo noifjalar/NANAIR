@@ -21,6 +21,7 @@ class Employee_LL :
         return self.dapi.storenewemplyee( new_empl )
     """
     def addnewemployee(self, ssn, name, role, rank, licence, address, phonenumber):
+        '''Vantar að tékka hvort emp sé til með ssn tékki'''
         self.dapi.register_employee_Data(ssn, name, role, rank, licence, address, phonenumber)
         
 
