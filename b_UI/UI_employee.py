@@ -14,4 +14,4 @@ class Employee_UI :
         licence = input("Licence: ")
         phonenumber = input("Mobile: ")
         new_emp = Employee(ssn, name, role, rank, licence, address, phonenumber)
-        la.addnewemployee( new_emp )
+        self.la.addnewemplyee( new_emp )

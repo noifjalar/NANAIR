@@ -8,4 +8,4 @@ class LL_API :
         self.empll = Employee_LL( __dapi )
 
     def addnewemplyee( self, new_empl ):
-        self.empll.addnewemplyee( new_empl ) 
+        self.empll.addnewemployee( new_empl ) 

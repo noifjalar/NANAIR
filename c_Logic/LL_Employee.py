@@ -1,4 +1,4 @@
-#from b_UI.UI_employee import Employee_UI
+from d_Data.A_Data_API import DataAPI
 
 class Employee_LL :
     def __init__ (self, dapi_in):
@@ -9,7 +9,7 @@ class Employee_LL :
         new_emp_ready_for_print = new_emp.emp_comma_to_string
     '''
 
-    def addnewemplyee(self, new_empl ) :
+    def addnewemployee(self, new_empl ) :
         # first we should check if this is a doubel registration .. 
         if ( self.dapi.getemployeee( new_empl.ssn) == None ) :
             # kasta villu til baka um að notandi er þegar til. 
@@ -22,7 +22,6 @@ class Employee_LL :
 
     def change_employee_info(self):
         
-
 
 
 
