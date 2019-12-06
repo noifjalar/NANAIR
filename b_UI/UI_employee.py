@@ -13,6 +13,6 @@ class Employee_UI :
         rank = input("Rank: ")
         licence = input("Licence: ")
         phonenumber = input("Mobile: ")
-        emp_id = la.new_emp_id()
+        emp_id = la.new_emp_id() #WTH
         new_emp = Employee(ssn, name, role, rank, licence, address, phonenumber, emp_id)
-        self.la.addnewemployee( new_emp )
+        self.la.addnewemplyee( new_emp )
