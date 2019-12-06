@@ -28,19 +28,19 @@ class Employee_UI :
         print("(3) - Rank")
         print("(4) - Licence")
         print("(5) - Phonenumber")
-        print("\t Press q to quit")
+        print("Press q to quit")
         choice = input("Select an operation with a corresponding number: ").lower()
 
         if choice == "1":
-            self.la.new_emp_id()
+            self.la.change_empl_address()
         elif choice == "2":
-            self.la.new_emp_id()
+            self.la.change_empl_role()
         elif choice == "3":
-            self.la.new_emp_id()
+            self.la.change_empl_rank()
         elif choice == "4":
-            self.la.new_emp_id()
+            self.la.change_empl_licence()
         elif choice == "5":
-            self.la.new_emp_id()
+            self.la.change_empl_phonenumber()
         else :
             print("Input error! Try again")
             self.change_employee_info()
