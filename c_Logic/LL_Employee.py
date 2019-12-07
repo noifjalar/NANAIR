@@ -4,7 +4,7 @@ from d_Data.Data_Employee import Employee_Data
 class Employee_LL :
     def __init__ (self):
         #self.dapi = dapi_in
-        self.dapi = Employee_Data()
+        self.demp = Employee_Data()
 
     '''def register_employee_LL(self):
         if 
@@ -22,12 +22,30 @@ class Employee_LL :
     """
     def addnewemployee(self, ssn, name, role, rank, licence, address, phonenumber):
         '''Vantar að tékka hvort emp sé til með ssn tékki'''
-        self.dapi.register_employee_Data(ssn, name, role, rank, licence, address, phonenumber)
+        self.demp.register_employee_Data(ssn, name, role, rank, licence, address, phonenumber)
         
+    def change_employee_address(self, new_address) :
+        '''passa að employeeinn sé til'''
+        self.demp.change_emp_addr_data(new_address)
+    
+    def change_employee_role(self, new_role) :
+        '''passa að employeeinn sé til'''
+        self.demp.change_emp_role_data(new_role)
 
+    def change_employee_rank(self, new_rank) :
+        '''passa að employeeinn sé til'''
+        self.demp.change_emp_rank_data(new_rank)
 
-    def change_employee_info(self):
-        pass
+    def change_employee_licence(self, new_licence) :
+        '''passa að employeeinn sé til'''
+        self.demp.change_emp_lice_data(new_licence)
+
+    def change_employee_phonenumber(self, new_phonenumber) :
+        '''passa að employeeinn sé til'''
+        self.demp.change_emp_phone_data(new_phonenumber)
+
+    #def change_employee_info(self):
+        #pass
         # open file 
         # read file
         # insert file content into dict in a list

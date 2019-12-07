@@ -32,15 +32,20 @@ class Employee_UI :
         choice = input("Select an operation with a corresponding number: ").lower()
 
         if choice == "1":
-            self.la.change_empl_address()
+            new_address = input("New address: ")
+            self.la.change_empl_address(new_address)
         elif choice == "2":
-            self.la.change_empl_role()
+            new_role = input("New role: ")
+            self.la.change_empl_role(new_role)
         elif choice == "3":
-            self.la.change_empl_rank()
+            new_rank = input("New rank: ")
+            self.la.change_empl_rank(new_rank)
         elif choice == "4":
-            self.la.change_empl_licence()
+            new_licence = input("New licence: ")
+            self.la.change_empl_licence(new_licence)
         elif choice == "5":
-            self.la.change_empl_phonenumber()
+            new_phonenumber = input("New phonenumber: ")
+            self.la.change_empl_phonenumber(new_phonenumber)
         else :
             print("Input error! Try again")
             self.change_employee_info()

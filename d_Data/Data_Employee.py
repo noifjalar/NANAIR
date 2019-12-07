@@ -20,6 +20,39 @@ class Employee_Data :
             #return False
     #return True 
 
+    def get_crew_dict(self) :
+        crew_dict = {} 
+        try :
+            with open( self.filename ,"r") as crew_file:
+                for line in crew_file :
+                    ssn, name, role, rank, licence, address, phonenumber = line.strip().split(",")
+                    emp = Employee(ssn, name, role, rank, licence, address, phonenumber)
+                    key = emp.ssn
+                    
+
+                    
+                crew_file.close()      
+        except FileNotFoundError :
+            return None 
+
+
+
+    def change_emp_addr_data(self, new_address) :
+        new_addr = Employee(new_address) #vantar 6 annað ssn, simanr ofl þarf að sækja það úr file og tengja saman eða ehv 
+        pass
+
+    def change_emp_role_data(self, new_role) :
+        pass
+
+    def change_emp_rank_data(self, new_rank) :
+        pass
+
+    def change_emp_lice_data(self, new_licence) :
+        pass
+
+    def change_emp_phone_data(seld, new_phonenumber) :
+        pass
+
 
 
 
