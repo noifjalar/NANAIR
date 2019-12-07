@@ -10,3 +10,4 @@ class UI_Destination:
         identity = input("ID: ")
         destination = input("Destination: ")
         new_destination = Destination(identity, destination)
+        self.la.addnewdestination(identity, destination, flight_time)
