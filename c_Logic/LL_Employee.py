@@ -24,25 +24,25 @@ class Employee_LL :
         '''Vantar að tékka hvort emp sé til með ssn tékki'''
         self.demp.register_employee_Data(ssn, name, role, rank, licence, address, phonenumber)
         
-    def change_employee_address(self, new_address) :
+    def change_employee_address(self, new_address, emp_ssn) :
         '''passa að employeeinn sé til'''
-        self.demp.change_emp_addr_data(new_address)
+        self.demp.change_emp_addr_data(new_address, emp_ssn)
     
-    def change_employee_role(self, new_role) :
+    def change_employee_role(self, new_role, emp_ssn) :
         '''passa að employeeinn sé til'''
-        self.demp.change_emp_role_data(new_role)
+        self.demp.change_emp_role_data(new_role, emp_ssn)
 
-    def change_employee_rank(self, new_rank) :
+    def change_employee_rank(self, new_rank, emp_ssn) :
         '''passa að employeeinn sé til'''
-        self.demp.change_emp_rank_data(new_rank)
+        self.demp.change_emp_rank_data(new_rank, emp_ssn)
 
-    def change_employee_licence(self, new_licence) :
+    def change_employee_licence(self, new_licence, emp_ssn) :
         '''passa að employeeinn sé til'''
-        self.demp.change_emp_lice_data(new_licence)
+        self.demp.change_emp_lice_data(new_licence, emp_ssn)
 
-    def change_employee_phonenumber(self, new_phonenumber) :
+    def change_employee_phonenumber(self, new_phonenumber,emp_ssn) :
         '''passa að employeeinn sé til'''
-        self.demp.change_emp_phone_data(new_phonenumber)
+        self.demp.change_emp_phone_data(new_phonenumber, emp_ssn)
 
     #def change_employee_info(self):
         #pass

@@ -28,7 +28,7 @@ class Employee_Data :
                     ssn, name, role, rank, licence, address, phonenumber = line.strip().split(",")
                     emp = Employee(ssn, name, role, rank, licence, address, phonenumber)
                     key = emp.ssn
-                    
+
 
                     
                 crew_file.close()      
@@ -37,20 +37,20 @@ class Employee_Data :
 
 
 
-    def change_emp_addr_data(self, new_address) :
-        new_addr = Employee(new_address) #vantar 6 annað ssn, simanr ofl þarf að sækja það úr file og tengja saman eða ehv 
+    def change_emp_addr_data(self, new_address, emp_ssn) :
+        #new_addr = Employee(new_address) #vantar 6 annað ssn, simanr ofl þarf að sækja það úr file og tengja saman eða ehv 
         pass
 
-    def change_emp_role_data(self, new_role) :
+    def change_emp_role_data(self, new_role, emp_ssn) :
         pass
 
-    def change_emp_rank_data(self, new_rank) :
+    def change_emp_rank_data(self, new_rank, emp_ssn) :
         pass
 
-    def change_emp_lice_data(self, new_licence) :
+    def change_emp_lice_data(self, new_licence, emp_ssn) :
         pass
 
-    def change_emp_phone_data(seld, new_phonenumber) :
+    def change_emp_phone_data(seld, new_phonenumber, emp_ssn) :
         pass
 
 
