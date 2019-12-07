@@ -9,5 +9,6 @@ class UI_Destination:
     def register_destination_UI(self):
         identity = input("ID: ")
         destination = input("Destination: ")
+        flight_time = input("Flight time: ")
         # new_destination = Destination(identity, destination, flight_time)
         self.la.addnewdestination(identity, destination, flight_time)
