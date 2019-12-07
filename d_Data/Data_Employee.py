@@ -43,6 +43,10 @@ class Employee_Data :
         crew_dict = self.get_crew_dict()
         for key, value in crew_dict.items():
             if key == emp_ssn :
+                '''
+                employee_choice=[]
+                employee_choice = crew_dict.items
+                '''
                 value[4] = new_address
         return crew_dict 
         

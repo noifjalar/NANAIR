@@ -22,6 +22,9 @@ class Employee_UI :
         self.la.addnewemplyee(ssn, name, role, rank, licence, address, phonenumber)
 
     def change_employee_info(self) :
+        emp_ssn = input("Input the employee's ssn: ")
+        self.la.print_chosen_emp(emp_ssn)
+        #print("SSN: {}, Name: {} - Address: {}, Role: {}, Rank: {}, Licence: {}, Phonenumber: {}".format())
         print("\tChange employee info")
         print("(1) - Address") 
         print("(2) - Role")
@@ -30,7 +33,7 @@ class Employee_UI :
         print("(5) - Phonenumber")
         print("Press q to quit")
         choice = input("Select an operation with a corresponding number: ").lower()
-        emp_ssn = input("Input the employee's ssn: ")
+        #emp_ssn = input("Input the employee's ssn: ")
 
         if choice == "1":
             new_address = input("New address: ")
