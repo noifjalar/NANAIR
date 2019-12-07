@@ -1,7 +1,7 @@
-id,destination
-LYR,Longyearbyean
-GOH,Nuuk
-KUS,Kulusuk
-FAE,Thorshavn
-LWK,Tingwall
-KEF,Keflavik
+id,destination,flight_time
+LYR,Longyearbyean,4
+GOH,Nuuk,3
+KUS,Kulusuk,2
+FAE,Thorshavn,1
+LWK,Tingwall,2
+KEF,Keflavik,0
