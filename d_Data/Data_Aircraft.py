@@ -5,7 +5,7 @@ class Aircraft_Data :
         self.filename = "./a_csv/Aircraft.csv"
 
     def register_aircraft_Data(self,nickname,planeTypeId,capacity,manufacturer):
-        new_aircraft = Aircraft(planeInsignia, planeTypeId)
+        new_aircraft = Aircraft(nickname,planeTypeId,capacity,manufacturer)
         try :
             with open( self.filename ,"a") as aircraft_file:
                 aircraft_file.write("\n")

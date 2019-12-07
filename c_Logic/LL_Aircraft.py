@@ -6,7 +6,7 @@ class Aircraft_LL :
         #self.dapi = dapi_in
         self.dapi = Aircraft_Data()
 
-    def addnewaircraft(self, planeInsignia, planeTypeId):
+    def addnewaircraft(self, nickname,planeTypeId,capacity,manufacturer):
         self.dapi.register_aircraft_Data(nickname,planeTypeId,capacity,manufacturer)
 
 
