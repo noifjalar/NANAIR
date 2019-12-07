@@ -14,21 +14,20 @@ class LL_API :
     def addnewemplyee( self, ssn, name, role, rank, licence, address, phonenumber):
         self.empll.addnewemployee( ssn, name, role, rank, licence, address, phonenumber ) 
 
-    def change_empl_address(self) :
-        '''passa að employeeinn sé til'''
-        pass
+    def change_empl_address(self, new_address, emp_ssn) :
+        self.empll.change_employee_address(new_address, emp_ssn)
     
-    def change_empl_role(self) :
-        pass
+    def change_empl_role(self, new_role, emp_ssn) :
+        self.empll.change_employee_role(new_role, emp_ssn)
 
-    def change_empl_rank(self) :
-        pass
+    def change_empl_rank(self, new_rank, emp_ssn) :
+        self.empll.change_employee_rank(new_rank, emp_ssn)
 
-    def change_empl_licence(self) :
-        pass
+    def change_empl_licence(self, new_licence, emp_ssn) :
+        self.empll.change_employee_licence(new_licence, emp_ssn)
 
-    def change_empl_phonenumber(self) :
-        pass
+    def change_empl_phonenumber(self, new_phonenumber, emp_snn) :
+        self.empll.change_employee_phonenumber(new_phonenumber, emp_ssn)
 
     def new_emp_id(self):
         bla = Employee_LL()

@@ -30,21 +30,27 @@ class Employee_UI :
         print("(5) - Phonenumber")
         print("Press q to quit")
         choice = input("Select an operation with a corresponding number: ").lower()
+        emp_ssn = input("Input the employee's ssn: ")
 
         if choice == "1":
-            self.la.change_empl_address()
+            new_address = input("New address: ")
+            self.la.change_empl_address(new_address, emp_ssn)
         elif choice == "2":
-            self.la.change_empl_role()
+            new_role = input("New role: ")
+            self.la.change_empl_role(new_role, emp_ssn)
         elif choice == "3":
-            self.la.change_empl_rank()
+            new_rank = input("New rank: ")
+            self.la.change_empl_rank(new_rank, emp_ssn)
         elif choice == "4":
-            self.la.change_empl_licence()
+            new_licence = input("New licence: ")
+            self.la.change_empl_licence(new_licence, emp_ssn)
         elif choice == "5":
-            self.la.change_empl_phonenumber()
+            new_phonenumber = input("New phonenumber: ")
+            self.la.change_empl_phonenumber(new_phonenumber,emp_ssn)
         else :
             print("Input error! Try again")
             self.change_employee_info()
-        pass
+        
 
         
 
