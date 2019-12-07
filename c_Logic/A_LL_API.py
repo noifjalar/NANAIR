@@ -1,7 +1,7 @@
 from c_Logic.LL_Employee import Employee_LL
 from d_Data.A_Data_API import DataAPI
 from c_Logic.LL_Aircraft import Aircraft_LL
-
+from c_Logic.LL_Destination import Destination_LL
 #import os
 
 class LL_API :
@@ -10,7 +10,8 @@ class LL_API :
         #self.empll = Employee_LL( self.__dapi )
         self.empll = Employee_LL()
         self.airc = Aircraft_LL()
-
+        self.dest = Destination_LL()
+    #  Main menu selected 1
     def addnewemplyee( self, ssn, name, role, rank, licence, address, phonenumber):
         self.empll.addnewemployee( ssn, name, role, rank, licence, address, phonenumber ) 
 
@@ -33,6 +34,9 @@ class LL_API :
         bla = Employee_LL()
         the_new_emp_id = bla.new_emp_id()
         return the_new_emp_id
-        
+    #  Main menu selected 5
+    def addnewdestination(self, identity, destination, flight_time):
+        self.dest.addnewdestination(identity, destination, flight_time)
+    #  Main menu selected 6   
     def addnewaircraft(self, nickname,planeTypeId,capacity,manufacturer):
         self.airc.addnewaircraft(nickname,planeTypeId,capacity,manufacturer)
