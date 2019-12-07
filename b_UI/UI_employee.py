@@ -23,7 +23,7 @@ class Employee_UI :
 
     def change_employee_info(self) :
         choice = ""
-        while choice != "q"
+        while choice != "q" :
             emp_ssn = input("Input the employee's ssn: ")
             self.la.print_chosen_emp(emp_ssn)
             #print("SSN: {}, Name: {} - Address: {}, Role: {}, Rank: {}, Licence: {}, Phonenumber: {}".format())
