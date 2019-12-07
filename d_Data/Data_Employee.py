@@ -1,3 +1,4 @@
+import csv
 from Model.employee import Employee 
 
 class Employee_Data :
@@ -21,16 +22,16 @@ class Employee_Data :
     #return True 
 
     def get_crew_dict(self) :
-        crew_dict = {} 
+        crew_dict = {}
         try :
             with open( self.filename ,"r") as crew_file:
                 for line in crew_file :
                     ssn, name, role, rank, licence, address, phonenumber = line.strip().split(",")
                     emp = Employee(ssn, name, role, rank, licence, address, phonenumber)
-                    key = emp.ssn
-
-
-                    
+                    emp_list = [emp.name, emp.role, emp.rank, emp.licence, emp.address, emp.phonenumber]
+                    key = emp.ssn 
+                    crew_dict[key] = (emp_list)
+                return crew_dict     
                 crew_file.close()      
         except FileNotFoundError :
             return None 
@@ -39,7 +40,13 @@ class Employee_Data :
 
     def change_emp_addr_data(self, new_address, emp_ssn) :
         #new_addr = Employee(new_address) #vantar 6 annað ssn, simanr ofl þarf að sækja það úr file og tengja saman eða ehv 
-        pass
+        crew_dict = self.get_crew_dict()
+        for key, value in crew_dict.items():
+            if key == emp_ssn :
+                value[4] = new_address
+        return crew_dict 
+        
+
 
     def change_emp_role_data(self, new_role, emp_ssn) :
         pass
