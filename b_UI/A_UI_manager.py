@@ -7,6 +7,7 @@ class Manager_UI :
         self.__la = LL_API()
         self.em = Employee_UI( self.__la )
         self.aircraft = UI_Aircraft(self.__la )
+        self.destination = UI_Destination(self.__la)
         
     def main_menu(self) :
     
