@@ -2,6 +2,7 @@ from c_Logic.LL_Employee import Employee_LL
 from d_Data.A_Data_API import DataAPI
 from c_Logic.LL_Aircraft import Aircraft_LL
 from c_Logic.LL_Destination import Destination_LL
+from d_Data.Data_Employee import Employee_Data
 #import os
 
 class LL_API :
@@ -11,9 +12,15 @@ class LL_API :
         self.empll = Employee_LL()
         self.airc = Aircraft_LL()
         self.dest = Destination_LL()
+        self.empld = Employee_Data()
+
+
     #  Main menu selected 1
     def addnewemplyee( self, ssn, name, role, rank, licence, address, phonenumber):
         self.empll.addnewemployee( ssn, name, role, rank, licence, address, phonenumber ) 
+
+    def print_chosen_emp(self, emp_ssn) :
+        self.empld.get_chosen_emp(emp_ssn)
 
     def change_empl_address(self, new_address, emp_ssn) :
         self.empll.change_employee_address(new_address, emp_ssn)

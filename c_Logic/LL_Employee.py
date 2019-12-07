@@ -23,7 +23,7 @@ class Employee_LL :
     def addnewemployee(self, ssn, name, role, rank, licence, address, phonenumber):
         '''Vantar að tékka hvort emp sé til með ssn tékki'''
         self.demp.register_employee_Data(ssn, name, role, rank, licence, address, phonenumber)
-        
+              
     def change_employee_address(self, new_address, emp_ssn) :
         '''passa að employeeinn sé til'''
         self.demp.change_emp_addr_data(new_address, emp_ssn)
@@ -43,6 +43,7 @@ class Employee_LL :
     def change_employee_phonenumber(self, new_phonenumber,emp_ssn) :
         '''passa að employeeinn sé til'''
         self.demp.change_emp_phone_data(new_phonenumber, emp_ssn)
+
 
     #def change_employee_info(self):
         #pass

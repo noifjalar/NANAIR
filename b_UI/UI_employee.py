@@ -22,37 +22,39 @@ class Employee_UI :
         self.la.addnewemplyee(ssn, name, role, rank, licence, address, phonenumber)
 
     def change_employee_info(self) :
-        emp_ssn = input("Input the employee's ssn: ")
-        self.la.print_chosen_emp(emp_ssn)
-        #print("SSN: {}, Name: {} - Address: {}, Role: {}, Rank: {}, Licence: {}, Phonenumber: {}".format())
-        print("\tChange employee info")
-        print("(1) - Address") 
-        print("(2) - Role")
-        print("(3) - Rank")
-        print("(4) - Licence")
-        print("(5) - Phonenumber")
-        print("Press q to quit")
-        choice = input("Select an operation with a corresponding number: ").lower()
-        #emp_ssn = input("Input the employee's ssn: ")
+        choice = ""
+        while choice != "q"
+            emp_ssn = input("Input the employee's ssn: ")
+            self.la.print_chosen_emp(emp_ssn)
+            #print("SSN: {}, Name: {} - Address: {}, Role: {}, Rank: {}, Licence: {}, Phonenumber: {}".format())
+            print("\tChange employee info")
+            print("(1) - Address") 
+            print("(2) - Role")
+            print("(3) - Rank")
+            print("(4) - Licence")
+            print("(5) - Phonenumber")
+            print("Press q to quit")
+            choice = input("Select an operation with a corresponding number: ").lower()
+            #emp_ssn = input("Input the employee's ssn: ")
 
-        if choice == "1":
-            new_address = input("New address: ")
-            self.la.change_empl_address(new_address, emp_ssn)
-        elif choice == "2":
-            new_role = input("New role: ")
-            self.la.change_empl_role(new_role, emp_ssn)
-        elif choice == "3":
-            new_rank = input("New rank: ")
-            self.la.change_empl_rank(new_rank, emp_ssn)
-        elif choice == "4":
-            new_licence = input("New licence: ")
-            self.la.change_empl_licence(new_licence, emp_ssn)
-        elif choice == "5":
-            new_phonenumber = input("New phonenumber: ")
-            self.la.change_empl_phonenumber(new_phonenumber,emp_ssn)
-        else :
-            print("Input error! Try again")
-            self.change_employee_info()
+            if choice == "1":
+                new_address = input("New address: ")
+                self.la.change_empl_address(new_address, emp_ssn)
+            elif choice == "2":
+                new_role = input("New role: ")
+                self.la.change_empl_role(new_role, emp_ssn)
+            elif choice == "3":
+                new_rank = input("New rank: ")
+                self.la.change_empl_rank(new_rank, emp_ssn)
+            elif choice == "4":
+                new_licence = input("New licence: ")
+                self.la.change_empl_licence(new_licence, emp_ssn)
+            elif choice == "5":
+                new_phonenumber = input("New phonenumber: ")
+                self.la.change_empl_phonenumber(new_phonenumber,emp_ssn)
+            else :
+                print("Input error! Try again")
+                self.change_employee_info()
         
 
         
