@@ -58,18 +58,9 @@ class Employee_Data :
         crew_dict = self.get_crew_dict()
         for key, value in crew_dict.items():
             if key == emp_ssn :
-                '''
-                employee_choice=[]
-                employee_choice = crew_dict.items
-                '''
                 value[4] = new_address
-                try :
-                    with open( self.filename ,"w") as crew_file:
-                        crew_file.write(key)
-                        crew_file.write()
-                        crew_file.close()      
-                except FileNotFoundError :
-                    return None       
+                print(crew_dict)
+         
         #return crew_dict         
 
     def change_emp_role_data(self, new_role, emp_ssn) :
