@@ -58,6 +58,8 @@ class Employee_Data :
         for key, value in crew_dict.items():
             if key == emp_ssn :
                 value[4] = new_address
+                self.overwrite_crew_file(crew_dict)
+
 
                 
          
@@ -70,6 +72,7 @@ class Employee_Data :
         for key, value in crew_dict.items():
             if key == emp_ssn :
                 value[1] = new_role
+                self.overwrite_crew_file(crew_dict)
 
         ''' Choose 2 in menu ''' 
 
@@ -78,6 +81,7 @@ class Employee_Data :
         for key, value in crew_dict.items():
             if key == emp_ssn :
                 value[2] = new_rank
+                self.overwrite_crew_file(crew_dict)
 
         ''' Choose 2 in menu ''' 
 
@@ -86,6 +90,7 @@ class Employee_Data :
         for key, value in crew_dict.items():
             if key == emp_ssn :
                 value[3] = new_licence
+                self.overwrite_crew_file(crew_dict)
 
         ''' Choose 2 in menu ''' 
         
@@ -94,9 +99,10 @@ class Employee_Data :
         for key, value in crew_dict.items():
             if key == emp_ssn :
                 value[5] = new_role
+                self.overwrite_crew_file(crew_dict)
 
         ''' Choose 2 in menu ''' 
     
-    def overwrite_crew_file(self):
-        crew_dict = self.get_crew_dict()
-        print(crew_dict)
+    def overwrite_crew_file(self, crew_dict):
+        #crew_dict = self.get_crew_dict()
+        
