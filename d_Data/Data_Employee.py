@@ -41,8 +41,18 @@ class Employee_Data :
         crew_dict = self.get_crew_dict()
         for key, value in crew_dict.items():
             if key == emp_ssn :
-                print("SSN: {}, Name: {} - Address: {}, Role: {}, Rank: {}, Licence: {}, Phonenumber: {}".format(emp_ssn, value[0], value[1], value[2], value[3], value[4], value[5]))
                 return value 
+
+                #wow = sending_up(mom)
+
+                #def sending_up(self, mom):
+                    #1+1
+                    #return 2
+
+
+                #print("SSN: {}, Name: {} - Address: {}, Role: {}, Rank: {}, Licence: {}, Phonenumber: {}".format(emp_ssn, value[0], value[1], value[2], value[3], value[4], value[5]))
+                
+
 
     def change_emp_addr_data(self, new_address, emp_ssn) :
         crew_dict = self.get_crew_dict()

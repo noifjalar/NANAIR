@@ -20,7 +20,8 @@ class LL_API :
         self.empll.addnewemployee( ssn, name, role, rank, licence, address, phonenumber ) 
 
     def print_chosen_emp(self, emp_ssn) :
-        self.empld.get_chosen_emp(emp_ssn)
+        wow = self.empld.get_chosen_emp(emp_ssn)
+        print()
 
     def change_empl_address(self, new_address, emp_ssn) :
         self.empll.change_employee_address(new_address, emp_ssn)
