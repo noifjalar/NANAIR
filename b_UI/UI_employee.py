@@ -26,8 +26,8 @@ class Employee_UI :
         while choice != "q" :
             emp_ssn = input("Input the employee's ssn: ")
             wow = self.la.print_chosen_emp(emp_ssn)
-            print(*wow)
-            #print("SSN: {}, Name: {} - Address: {}, Role: {}, Rank: {}, Licence: {}, Phonenumber: {}".format())
+            #print(*wow)
+            print("SSN: {}, Name: {} - Address: {}, Role: {}, Rank: {}, Licence: {}, Phonenumber: {}".format(emp_ssn,wow[0],wow[1],wow[2],wow[3],wow[4],wow[5]))
             print("\tChange employee info")
             print("(1) - Address") 
             print("(2) - Role")
