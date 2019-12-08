@@ -20,6 +20,9 @@ class Employee_LL :
         # svörum svarinu sem við fáum þegar við köstum þessu niður í skrá 
         return self.dapi.storenewemplyee( new_empl )
     """
+    def get_chosen_emp(emp_ssn) :
+        self.demp.get_chosen_emp(emp_ssn)
+        
     def addnewemployee(self, ssn, name, role, rank, licence, address, phonenumber):
         '''Vantar að tékka hvort emp sé til með ssn tékki'''
         self.demp.register_employee_Data(ssn, name, role, rank, licence, address, phonenumber)

@@ -72,21 +72,29 @@ class Employee_Data :
                     return None       
         #return crew_dict         
 
-
     def change_emp_role_data(self, new_role, emp_ssn) :
-        pass
+        crew_dict = self.get_crew_dict()
+        for key, value in crew_dict.items():
+            if key == emp_ssn :
+                value[1] = new_role
 
     def change_emp_rank_data(self, new_rank, emp_ssn) :
-        pass
+        crew_dict = self.get_crew_dict()
+        for key, value in crew_dict.items():
+            if key == emp_ssn :
+                value[2] = new_rank
 
     def change_emp_lice_data(self, new_licence, emp_ssn) :
-        pass
+        crew_dict = self.get_crew_dict()
+        for key, value in crew_dict.items():
+            if key == emp_ssn :
+                value[3] = new_licence
 
     def change_emp_phone_data(seld, new_phonenumber, emp_ssn) :
-        pass
-
-
-
+        crew_dict = self.get_crew_dict()
+        for key, value in crew_dict.items():
+            if key == emp_ssn :
+                value[5] = new_role
 
 # Gylfi gerði counter sem enginn skilur ;)
     # def getNextID( ):

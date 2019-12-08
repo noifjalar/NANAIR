@@ -12,7 +12,6 @@ class LL_API :
         self.empll = Employee_LL()
         self.airc = Aircraft_LL()
         self.dest = Destination_LL()
-        self.empld = Employee_Data()
 
 
     #  Main menu selected 1
@@ -20,7 +19,7 @@ class LL_API :
         self.empll.addnewemployee( ssn, name, role, rank, licence, address, phonenumber ) 
 
     def print_chosen_emp(self, emp_ssn) :
-        wow = self.empld.get_chosen_emp(emp_ssn)
+        wow = self.empll.get_chosen_emp(emp_ssn)
         print()
 
     def change_empl_address(self, new_address, emp_ssn) :
