@@ -1,9 +1,13 @@
 import csv
+import re
+import os
 from Model.employee import Employee 
 
 class Employee_Data :
     def __init__(self):
         self.filename = "./a_csv/Crew.csv"
+        self.trash_file = "./a_csv/Crew_Trash.csv"
+        
         
         ''' Choose 1 in menu '''
 
@@ -104,5 +108,22 @@ class Employee_Data :
         ''' Choose 2 in menu ''' 
     
     def overwrite_crew_file(self, crew_dict):
-        #crew_dict = self.get_crew_dict()
+        string = ""
+
+        dest = self.trash_file
+        source = self.filename
+        os.rename(source, dest)
+
+        for key,value in crew_dict.items() :
+            string = ''.join('{},{},{},{},{},{},{}'.format(key, value[0], value[1], value[2],value[3],value[4],value[5]))
+
+            with open( self.filename ,"a") as crew_file:
+                crew_file.write(string)
+                crew_file.write("\n")
+        
+        os.remove(self.trash_file)
+        
+
+        
+
         
