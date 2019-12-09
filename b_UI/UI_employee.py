@@ -60,6 +60,7 @@ class Employee_UI :
                     print("Available ranks: ")
                     print("\t(1) - Captain") 
                     print("\t(2) - Copilot")
+                    pick = input("Pick a new rank: ")
                     if pick == "1":
                         new_rank = "Captain"
                     elif pick == "2":
