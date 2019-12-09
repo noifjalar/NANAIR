@@ -28,3 +28,5 @@ class DataAPI :
         the_id = emp_data.new_emp_id()
         return the_id
         
+    def get_pilots(self)
+        return get_pilots()
