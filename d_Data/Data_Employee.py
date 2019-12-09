@@ -145,9 +145,6 @@ class Employee_Data :
                 cabin_list.append(value[0])
         return sorted(cabin_list)
 
-    def get_cert_emp(self):
-        pass
-
     def get_off_emp(self):
         pass
 

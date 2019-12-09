@@ -53,3 +53,6 @@ class Employee_LL :
     
     def get_pilots(self):
         return self.demp.get_pilots()
+
+    def get_cabin(self) :
+        return self.demp.get_cabin()

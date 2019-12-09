@@ -63,13 +63,10 @@ class LL_API :
         return self.demp.get_all_emp()
 
     def get_pilots(self):
-        return self.demp.get_pilots()
+        return self.empll.get_pilots()
 
     def get_cabin(self):
-        return self.demp.get_cabin()
-
-    def display_cert_emp(self):
-        self.disp.disp_cert_emp()
+        return self.empll.get_cabin()
 
     def display_off_emp(self):
         self.disp.disp_off_emp()
@@ -80,8 +77,8 @@ class LL_API :
     def display_cert_worksheet(self):
         self.disp.disp_cert_worksheet()
 
-    def display_pilot_licence(self):
-        self.disp.disp_pilot_licence()
+    def display_pilots_with_licence(self):
+        self.disp.disp_pilots_with_licence()
 
     def display_pilot_by_aircraft(self):
         self.disp.disp_pilot_by_aircraft()

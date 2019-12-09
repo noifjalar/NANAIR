@@ -1,4 +1,5 @@
 from c_Logic.A_LL_API import LL_API 
+
 class Display_UI :
     def __init__(self, logicAPI_in ) :
         self.la = logicAPI_in
@@ -51,15 +52,20 @@ class Display_UI :
                         for name in cabin_list:
                             print(name)
                     elif next_choice == "4" :
-                        self.la.display_cert_emp()
+                        # self.la.display_cert_emp()
+                        emp_ssn = input("Input the employee's ssn: ")
+                        print()
+                        wow = self.la.print_chosen_emp(emp_ssn)
+                        print("SSN: {}, Name: {} - Role: {}, Rank: {}, Licence: {}, Address: {}, Phonenumber: {}\n".format(emp_ssn,wow[0],wow[1],wow[2],wow[3],wow[4],wow[5]))  
                     elif next_choice == "5" :
-                        self.la.display_off_emp()
+                        self.la.display_off_emp() #VANTAR 
                     elif next_choice == "6" :
-                        self.la.display_on_emp()
+                        self.la.display_on_emp() #VANTAR 
                     elif next_choice == "7" :
-                        self.la.display_cert_worksheet()
+                        self.la.display_cert_worksheet() #VANTAR 
                     elif next_choice == "8" :
-                        self.la.display_pilot_licence() 
+                        self.la.display_pilots_with_licence() 
+                        
                     elif next_choice == "9" :
                         self.la.display_pilot_by_licene()
                     else: 
