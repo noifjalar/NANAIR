@@ -115,7 +115,33 @@ class Employee_Data :
         
         os.remove(self.trash_file)
         
+    def get_all_emp(self) :
+        pass
 
-        
+    def get_pilots(self):
+        pass
+
+    def get_cabin(self):
+        pass
+
+    def get_cert_emp(self):
+        pass
+
+    def get_off_emp(self):
+        pass
+
+    def get_on_emp(self):
+        pass
+
+    def get_cert_worksheet(self):
+        pass
+
+    def get_pilot_licence(self):
+        pass
+
+    def get_pilot_by_aircraft(self):
+        pass
+
+    
 
         
