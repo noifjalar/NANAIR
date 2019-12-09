@@ -23,7 +23,8 @@ class Employee_UI :
 
     def change_employee_info(self) :
         choice = ""
-        while choice != "q" :
+        pick = ""
+        while pick != "n" :
             emp_ssn = input("Input the employee's ssn: ")
             wow = self.la.print_chosen_emp(emp_ssn)
             #print(*wow)
@@ -33,7 +34,6 @@ class Employee_UI :
             print("(2) - Role and Rank")
             print("(3) - Licence")
             print("(4) - Phonenumber")
-            print("Press q to quit")
             choice = input("Select an operation with a corresponding number: ").lower()
 
             if choice == "1":
@@ -93,6 +93,11 @@ class Employee_UI :
             else :
                 print("Input error! Try again")
                 self.change_employee_info()
+
+            wow = self.la.print_chosen_emp(emp_ssn)
+            print("SSN: {}, Name: {} - Role: {}, Rank: {}, Licence: {}, Address: {}, Phonenumber: {}".format(emp_ssn,wow[0],wow[1],wow[2],wow[3],wow[4],wow[5]))
+            pick = input("Do you want to continue changing the employee's information? (y/n) ")
+
 
     
 
