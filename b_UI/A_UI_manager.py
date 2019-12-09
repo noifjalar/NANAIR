@@ -19,8 +19,8 @@ class Manager_UI :
             print("Shift manager:")
             print("\t(1) - Register employee") #1
             print("\t(2) - Change employee info") #2
-            print("\t(3) - Assign cabin/pilot to voyage") #3
-            print("\t(4) - Display voyage") #4
+            print("\t(3) - Assign cabin/pilot to voyage") #3 #4
+            print("\t(4) - Display information")
             print("")
             print("Registration manager:")
             print("\t(5) - Register destination") #5
@@ -36,8 +36,8 @@ class Manager_UI :
                 self.em.change_employee_info()
             #elif choice == "3":
                 #the_instance.assing_cabin_pilot_to_voyage()
-            #elif choice == "4":
-                #the_instance.display_voyage()
+            elif choice == "4":
+                self.em.display_info()
             elif choice == "5":
                 self.destination.register_destination_UI()
             elif choice == "6":
