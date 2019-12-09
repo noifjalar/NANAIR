@@ -31,7 +31,6 @@ class Employee_UI :
             print("\tChange employee info")
             print("(1) - Address") 
             print("(2) - Role and Rank")
-            #print("(3) - Rank")
             print("(3) - Licence")
             print("(4) - Phonenumber")
             print("Press q to quit")
@@ -95,25 +94,7 @@ class Employee_UI :
                 print("Input error! Try again")
                 self.change_employee_info()
 
-    def display_info() :
-        choice == "" 
-        while choice != "q" :
-            print("\tDisplay information")
-            print("")
-            print("\t(1) - Display employees") #1
-            print("\t(2) - Display pilots") #2
-            print("\t(3) - Display cabin crew") #3
-            print("\t(4) - Display certain employee") #4
-            print("\t(5) - Display destinations")#5
-            print("\t(6) - Display voyages") #6
-            print("\t(7) - Display off-duty employees") #7
-            print("\t(8) - Display on-duty employees") #8
-            print("\t(9) - Display certain employees weekly worksheet")
-            print("\t Press q to quit")
-            
-            choice = input("Select an operation with a corresponding number: ").lower()
-
-            if choice ==
+    
 
 
 

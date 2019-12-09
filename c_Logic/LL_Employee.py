@@ -43,27 +43,11 @@ class Employee_LL :
         '''passa að employeeinn sé til'''
         self.demp.change_emp_phone_data(new_phonenumber, emp_ssn)
 
-
-    #def change_employee_info(self):
-        #pass
-        # open file 
-        # read file
-        # insert file content into dict in a list
-    # def new_emp_id(self):
-    #     rugl = DataAPI()
-    #     the_new_emp_id = rugl.new_emp_id()
-    #     return the_new_emp_id
         
-
-
-
-
-
 
         
 
     def assign_cabin_pilot_to_voyage(self):
         pass
-    def display_voyage(self):
-        pass
+
     
