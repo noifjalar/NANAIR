@@ -116,7 +116,11 @@ class Employee_Data :
         os.remove(self.trash_file)
         
     def get_all_emp(self) :
-        pass
+        crew_list = []
+        crew_dict = self.get_crew_dict()
+        for value in crew_dict.values() :
+            crew_list.append(value[0])
+        return sorted(crew_list)
 
     def get_pilots(self):
         pass

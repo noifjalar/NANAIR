@@ -2,12 +2,14 @@ from c_Logic.A_LL_API import LL_API
 from b_UI.UI_employee import Employee_UI
 from b_UI.UI_Aircraft import UI_Aircraft
 from b_UI.UI_destination import UI_Destination
+from b_UI.UI_display import Display_UI
 class Manager_UI :
     def __init__(self) :
         self.__la = LL_API()
         self.em = Employee_UI( self.__la )
         self.aircraft = UI_Aircraft(self.__la )
         self.destination = UI_Destination(self.__la)
+        self.disp = Display_UI( self.__la )
         
     def main_menu(self) :
     
@@ -37,7 +39,7 @@ class Manager_UI :
             #elif choice == "3":
                 #the_instance.assing_cabin_pilot_to_voyage()
             elif choice == "4":
-                self.em.display_info()
+                self.disp.display_info()
             elif choice == "5":
                 self.destination.register_destination_UI()
             elif choice == "6":
