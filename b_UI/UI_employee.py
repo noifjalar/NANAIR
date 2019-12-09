@@ -26,19 +26,23 @@ class Employee_UI :
         pick = "n"
         while pick == "n" :
             emp_ssn = input("Input the employee's ssn: ")
+            print()
             wow = self.la.print_chosen_emp(emp_ssn)
+            print("SSN: {}, Name: {} - Role: {}, Rank: {}, Licence: {}, Address: {}, Phonenumber: {}\n".format(emp_ssn,wow[0],wow[1],wow[2],wow[3],wow[4],wow[5]))
+            
             pick = "s"
 
             while pick == "s" :
         
                 #print(*wow)
-                print("SSN: {}, Name: {} - Address: {}, Role: {}, Rank: {}, Licence: {}, Phonenumber: {}".format(emp_ssn,wow[0],wow[1],wow[2],wow[3],wow[4],wow[5]))
-                print("\tChange employee info")
-                print("(1) - Address") 
-                print("(2) - Role and Rank")
-                print("(3) - Licence")
-                print("(4) - Phonenumber")
+                
+                print("Change employee info")
+                print("\t(1) - Address") 
+                print("\t(2) - Role and Rank")
+                print("\t(3) - Licence")
+                print("\t(4) - Phonenumber")
                 choice = input("Select an operation with a corresponding number: ").lower()
+                print()
 
                 if choice == "1":
                     new_address = input("New address: ")
@@ -50,7 +54,7 @@ class Employee_UI :
                     pick = input("Pick a new role: ")
                     if pick == "1":
                         new_role = "Cabincrew"
-                        print("Available ranks: ")
+                        print("\nAvailable ranks: ")
                         print("\t(1) - Flight Service Manager") 
                         print("\t(2) - Flight Attendant")
                         pick = input("Pick a new rank: ")
@@ -99,11 +103,13 @@ class Employee_UI :
                     self.change_employee_info()
 
                 wow = self.la.print_chosen_emp(emp_ssn)
-                print("SSN: {}, Name: {} - Role: {}, Rank: {}, Licence: {}, Address: {}, Phonenumber: {}".format(emp_ssn,wow[0],wow[1],wow[2],wow[3],wow[4],wow[5]))
+                print("\nSSN: {}, Name: {} - Role: {}, Rank: {}, Licence: {}, Address: {}, Phonenumber: {}\n".format(emp_ssn,wow[0],wow[1],wow[2],wow[3],wow[4],wow[5]))
                 print("Do you want to change:")
                 print("(S) - More info about the same employee,")
                 print("(N) - change a new employee,")
-                pick = input("(R) - or return to main menu")
+                print("(R) - or return to main menu")
+                pick = input("Select: ").lower()
+                print()
 
 
     

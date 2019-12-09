@@ -26,7 +26,7 @@ class Manager_UI :
             print("\t(5) - Register destination") #5
             print("\t(6) - Register airplanes") #6
             print("\t(7) - Create voyage") #7
-            print("\t Press q to quit")
+            print("\t Press Q to quit")
             
             choice = input("Select an operation with a corresponding number: ").lower()
 

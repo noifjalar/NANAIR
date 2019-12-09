@@ -5,6 +5,7 @@ from c_Logic.LL_Destination import Destination_LL
 from d_Data.Data_Employee import Employee_Data
 #import os
 
+
 class LL_API :
     def __init__(self) :
         self.__dapi = DataAPI( )
@@ -12,7 +13,7 @@ class LL_API :
         self.empll = Employee_LL()
         self.airc = Aircraft_LL()
         self.dest = Destination_LL()
-        self.disp = Display_LL()
+        #self.disp = Display_LL()
 
 
     #  Main menu selected 1
@@ -62,27 +63,27 @@ class LL_API :
         self.demp.get_all_emp()
 
     def display_pilots(self):
-        self.demp.get_pilots()
+        self.disp.disp_pilots()
 
     def display_cabin(self):
-        self.demp.get_cabin()
+        self.disp.disp_cabin()
 
     def display_cert_emp(self):
-        self.demp.get_cert_emp()
+        self.disp.disp_cert_emp()
 
     def display_off_emp(self):
-        self.demp.get_off_emp()
+        self.disp.disp_off_emp()
 
     def display_on_emp(self):
-        self.demp.get_on_emp()
+        self.disp.disp_on_emp()
 
     def display_cert_worksheet(self):
-        self.demp.get_cert_worksheet()
+        self.disp.disp_cert_worksheet()
 
     def display_pilot_licence(self):
-        self.demp.get_pilot_licence()
+        self.disp.disp_pilot_licence()
 
     def display_pilot_by_aircraft(self):
-        self.demp.get_pilot_by_aircraft()
+        self.disp.disp_pilot_by_aircraft()
 
     
