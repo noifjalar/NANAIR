@@ -80,16 +80,7 @@ class Employee_Data :
                 self.overwrite_crew_file(crew_dict)
 
         ''' Choose 2 in menu ''' 
-
-    #def change_emp_rank_data(self, new_rank, emp_ssn) :
-        # crew_dict = self.get_crew_dict()
-        # for key, value in crew_dict.items():
-        #     if key == emp_ssn :
-        #         value[2] = new_rank
-        #         self.overwrite_crew_file(crew_dict)
-
-        ''' Choose 2 in menu ''' 
-
+        
     def change_emp_lice_data(self, new_licence, emp_ssn) :
         crew_dict = self.get_crew_dict()
         for key, value in crew_dict.items():

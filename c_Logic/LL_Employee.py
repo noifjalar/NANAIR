@@ -35,10 +35,6 @@ class Employee_LL :
         '''passa að employeeinn sé til'''
         self.demp.change_emp_role_rank_data(new_role, new_rank, emp_ssn)
 
-    #def change_employee_rank(self, new_rank, emp_ssn) :
-        #'''passa að employeeinn sé til'''
-        #self.demp.change_emp_rank_data(new_rank, emp_ssn)
-
     def change_employee_licence(self, new_licence, emp_ssn) :
         '''passa að employeeinn sé til'''
         self.demp.change_emp_lice_data(new_licence, emp_ssn)

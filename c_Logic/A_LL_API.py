@@ -27,10 +27,7 @@ class LL_API :
     
     def change_empl_role_rank(self, new_role, new_rank, emp_ssn) :
         self.empll.change_employee_role_rank(new_role, new_rank, emp_ssn)
-
-    #def change_empl_rank(self, new_rank, emp_ssn) :
-        #self.empll.change_employee_rank(new_rank, emp_ssn)
-
+        
     def change_empl_licence(self, new_licence, emp_ssn) :
         self.empll.change_employee_licence(new_licence, emp_ssn)
 

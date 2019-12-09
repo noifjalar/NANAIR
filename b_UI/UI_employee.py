@@ -67,25 +67,7 @@ class Employee_UI :
                         new_rank = "Copilot"
                 
                 self.la.change_empl_role_rank(new_role, new_rank, emp_ssn)
-            # elif choice == "3":
-            #     print("Available ranks: ")
-            #     print("\t(1) - Captain") 
-            #     print("\t(2) - Copilot")
-            #     print("\t(3) - Flight Service Manager") 
-            #     print("\t(4) - Flight Attendant")
-            #     pick = input("Pick a new rank: ")
-            #     if pick == "1":
-            #         new_rank = "Captain"
-            #     elif pick == "2":
-            #         new_rank = "Copilot"
-            #     elif pick == "3":
-            #         new_rank = "Flight Service Manager"
-            #     elif pick == "4":
-            #         new_rank = "Flight Attendant"
-            #     # else:??
-            #     #     print("ertu mönni??")
-            #     # new_rank = input("New rank: ")
-            #     self.la.change_empl_rank(new_rank, emp_ssn)
+
             elif choice == "3":
                 print("Available licences: ")
                 print("\t(1) - NAFokkerF100") 
