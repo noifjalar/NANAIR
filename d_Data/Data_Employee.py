@@ -127,7 +127,15 @@ class Employee_Data :
         return sorted(crew_list)
 
     def get_pilots(self):
-        pass
+        pilot_list = []
+        pilot_dict = self.get_crew_dict()
+        for value in pilot_dict.values():
+            if value[1] == "Pilot":
+                # print(value[1])
+                pilot_list.append(value[0])
+        return pilot_list
+        # input("nice")
+        # return sorted(pilot_list)
 
     def get_cabin(self):
         pass

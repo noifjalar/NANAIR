@@ -63,7 +63,7 @@ class LL_API :
         return self.demp.get_all_emp()
 
     def display_pilots(self):
-        self.disp.disp_pilots()
+        return self.demp.get_pilots()
 
     def display_cabin(self):
         self.disp.disp_cabin()
