@@ -3,7 +3,6 @@ from d_Data.A_Data_API import DataAPI
 from c_Logic.LL_Aircraft import Aircraft_LL
 from c_Logic.LL_Destination import Destination_LL
 from d_Data.Data_Employee import Employee_Data
-from c_Logic.LL_display import Display_LL
 #import os
 
 class LL_API :
@@ -47,40 +46,43 @@ class LL_API :
     def addnewaircraft(self, nickname,planeTypeId,capacity,manufacturer):
         self.airc.addnewaircraft(nickname,planeTypeId,capacity,manufacturer)
 
-#    def display_dest(self):
-#        self.disp.disp_dest() :)
-
     def display_voy():
         pass
 
-    def display_status():
+    def display_dest(self):
         pass
 
-    def display_all_emp():
+    def display_voy(self):
         pass
 
-    def display_pilots():
+    def display_status(self):
         pass
 
-    def display_cabin():
-        pass
+    def display_all_emp(self):
+        self.demp.get_all_emp()
 
-    def display_cert_emp():
-        pass
+    def display_pilots(self):
+        self.disp.disp_pilots()
 
-    def display_off_emp():
-        pass
+    def display_cabin(self):
+        self.disp.disp_cabin()
 
-    def display_on_emp():
-        pass
+    def display_cert_emp(self):
+        self.disp.disp_cert_emp()
 
-    def display_cert_worksheet():
-        pass
+    def display_off_emp(self):
+        self.disp.disp_off_emp()
 
-    def display_pilot_licence():
-        pass
+    def display_on_emp(self):
+        self.disp.disp_on_emp()
 
-    def display_pilot_by_aircraft():
-        pass
+    def display_cert_worksheet(self):
+        self.disp.disp_cert_worksheet()
+
+    def display_pilot_licence(self):
+        self.disp.disp_pilot_licence()
+
+    def display_pilot_by_aircraft(self):
+        self.disp.disp_pilot_by_aircraft()
 
     
