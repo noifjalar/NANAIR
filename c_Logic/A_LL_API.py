@@ -48,39 +48,39 @@ class LL_API :
         self.airc.addnewaircraft(nickname,planeTypeId,capacity,manufacturer)
 
     def display_dest(self):
-        self.disp.disp_dest() :)
+        self.disp.disp_dest()
 
-    def display_voy():
-        pass
+    def display_voy(self):
+        self.disp.disp_voy()
 
-    def display_status():
-        pass
+    def display_status(self):
+        self.disp.disp_status()
 
-    def display_all_emp():
-        pass
+    def display_all_emp(self):
+        self.disp.disp_all_emp()
 
-    def display_pilots():
-        pass
+    def display_pilots(self):
+        self.disp.disp_pilots()
 
-    def display_cabin():
-        pass
+    def display_cabin(self):
+        self.disp.disp_cabin()
 
-    def display_cert_emp():
-        pass
+    def display_cert_emp(self):
+        self.disp.disp_cert_emp()
 
-    def display_off_emp():
-        pass
+    def display_off_emp(self):
+        self.disp.disp_off_emp()
 
-    def display_on_emp():
-        pass
+    def display_on_emp(self):
+        self.disp.disp_on_emp()
 
-    def display_cert_worksheet():
-        pass
+    def display_cert_worksheet(self):
+        self.disp.disp_cert_worksheet()
 
-    def display_pilot_licence():
-        pass
+    def display_pilot_licence(self):
+        self.disp.disp_pilot_licence()
 
-    def display_pilot_by_aircraft():
-        pass
+    def display_pilot_by_aircraft(self):
+        self.disp.disp_pilot_by_aircraft()
 
     
