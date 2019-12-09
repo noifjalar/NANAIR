@@ -42,12 +42,49 @@ class Employee_UI :
                 new_address = input("New address: ")
                 self.la.change_empl_address(new_address, emp_ssn)
             elif choice == "2":
-                new_role = input("New role: ")
+                print("\t(1) - Cabin") 
+                print("\t(2) - Pilot")
+                pick = input("Pick a new role: ")
+                if pick == "1":
+                    new_role = "Cabincrew"
+                elif pick == "2":
+                    new_role = "Pilot"
+                # else:??
+                #     print("ertu mönni??")
+                # new_role = input("New role: ")
                 self.la.change_empl_role(new_role, emp_ssn)
             elif choice == "3":
-                new_rank = input("New rank: ")
+                print("\t(1) - Captain") 
+                print("\t(2) - Copilot")
+                print("\t(3) - Flight Service Manager") 
+                print("\t(4) - Flight Attendant")
+                pick = input("Pick a new rank: ")
+                if pick == "1":
+                    new_rank = "Captain"
+                elif pick == "2":
+                    new_rank = "Copilot"
+                elif pick == "3":
+                    new_rank = "Flight Service Manager"
+                elif pick == "4":
+                    new_rank = "Flight Attendant"
+                # else:??
+                #     print("ertu mönni??")
+                # new_rank = input("New rank: ")
                 self.la.change_empl_rank(new_rank, emp_ssn)
             elif choice == "4":
+                print("\t(1) - NAFokkerF100") 
+                print("\t(2) - NABAE146")
+                print("\t(3) - NAFokkerF28") 
+               
+                pick = input("Pick new licence: ")
+                if pick == "1":
+                    new_rank = "NAFokkerF100"
+                elif pick == "2":
+                    new_rank = "NABAE146"
+                elif pick == "3":
+                    new_rank = "NAFokkerF28"
+                else:
+                    print("ertu mönni??")
                 new_licence = input("New licence: ")
                 self.la.change_empl_licence(new_licence, emp_ssn)
             elif choice == "5":
