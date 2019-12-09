@@ -154,8 +154,29 @@ class Employee_Data :
     def get_cert_worksheet(self):
         pass
 
-    def get_pilot_licence(self):
-        pass
+    def get_pilots_with_NABAE146(self):
+        nabae146_list = []
+        nabae146_dict = self.get_crew_dict()
+        for value in nabae146_dict.values() :
+            if value[3] == "NABAE146":
+                nabae146_list.append(value[0])
+        return sorted(nabae146_list)
+
+    def get_pilots_with_NAFokkerF28(self):
+        nafokkerf28_list = []
+        nafokkerf28_dict = self.get_crew_dict()
+        for value in nafokkerf28_dict.values() :
+            if value[3] == "NAFokkerF28":
+                nafokkerf28_list.append(value[0])
+        return sorted(nafokkerf28_list)
+
+    def get_pilots_with_NAFokker100(self):
+        nafokker100_list = []
+        nafokker100_dict = self.get_crew_dict()
+        for value in nafokker100_dict.values() :
+            if value[3] == "NAFokkerF100":
+                nafokker100_list.append(value[0])
+        return sorted(nafokker100_list)
 
     def get_pilot_by_aircraft(self):
         pass
