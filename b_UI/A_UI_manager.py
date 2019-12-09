@@ -46,6 +46,8 @@ class Manager_UI :
                 self.aircraft.register_aircraft_UI()
             #elif choice == "7":
                 #the_instance.create_voyage()
+            elif choice == "q" :
+                quit
             else:
                 print("Input error! Try again")
                 self.main_menu()
