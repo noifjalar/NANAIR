@@ -62,13 +62,17 @@ class Display_UI :
 
             elif choice == "2" :
                 self.la.display_dest()
+                pass
 
             elif choice == "3" :
                 self.la.display_voy()
+                pass
 
             elif choice == "4" :
                 self.la.display_status()
+                pass
 
             else:
                 print("Invalid input!")
+                pass
  
