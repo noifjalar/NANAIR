@@ -44,3 +44,41 @@ class LL_API :
     #  Main menu selected 6   
     def addnewaircraft(self, nickname,planeTypeId,capacity,manufacturer):
         self.airc.addnewaircraft(nickname,planeTypeId,capacity,manufacturer)
+
+    def display_dest():
+        pass
+
+    def display_voy():
+        pass
+
+    def display_status():
+        pass
+
+    def display_all_emp():
+        pass
+
+    def display_pilots():
+        pass
+
+    def display_cabin():
+        pass
+
+    def display_cert_emp():
+        pass
+
+    def display_off_emp():
+        pass
+
+    def display_on_emp():
+        pass
+
+    def display_cert_worksheet():
+        pass
+
+    def display_pilot_licence():
+        pass
+
+    def display_pilot_by_aircraft():
+        pass
+
+    
