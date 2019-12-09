@@ -39,7 +39,10 @@ class Display_UI :
                         for name in all_emp :
                             print(name)
                     elif next_choice == "2" :
-                        self.la.display_pilots()
+                        pilot_list = self.la.get_pilots()
+                        print(pilot_list)
+                        for name in pilot_list:
+                            print(name)
                     elif next_choice == "3" :
                         self.la.display_cabin()
                     elif next_choice == "4" :

@@ -51,3 +51,5 @@ class Employee_LL :
         pass
 
     
+    def get_pilots(self):
+        return self.demp.get_pilots()

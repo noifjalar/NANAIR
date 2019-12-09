@@ -62,7 +62,7 @@ class LL_API :
     def display_all_emp(self):
         return self.demp.get_all_emp()
 
-    def display_pilots(self):
+    def get_pilots(self):
         return self.demp.get_pilots()
 
     def display_cabin(self):
@@ -86,4 +86,3 @@ class LL_API :
     def display_pilot_by_aircraft(self):
         self.disp.disp_pilot_by_aircraft()
 
-    
