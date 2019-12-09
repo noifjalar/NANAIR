@@ -30,54 +30,69 @@ class Employee_UI :
             print("SSN: {}, Name: {} - Address: {}, Role: {}, Rank: {}, Licence: {}, Phonenumber: {}".format(emp_ssn,wow[0],wow[1],wow[2],wow[3],wow[4],wow[5]))
             print("\tChange employee info")
             print("(1) - Address") 
-            print("(2) - Role")
-            print("(3) - Rank")
-            print("(4) - Licence")
-            print("(5) - Phonenumber")
+            print("(2) - Role and Rank")
+            #print("(3) - Rank")
+            print("(3) - Licence")
+            print("(4) - Phonenumber")
             print("Press q to quit")
             choice = input("Select an operation with a corresponding number: ").lower()
-            #emp_ssn = input("Input the employee's ssn: ")
 
             if choice == "1":
                 new_address = input("New address: ")
                 self.la.change_empl_address(new_address, emp_ssn)
             elif choice == "2":
+                print("Available roles: ")
                 print("\t(1) - Cabin") 
                 print("\t(2) - Pilot")
                 pick = input("Pick a new role: ")
                 if pick == "1":
                     new_role = "Cabincrew"
+                    print("Available ranks: ")
+                    print("\t(1) - Flight Service Manager") 
+                    print("\t(2) - Flight Attendant")
+                    pick = input("Pick a new rank: ")
+                    if pick == "1":
+                        new_rank = "Flight Service Manager"
+                    elif pick == "2":
+                        new_rank = "Flight Attendant"
                 elif pick == "2":
                     new_role = "Pilot"
-                # else:??
-                #     print("ertu mönni??")
-                # new_role = input("New role: ")
-                self.la.change_empl_role(new_role, emp_ssn)
+                    print("Available ranks: ")
+                    print("\t(1) - Captain") 
+                    print("\t(2) - Copilot")
+                    if pick == "1":
+                        new_rank = "Captain"
+                    elif pick == "2":
+                        new_rank = "Copilot"
+                
+                self.la.change_empl_role_rank(new_role, new_rank, emp_ssn)
+            # elif choice == "3":
+            #     print("Available ranks: ")
+            #     print("\t(1) - Captain") 
+            #     print("\t(2) - Copilot")
+            #     print("\t(3) - Flight Service Manager") 
+            #     print("\t(4) - Flight Attendant")
+            #     pick = input("Pick a new rank: ")
+            #     if pick == "1":
+            #         new_rank = "Captain"
+            #     elif pick == "2":
+            #         new_rank = "Copilot"
+            #     elif pick == "3":
+            #         new_rank = "Flight Service Manager"
+            #     elif pick == "4":
+            #         new_rank = "Flight Attendant"
+            #     # else:??
+            #     #     print("ertu mönni??")
+            #     # new_rank = input("New rank: ")
+            #     self.la.change_empl_rank(new_rank, emp_ssn)
             elif choice == "3":
-                print("\t(1) - Captain") 
-                print("\t(2) - Copilot")
-                print("\t(3) - Flight Service Manager") 
-                print("\t(4) - Flight Attendant")
-                pick = input("Pick a new rank: ")
-                if pick == "1":
-                    new_rank = "Captain"
-                elif pick == "2":
-                    new_rank = "Copilot"
-                elif pick == "3":
-                    new_rank = "Flight Service Manager"
-                elif pick == "4":
-                    new_rank = "Flight Attendant"
-                # else:??
-                #     print("ertu mönni??")
-                # new_rank = input("New rank: ")
-                self.la.change_empl_rank(new_rank, emp_ssn)
-            elif choice == "4":
+                print("Available licences: ")
                 print("\t(1) - NAFokkerF100") 
                 print("\t(2) - NABAE146")
                 print("\t(3) - NAFokkerF28") 
                 print("\t(4) - N/A") 
                
-                pick = input("Pick new licence: ")
+                pick = input("Pick new licence: ") 
                 if pick == "1":
                     new_licence = "NAFokkerF100"
                 elif pick == "2":
@@ -86,11 +101,11 @@ class Employee_UI :
                     new_licence = "NAFokkerF28"
                 elif pick == "4":
                     new_licence = "N/A"
-                # else:???
-                #     print("ertu mönni??")
-                # new_licence = input("New licence: ")
+                else:
+                    print("Invalid input!")
+                    break
                 self.la.change_empl_licence(new_licence, emp_ssn)
-            elif choice == "5":
+            elif choice == "4":
                 new_phonenumber = input("New phonenumber: ")
                 self.la.change_empl_phonenumber(new_phonenumber,emp_ssn)
             else :

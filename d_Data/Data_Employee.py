@@ -71,21 +71,22 @@ class Employee_Data :
 
         ''' Choose 2 in menu ''' 
 
-    def change_emp_role_data(self, new_role, emp_ssn) :
+    def change_emp_role_rank_data(self, new_role, new_rank, emp_ssn) :
         crew_dict = self.get_crew_dict()
         for key, value in crew_dict.items():
             if key == emp_ssn :
                 value[1] = new_role
+                value[2] = new_rank
                 self.overwrite_crew_file(crew_dict)
 
         ''' Choose 2 in menu ''' 
 
-    def change_emp_rank_data(self, new_rank, emp_ssn) :
-        crew_dict = self.get_crew_dict()
-        for key, value in crew_dict.items():
-            if key == emp_ssn :
-                value[2] = new_rank
-                self.overwrite_crew_file(crew_dict)
+    #def change_emp_rank_data(self, new_rank, emp_ssn) :
+        # crew_dict = self.get_crew_dict()
+        # for key, value in crew_dict.items():
+        #     if key == emp_ssn :
+        #         value[2] = new_rank
+        #         self.overwrite_crew_file(crew_dict)
 
         ''' Choose 2 in menu ''' 
 

@@ -31,13 +31,13 @@ class Employee_LL :
         '''passa að employeeinn sé til'''
         self.demp.change_emp_addr_data(new_address, emp_ssn)
     
-    def change_employee_role(self, new_role, emp_ssn) :
+    def change_employee_role_rank(self, new_role, new_rank, emp_ssn) :
         '''passa að employeeinn sé til'''
-        self.demp.change_emp_role_data(new_role, emp_ssn)
+        self.demp.change_emp_role_rank_data(new_role, new_rank, emp_ssn)
 
-    def change_employee_rank(self, new_rank, emp_ssn) :
-        '''passa að employeeinn sé til'''
-        self.demp.change_emp_rank_data(new_rank, emp_ssn)
+    #def change_employee_rank(self, new_rank, emp_ssn) :
+        #'''passa að employeeinn sé til'''
+        #self.demp.change_emp_rank_data(new_rank, emp_ssn)
 
     def change_employee_licence(self, new_licence, emp_ssn) :
         '''passa að employeeinn sé til'''
