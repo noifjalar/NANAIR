@@ -75,17 +75,20 @@ class Employee_UI :
                 print("\t(1) - NAFokkerF100") 
                 print("\t(2) - NABAE146")
                 print("\t(3) - NAFokkerF28") 
+                print("\t(4) - N/A") 
                
                 pick = input("Pick new licence: ")
                 if pick == "1":
-                    new_rank = "NAFokkerF100"
+                    new_licence = "NAFokkerF100"
                 elif pick == "2":
-                    new_rank = "NABAE146"
+                    new_licence = "NABAE146"
                 elif pick == "3":
-                    new_rank = "NAFokkerF28"
-                else:
-                    print("ertu mönni??")
-                new_licence = input("New licence: ")
+                    new_licence = "NAFokkerF28"
+                elif pick == "4":
+                    new_licence = "N/A"
+                # else:???
+                #     print("ertu mönni??")
+                # new_licence = input("New licence: ")
                 self.la.change_empl_licence(new_licence, emp_ssn)
             elif choice == "5":
                 new_phonenumber = input("New phonenumber: ")
