@@ -77,8 +77,14 @@ class LL_API :
     def display_cert_worksheet(self):
         self.disp.disp_cert_worksheet()
 
-    def display_pilots_with_licence(self):
-        self.disp.disp_pilots_with_licence()
+    def get_pilots_with_NABAE146(self):
+        return self.empll.get_pilots_with_NABAE146()
+
+    def get_pilots_with_NAFokkerF28(self):
+        return self.empll.get_pilots_with_NAFokkerF28()
+
+    def get_pilots_with_NAFokker100(self):
+        return self.empll.get_pilots_with_NAFokker100()
 
     def display_pilot_by_aircraft(self):
         self.disp.disp_pilot_by_aircraft()

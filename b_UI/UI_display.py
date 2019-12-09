@@ -64,7 +64,29 @@ class Display_UI :
                     elif next_choice == "7" :
                         self.la.display_cert_worksheet() #VANTAR 
                     elif next_choice == "8" :
-                        self.la.display_pilots_with_licence() 
+                        print("Available licences: ")
+                        print("\t(1) - NABAE146")
+                        print("\t(2) - NAFokkerF28")
+                        print("\t(3) - NAFokkerF100")
+                        pick = input("Choose licence: ")
+                        if pick == "1":
+                            nabae_list = self.la.get_pilots_with_NABAE146() 
+                            for pilot in nabae_list:
+                                print("Pilots with NABAE146 licence: ")
+                                print(pilot)
+                        elif pick == "2":
+                            nafokkerf28_list = self.la.get_pilots_with_NAFokkerF28()
+                            for pilot in nafokkerf28_list:
+                                print("Pilots with NAFokkerF28 licence: ")
+                                print(pilot)
+                        elif pick == "3":
+                            nafokker100_list = self.la.get_pilots_with_NAFokker100()
+                            for pilot in nafokker100_list:
+                                print("Pilots with NAFokkerF100 licence: ")
+                                print(pilot)
+                        else:
+                            print("Invalid input!")
+
                         
                     elif next_choice == "9" :
                         self.la.display_pilot_by_licene()

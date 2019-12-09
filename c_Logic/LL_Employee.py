@@ -43,7 +43,7 @@ class Employee_LL :
         '''passa að employeeinn sé til'''
         self.demp.change_emp_phone_data(new_phonenumber, emp_ssn)
 
-        
+    
 
         
 
@@ -56,3 +56,12 @@ class Employee_LL :
 
     def get_cabin(self) :
         return self.demp.get_cabin()
+
+    def get_pilots_with_NABAE146(self):
+        return self.demp.get_pilots_with_NABAE146()
+
+    def get_pilots_with_NAFokkerF28(self):
+        return self.demp.get_pilots_with_NAFokkerF28()
+
+    def get_pilots_with_NAFokker100(self):
+        return self.demp.get_pilots_with_NAFokker100()
