@@ -133,12 +133,17 @@ class Employee_Data :
             if value[1] == "Pilot":
                 # print(value[1])
                 pilot_list.append(value[0])
-        return pilot_list
+        return sorted(pilot_list)
         # input("nice")
         # return sorted(pilot_list)
 
     def get_cabin(self):
-        pass
+        cabin_list = []
+        cabin_dict = self.get_crew_dict()
+        for value in cabin_dict.values() :
+            if value[1] == "Cabincrew":
+                cabin_list.append(value[0])
+        return sorted(cabin_list)
 
     def get_cert_emp(self):
         pass

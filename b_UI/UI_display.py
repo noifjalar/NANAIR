@@ -35,16 +35,21 @@ class Display_UI :
                     next_choice = input("Select an operation with a corresponding number: ").lower()
                 
                     if next_choice == "1" :
-                        all_emp = self.la.display_all_emp()
+                        print("Employee list: ")
+                        all_emp = self.la.get_all_emp()
                         for name in all_emp :
                             print(name)
                     elif next_choice == "2" :
+                        print("Pilot list: ")
                         pilot_list = self.la.get_pilots()
-                        print(pilot_list)
                         for name in pilot_list:
                             print(name)
                     elif next_choice == "3" :
-                        self.la.display_cabin()
+                        print("Cabin list: ")
+                        self.la.get_cabin()
+                        cabin_list = self.la.get_cabin()
+                        for name in cabin_list:
+                            print(name)
                     elif next_choice == "4" :
                         self.la.display_cert_emp()
                     elif next_choice == "5" :

@@ -59,14 +59,14 @@ class LL_API :
     def display_status(self):
         pass
 
-    def display_all_emp(self):
+    def get_all_emp(self):
         return self.demp.get_all_emp()
 
     def get_pilots(self):
         return self.demp.get_pilots()
 
-    def display_cabin(self):
-        self.disp.disp_cabin()
+    def get_cabin(self):
+        return self.demp.get_cabin()
 
     def display_cert_emp(self):
         self.disp.disp_cert_emp()
