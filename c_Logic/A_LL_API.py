@@ -3,7 +3,6 @@ from d_Data.A_Data_API import DataAPI
 from c_Logic.LL_Aircraft import Aircraft_LL
 from c_Logic.LL_Destination import Destination_LL
 from d_Data.Data_Employee import Employee_Data
-from c_Logic.LL_display import Display_LL
 #import os
 
 class LL_API :
@@ -48,16 +47,16 @@ class LL_API :
         self.airc.addnewaircraft(nickname,planeTypeId,capacity,manufacturer)
 
     def display_dest(self):
-        self.disp.disp_dest()
+        pass
 
     def display_voy(self):
-        self.disp.disp_voy()
+        pass
 
     def display_status(self):
-        self.disp.disp_status()
+        pass
 
     def display_all_emp(self):
-        self.disp.disp_all_emp()
+        self.demp.get_all_emp()
 
     def display_pilots(self):
         self.disp.disp_pilots()
