@@ -48,7 +48,7 @@ class LL_API :
         self.airc.addnewaircraft(nickname,planeTypeId,capacity,manufacturer)
 
     def display_dest(self):
-        self.disp.disp_dest()
+        self.disp.disp_dest() :)
 
     def display_voy():
         pass
