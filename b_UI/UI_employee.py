@@ -82,6 +82,8 @@ class Employee_UI :
                     print("\t(3) - NAFokkerF28") 
                     print("\t(4) - N/A") 
                     
+
+                    #búa til model fyrir töfluna
                     pick = input("Pick new licence: ") 
                     if pick == "1":
                         new_licence = "NAFokkerF100"

@@ -94,6 +94,10 @@ class Employee_Data :
         crew_dict = self.get_crew_dict()
         for key, value in crew_dict.items():
             if key == emp_ssn :
+
+
+                #Skoða, new_role, hvað er það?
+
                 value[5] = new_role
                 self.overwrite_crew_file(crew_dict)
 

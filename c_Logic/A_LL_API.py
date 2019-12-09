@@ -33,7 +33,7 @@ class LL_API :
     def change_empl_licence(self, new_licence, emp_ssn) :
         self.empll.change_employee_licence(new_licence, emp_ssn)
 
-    def change_empl_phonenumber(self, new_phonenumber, emp_snn) :
+    def change_empl_phonenumber(self, new_phonenumber, emp_ssn) :
         self.empll.change_employee_phonenumber(new_phonenumber, emp_ssn)
 
     def new_emp_id(self):
