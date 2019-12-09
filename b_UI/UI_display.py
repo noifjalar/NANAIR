@@ -14,7 +14,7 @@ class Display_UI :
             print("\t(2) - Display destinations")
             print("\t(3) - Display voyages")
             print("\t(4) - Display aircraft's status")
-            print("\t Press q to quit")
+            print("\t Press Q to quit")
             
             choice = input("Select an operation with a corresponding number: ").lower()
 
@@ -31,6 +31,7 @@ class Display_UI :
                     print("\t(7) - Display certain employees weekly worksheet")
                     print("\t(8) - Display pilots with certain licences")
                     print("\t(9) - Display pilots ordered by aircraft type")
+                    print("\tPress Q to go back")
                     next_choice = input("Select an operation with a corresponding number: ").lower()
                 
                     if next_choice == "1" :
