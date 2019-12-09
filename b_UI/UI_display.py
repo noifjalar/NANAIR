@@ -1,14 +1,16 @@
-    
+from c_Logic.A_LL_API import LL_API 
 class Display_UI :
     def __init__(self, logicAPI_in ) :
         self.la = logicAPI_in
     
-    def display_info() :
-        choice == "" 
-        while choice != "q" :
+    def display_info(self) :
+
+        choice = ""
+
+        while choice != "q" : 
             print("Display information")
             print("")
-            print("\t(1)Display employee information")
+            print("\t(1) - Display employee information")
             print("\t(2) - Display destinations")
             print("\t(3) - Display voyages")
             print("\t(4) - Display aircraft's status")
@@ -17,7 +19,8 @@ class Display_UI :
             choice = input("Select an operation with a corresponding number: ").lower()
 
             if choice == "1" :
-                while next_choice != "q"
+                next_choice = ""
+                while next_choice != "q" :
                     print("Employee information")
                     print("\t(1) - Display all employees") 
                     print("\t(2) - Display pilots") 
@@ -31,7 +34,9 @@ class Display_UI :
                     next_choice = input("Select an operation with a corresponding number: ").lower()
                 
                     if next_choice == "1" :
-                        self.la.display_all_emp()
+                        all_emp = self.la.display_all_emp()
+                        for name in all_emp :
+                            print(name)
                     elif next_choice == "2" :
                         self.la.display_pilots()
                     elif next_choice == "3" :

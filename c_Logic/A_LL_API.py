@@ -13,7 +13,7 @@ class LL_API :
         self.empll = Employee_LL()
         self.airc = Aircraft_LL()
         self.dest = Destination_LL()
-        #self.disp = Display_LL()
+        self.demp = Employee_Data()
 
 
     #  Main menu selected 1
@@ -47,7 +47,7 @@ class LL_API :
     def addnewaircraft(self, nickname,planeTypeId,capacity,manufacturer):
         self.airc.addnewaircraft(nickname,planeTypeId,capacity,manufacturer)
 
-    def display_voy():
+    def display_voy(self):
         pass
 
     def display_dest(self):
@@ -60,7 +60,7 @@ class LL_API :
         pass
 
     def display_all_emp(self):
-        self.demp.get_all_emp()
+        return self.demp.get_all_emp()
 
     def display_pilots(self):
         self.disp.disp_pilots()
