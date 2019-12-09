@@ -3,6 +3,7 @@ from d_Data.A_Data_API import DataAPI
 from c_Logic.LL_Aircraft import Aircraft_LL
 from c_Logic.LL_Destination import Destination_LL
 from d_Data.Data_Employee import Employee_Data
+from c_Logic.LL_display import Display_LL
 #import os
 
 class LL_API :
@@ -12,6 +13,7 @@ class LL_API :
         self.empll = Employee_LL()
         self.airc = Aircraft_LL()
         self.dest = Destination_LL()
+        self.disp = Display_LL()
 
 
     #  Main menu selected 1
@@ -27,7 +29,7 @@ class LL_API :
     
     def change_empl_role_rank(self, new_role, new_rank, emp_ssn) :
         self.empll.change_employee_role_rank(new_role, new_rank, emp_ssn)
-        
+
     def change_empl_licence(self, new_licence, emp_ssn) :
         self.empll.change_employee_licence(new_licence, emp_ssn)
 
@@ -45,8 +47,8 @@ class LL_API :
     def addnewaircraft(self, nickname,planeTypeId,capacity,manufacturer):
         self.airc.addnewaircraft(nickname,planeTypeId,capacity,manufacturer)
 
-    def display_dest():
-        pass
+    def display_dest(self):
+        self.disp.disp_dest()
 
     def display_voy():
         pass
