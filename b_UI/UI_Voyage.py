@@ -11,11 +11,11 @@ class voyage_UI :
     def register_voyage_UI(self):
         
 
-        flightNumber = input("Enter a flight number :")
+        flight_number = input("Enter a flight number :")
 
-        departingFrom =input("Enter departingFrom :")
+        departing_from =input("Enter departingFrom :")
 
-        arrivingAt =input("Enter arrivingAt :")
+        arriving_at =input("Enter arrivingAt :")
 
 
         year= int(input('input a year:'))
@@ -29,5 +29,5 @@ class voyage_UI :
         
         arrival = ("Enter arrivingAt  TIME :")
 
-        self.la.addnewvoyage(flightNumber, departingFrom, arrivingAt, departure, arrival)
+        self.la.addnewvoyage(flight_number, departing_from, arriving_at, departure, arrival)
 
