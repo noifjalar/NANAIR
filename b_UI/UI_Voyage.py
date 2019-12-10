@@ -27,7 +27,7 @@ class voyage_UI :
             else:
                 print("({}) - {}".format(counter, key))
                 counter += 1
-        val = input("Choose a destination: ")
+        val = int(input("Choose a destination: "))
         #print(val)
         counter = 1
         for key, value in dest_dict.items():
@@ -35,11 +35,12 @@ class voyage_UI :
                 pass
             else:
                 if val == counter:
+                    print('bagg')
                     arriving_at = value[0]
                     voy_dest_time = value[1]
                 counter += 1
         #arriving_at = voy_destination
-        print(voy_dest_time)
+        # print(voy_dest_time)
         print(arriving_at)
         input
             
