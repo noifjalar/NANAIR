@@ -7,6 +7,8 @@ class UI_Destination:
         self.la = logicAPI_in
 
     def register_destination_UI(self):
+        print("Register destination")
+        print()
         identity = input("ID: ")
         destination = input("Destination: ")
         flight_time = input("Flight time: ")

@@ -45,7 +45,7 @@ class Employee_UI :
         print("\t(3) - NAFokkerF28") 
         print("\t(4) - N/A") 
         print()
-        pick = input("Pick new licence: ") 
+        pick = input("Pick a new licence: ") 
         print()
         if pick == "1":
             licence = "NAFokkerF100"
@@ -76,7 +76,7 @@ class Employee_UI :
         
                 #print(*wow)
                 
-                print("Change employee info")
+                print("Change employee info:")
                 print("\t(1) - Address") 
                 print("\t(2) - Role and Rank")
                 print("\t(3) - Licence")
@@ -124,7 +124,7 @@ class Employee_UI :
                     
 
                     #búa til model fyrir töfluna
-                    pick = input("Pick new licence: ") 
+                    pick = input("Pick a new licence: ") 
                     if pick == "1":
                         new_licence = "NAFokkerF100"
                     elif pick == "2":

@@ -130,6 +130,5 @@ class Display_UI :
                 pass
 
             else:
-                print("Invalid input!")
                 pass
  
