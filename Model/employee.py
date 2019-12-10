@@ -22,10 +22,10 @@ class Employee :
     def emp_comma_to_string (self):
         ret = self.ssn + ","\
               + self.name + ","\
-              + self.address + ","\
               + self.role + ","\
               + self.rank + ","\
               + self.licence + ","\
+              + self.address + ","\
               + self.phonenumber
               #+ self.emp_id
         return ret

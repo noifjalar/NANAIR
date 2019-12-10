@@ -10,10 +10,10 @@ class Employee_UI :
     def register_employee_UI(self):
         ssn = input("SSN: ")
         name = input("Name: ")
-        address = input("Address: ")
         role = input("Role: ")
         rank = input("Rank: ")
         licence = input("Licence: ")
+        address = input("Address: ")
         phonenumber = input("Mobile: ")
         #de = Employee_Data()
         #emp_id = self.la.new_emp_id()
