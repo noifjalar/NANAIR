@@ -10,15 +10,55 @@ class Employee_UI :
     def register_employee_UI(self):
         ssn = input("SSN: ")
         name = input("Name: ")
-        role = input("Role: ")
-        rank = input("Rank: ")
-        licence = input("Licence: ")
+        print("Available roles: ")
+        print("\t(1) - Cabin") 
+        print("\t(2) - Pilot")
+        print()
+        pick = input("Pick a new role: ")
+        print()
+        if pick == "1":
+            role = "Cabincrew"
+            print("\nAvailable ranks: ")
+            print("\t(1) - Flight Service Manager") 
+            print("\t(2) - Flight Attendant")
+            print()
+            new_pick = input("Pick a new rank: ")
+            if new_pick == "1":
+                rank = "Flight Service Manager"
+            elif new_pick == "2":
+                rank = "Flight Attendant"
+        elif pick == "2":
+            role = "Pilot"
+            print("Available ranks: ")
+            print("\t(1) - Captain") 
+            print("\t(2) - Copilot")
+            print()
+            pick = input("Pick a new rank: ")
+            if pick == "1":
+                rank = "Captain"
+            elif pick == "2":
+                rank = "Copilot"
+        print()        
+        print("Available licences: ")
+        print("\t(1) - NAFokkerF100") 
+        print("\t(2) - NABAE146")
+        print("\t(3) - NAFokkerF28") 
+        print("\t(4) - N/A") 
+        print()
+        pick = input("Pick new licence: ") 
+        print()
+        if pick == "1":
+            licence = "NAFokkerF100"
+        elif pick == "2":
+            licence = "NABAE146"
+        elif pick == "3":
+            licence = "NAFokkerF28"
+        elif pick == "4":
+            licence = "N/A"
+        else:
+            print("Invalid input!")   
         address = input("Address: ")
         phonenumber = input("Mobile: ")
-        #de = Employee_Data()
-        #emp_id = self.la.new_emp_id()
-        #emp_id = la.new_emp_id()
-        #new_emp = Employee(ssn, name, role, rank, licence, address, phonenumber, emp_id)
         self.la.addnewemplyee(ssn, name, role, rank, licence, address, phonenumber)
 
     def change_employee_info(self) :

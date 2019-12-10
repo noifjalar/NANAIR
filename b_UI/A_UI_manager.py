@@ -29,8 +29,9 @@ class Manager_UI :
             print("\t(6) - Register airplanes") #6
             print("\t(7) - Create voyage") #7
             print("\t Press Q to quit")
-            
+            print()
             choice = input("Select an operation with a corresponding number: ").lower()
+            print()
 
             if choice == "1":
                 self.em.register_employee_UI()
