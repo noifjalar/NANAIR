@@ -9,9 +9,6 @@ class Voyage_Data :
         self.filename = "./a_csv/UpcomingFlights.csv"
         self.trash_file = "./a_csv/UpcomingFlights_Trash.csv"    
     
-    
-
-    
     def register_voyage_data(self, flightNumber, departingFrom, arrivingAt, departure, arrival):
             new_voy = Voyage(flightNumber, departingFrom, arrivingAt, departure, arrival)
             try :
@@ -21,3 +18,9 @@ class Voyage_Data :
                     upcoming_file.close()      
             except FileNotFoundError :
                 return None    
+
+    def get_voy_dict():
+        voy_dict = []
+        for line in self.filename:
+            voy_
+            voy_dict = line.append()

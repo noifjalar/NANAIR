@@ -11,11 +11,24 @@ class voyage_UI :
     def register_voyage_UI(self):
         
 
-        flight_number = input("Enter a flight number :")
+        flight_number = input("Enter a flight number: ")
 
-        departing_from =input("Enter departingFrom :")
+        departing_from = "KEF"
 
-        arriving_at =input("Enter arrivingAt :")
+
+
+
+        dest_dict = self.la.voy_dest()
+        counter = 1
+        for key,value in dest_dict.items():
+            if key == "Keflavik":
+                pass
+            else:
+                print("({}) - {}".format(counter, key))
+                counter += 1
+        
+
+
 
 
         year= int(input('input a year:'))
@@ -27,7 +40,7 @@ class voyage_UI :
         year, month, day, hour, minute = year, month, day, hour, minute
         departure = datetime.datetime(year, month, day, hour, minute).isoformat()
         
-        arrival = ("Enter arrivingAt  TIME :")
+        arrival = input("Enter arrivingAt  TIME :")
 
         self.la.addnewvoyage(flight_number, departing_from, arriving_at, departure, arrival)
 
