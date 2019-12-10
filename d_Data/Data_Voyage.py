@@ -12,7 +12,7 @@ class Voyage_Data :
     
 
     
-    def register_voyage_Data(self, flightNumber, departingFrom, arrivingAt, departure, arrival):
+    def register_voyage_data(self, flightNumber, departingFrom, arrivingAt, departure, arrival):
             new_voy = Voyage(flightNumber, departingFrom, arrivingAt, departure, arrival)
             try :
                 with open( self.filename ,"a") as upcoming_file:

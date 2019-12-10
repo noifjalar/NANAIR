@@ -3,6 +3,7 @@ from b_UI.UI_employee import Employee_UI
 from b_UI.UI_Aircraft import UI_Aircraft
 from b_UI.UI_destination import UI_Destination
 from b_UI.UI_display import Display_UI
+from b_UI.UI_Voyage import voyage_UI
 class Manager_UI :
     def __init__(self) :
         self.__la = LL_API()
@@ -10,6 +11,8 @@ class Manager_UI :
         self.aircraft = UI_Aircraft(self.__la )
         self.destination = UI_Destination(self.__la)
         self.disp = Display_UI( self.__la )
+        self.voyage = voyage_UI(self.__la)
+        
         
     def main_menu(self) :
     
@@ -45,8 +48,8 @@ class Manager_UI :
                 self.destination.register_destination_UI()
             elif choice == "6":
                 self.aircraft.register_aircraft_UI()
-            #elif choice == "7":
-                #the_instance.create_voyage()
+            elif choice == "7":
+                self.voyage.register_voyage_UI()
             elif choice == "q" :
                 quit
             else:

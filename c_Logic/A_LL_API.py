@@ -3,6 +3,7 @@ from d_Data.A_Data_API import DataAPI
 from c_Logic.LL_Aircraft import Aircraft_LL
 from c_Logic.LL_Destination import Destination_LL
 from d_Data.Data_Employee import Employee_Data
+from c_Logic.LL_Voyage import Voyage_LL
 #import os
 
 
@@ -14,8 +15,13 @@ class LL_API :
         self.airc = Aircraft_LL()
         self.dest = Destination_LL()
         self.demp = Employee_Data()
+        self.voy = Voyage_LL()
+        
 
-
+    # 
+    def addnewvoyage( self, flightNumber, departingFrom, arrivingAt, departure, arrival):
+        self.voy.addnewvoyage(flightNumber, departingFrom, arrivingAt, departure, arrival )
+    # 
     #  Main menu selected 1
     def addnewemplyee( self, ssn, name, role, rank, licence, address, phonenumber):
         self.empll.addnewemployee( ssn, name, role, rank, licence, address, phonenumber ) 
