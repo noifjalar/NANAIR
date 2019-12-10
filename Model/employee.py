@@ -7,7 +7,6 @@ class Employee :
         self.licence = licence
         self.address = address
         self.phonenumber = phonenumber
-        #self.emp_id = emp_id
 
     def __str__(self):
         return "Name: {self.name} - SSN: {self.ssn} - role: {self.role} - licence: {self.licence} - address: {self.address} - phonenumber: {self.phonenumber}"
@@ -27,13 +26,4 @@ class Employee :
               + self.licence + ","\
               + self.address + ","\
               + self.phonenumber
-              #+ self.emp_id
         return ret
-
-    # def new_emp_id (self):
-    #     with open ("./csv/Crew.csv","r") as file_object:
-    #         counter = 0
-    #         for line in file_object:
-    #             counter += 1
-    #         new_emp_id = counter + 1
-    #     return new_emp_id
