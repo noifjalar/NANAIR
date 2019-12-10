@@ -15,21 +15,16 @@ class Destination_Data :
             return None       
 
        
-    def get_dest_dict(self) :
+    def get_dest_dict(self) : #LAGAAAAAA
         dest_dict = {}
         try :
             with open( self.filename , "r" ) as dest_file:
-                header = True
                 for line in dest_file :
-                    if header :
-                        header = False
-                        continue
-                    else:
-                        identity, destination, flight_time = line.strip().split(",")
-                        dest = Destination(identity, destination, flight_time)
-                        dest_list = [dest.identity, dest.flight_time]
-                        key = dest.destination
-                        dest_dict[key] = (dest_list)
+                    identity, destination, flight_time = line.strip().split(",")
+                    dest = Destination(identity, destination, flight_time)
+                    dest_list = [dest.identity, dest.flight_time]
+                    key = dest.destination
+                    dest_dict[key] = (dest_list)
                 return dest_dict
                 dest_file.close()
         except FileNotFoundError :
