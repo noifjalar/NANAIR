@@ -15,7 +15,7 @@ class Display_UI :
             print("\t(2) - Display destinations")
             print("\t(3) - Display voyages")
             print("\t(4) - Display aircraft's status")
-            print("\t Press Q to quit")
+            print("\tPress Q to go back")
             
             choice = input("Select an operation with a corresponding number: ").lower()
 
@@ -89,7 +89,19 @@ class Display_UI :
 
                         
                     elif next_choice == "9" :
-                        self.la.display_pilot_by_licene()
+                        nabae_list = self.la.get_pilots_with_NABAE146() 
+                        nafokkerf28_list = self.la.get_pilots_with_NAFokkerF28()
+                        nafokker100_list = self.la.get_pilots_with_NAFokker100()
+                        print("Pilots with NABAE146 licence: ")
+                        for pilot in nabae_list :
+                            print("\t{}".format(pilot))
+                        print("Pilots with NAFokkerF28 licence: ")
+                        for pilot in nafokkerf28_list :
+                            print("\t{}".format(pilot))
+                        print("Pilots with NAFokkerF100 licence: ")
+                        for pilot in nafokker100_list :
+                            print("\t{}".format(pilot))
+                            
                     else: 
                         print("Invalid input!")
 
