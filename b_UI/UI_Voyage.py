@@ -37,7 +37,7 @@ class voyage_UI :
                 if val == counter:
                     print('bagg')
                     arriving_at = value[0]
-                    voy_dest_time = value[1]
+                    voy_dest_time = int(value[1])
                 counter += 1
         #arriving_at = voy_destination
         # print(voy_dest_time)
@@ -57,8 +57,12 @@ class voyage_UI :
 
         year, month, day, hour, minute = year, month, day, hour, minute
         departure = datetime.datetime(year, month, day, hour, minute).isoformat()
+        arrival = datetime.datetime(year, month, day, hour + voy_dest_time, minute).isoformat()
         
-        arrival = input("Enter arrivingAt  TIME :")
+        print(departure)
+        print(arrival)
+        
+        #arrival = input("Enter arrivingAt  TIME :")
 
         self.la.addnewvoyage(flight_number, departing_from, arriving_at, departure, arrival)
 
