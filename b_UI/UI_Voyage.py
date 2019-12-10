@@ -31,7 +31,6 @@ class voyage_UI :
                 pass
             else:
                 if val == counter:
-                    print('bagg')
                     arriving_at = value[0]
                     voy_dest_time = int(value[1])
                 counter += 1
@@ -51,7 +50,7 @@ class voyage_UI :
         departure = departure_not_iso.isoformat()
         arrival = arrival_not_iso.isoformat()
    
-        self.la.addnewvoyage(flight_number, departing_from, arriving_at, departure, arrival)
+        #self.la.addnewvoyage(flight_number, departing_from, arriving_at, departure, arrival)
 
         flight_number_return = input("Enter a flight number for return flight: ")
 
@@ -60,5 +59,7 @@ class voyage_UI :
 
         departing_from_return = arriving_at
         arriving_return = departing_from
+
+        self.la.addnewvoyage(flight_number, departing_from, arriving_at, departure, arrival)
         
         self.la.addnewvoyage(flight_number_return, departing_from_return, arriving_return, departure_return, arrival_return)
