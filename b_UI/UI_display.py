@@ -45,6 +45,7 @@ class Display_UI :
                         all_emp = self.la.get_all_emp()
                         for name in all_emp :
                             print("\t",name)
+                        print()    
                     elif next_choice == "2" :
                         print("Pilot list: ")
                         pilot_list = self.la.get_pilots()
