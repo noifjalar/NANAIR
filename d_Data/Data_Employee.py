@@ -34,17 +34,12 @@ class Employee_Data :
         crew_dict = {}
         try :
             with open( self.filename ,"r") as crew_file:
-                header = True
                 for line in crew_file :
-                    if header :
-                        header = False 
-                        continue
-                    else: 
-                        ssn, name, role, rank, licence, address, phonenumber = line.strip().split(",")
-                        emp = Employee(ssn, name, role, rank, licence, address, phonenumber)
-                        emp_list = [emp.name, emp.role, emp.rank, emp.licence, emp.address, emp.phonenumber]
-                        key = emp.ssn 
-                        crew_dict[key] = (emp_list)
+                    ssn, name, role, rank, licence, address, phonenumber = line.strip().split(",")
+                    emp = Employee(ssn, name, role, rank, licence, address, phonenumber)
+                    emp_list = [emp.name, emp.role, emp.rank, emp.licence, emp.address, emp.phonenumber]
+                    key = emp.ssn 
+                    crew_dict[key] = (emp_list)
                 #crew_dict = self.overwrite_crew_file()
                 return crew_dict     
                 crew_file.close()      
@@ -58,7 +53,7 @@ class Employee_Data :
         crew_dict = self.get_crew_dict()
         for key, value in crew_dict.items():
             if key == emp_ssn :
-                return value 
+                return value
 
         ''' Choose 2 in menu ''' 
 
