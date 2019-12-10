@@ -47,22 +47,21 @@ class voyage_UI :
         
 
 
+        year, month, day = int(input("Input date of flight (YYYY MM DD): ").split("."))
+        hour, minute = int(input("Input time of flight (hour.minute): ").split(":"))
+        print(year)
+        print(month)
+        print(day)
+        print(hour)
+        print(minute)
+        #hour= int(input('input a hour:'))
+        #minute= int(input('input a minute:'))
 
 
-        year= int(input('input a year:'))
-        month= int(input('input a month:'))
-        day= int(input('input a day:'))
-        hour= int(input('input a hour:'))
-        minute= int(input('input a minute:'))
-
-        year, month, day, hour, minute = year, month, day, hour, minute
+        #year, month, day, hour, minute = year, month, day, hour, minute
         departure = datetime.datetime(year, month, day, hour, minute).isoformat()
-        arrival = datetime.datetime(year, month, day, hour + voy_dest_time, minute).isoformat()
-        
         print(departure)
-        print(arrival)
-        
-        #arrival = input("Enter arrivingAt  TIME :")
+        arrival = datetime.datetime(year, month, day, hour + voy_dest_time, minute).isoformat()
 
         self.la.addnewvoyage(flight_number, departing_from, arriving_at, departure, arrival)
 
