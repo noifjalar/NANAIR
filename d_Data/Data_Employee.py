@@ -124,7 +124,8 @@ class Employee_Data :
         crew_dict = self.get_crew_dict()
         for value in crew_dict.values() :
             crew_list.append(value[0])
-        return sorted(crew_list)
+        new_crew_list = crew_list[1:]
+        return sorted(new_crew_list)
 
     def get_pilots(self):
         pilot_list = []

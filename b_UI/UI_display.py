@@ -16,12 +16,15 @@ class Display_UI :
             print("\t(3) - Display voyages")
             print("\t(4) - Display aircraft's status")
             print("\tPress Q to go back")
+            print()
             
             choice = input("Select an operation with a corresponding number: ").lower()
+            print()
 
             if choice == "1" :
                 next_choice = ""
                 while next_choice != "q" :
+                    print()
                     print("Employee information")
                     print("\t(1) - Display all employees") 
                     print("\t(2) - Display pilots") 
@@ -33,24 +36,26 @@ class Display_UI :
                     print("\t(8) - Display pilots with certain licences")
                     print("\t(9) - Display pilots ordered by aircraft type")
                     print("\tPress Q to go back")
+                    print()
                     next_choice = input("Select an operation with a corresponding number: ").lower()
+                    print()
                 
                     if next_choice == "1" :
                         print("Employee list: ")
                         all_emp = self.la.get_all_emp()
                         for name in all_emp :
-                            print(name)
+                            print("\t",name)
                     elif next_choice == "2" :
                         print("Pilot list: ")
                         pilot_list = self.la.get_pilots()
                         for name in pilot_list:
-                            print(name)
+                            print("\t",name)
                     elif next_choice == "3" :
                         print("Cabin list: ")
                         self.la.get_cabin()
                         cabin_list = self.la.get_cabin()
                         for name in cabin_list:
-                            print(name)
+                            print("\t",name)
                     elif next_choice == "4" :
                         # self.la.display_cert_emp()
                         emp_ssn = input("Input the employee's ssn: ")
@@ -68,22 +73,24 @@ class Display_UI :
                         print("\t(1) - NABAE146")
                         print("\t(2) - NAFokkerF28")
                         print("\t(3) - NAFokkerF100")
+                        print()
                         pick = input("Choose licence: ")
+                        print()
                         if pick == "1":
                             nabae_list = self.la.get_pilots_with_NABAE146() 
+                            print("Pilots with NABAE146 licence: ")
                             for pilot in nabae_list:
-                                print("Pilots with NABAE146 licence: ")
-                                print(pilot)
+                                print("\t",pilot)
                         elif pick == "2":
                             nafokkerf28_list = self.la.get_pilots_with_NAFokkerF28()
+                            print("Pilots with NAFokkerF28 licence: ")
                             for pilot in nafokkerf28_list:
-                                print("Pilots with NAFokkerF28 licence: ")
-                                print(pilot)
+                                print("\t",pilot)
                         elif pick == "3":
                             nafokker100_list = self.la.get_pilots_with_NAFokker100()
+                            print("Pilots with NAFokkerF100 licence: ")
                             for pilot in nafokker100_list:
-                                print("Pilots with NAFokkerF100 licence: ")
-                                print(pilot)
+                                print("\t",pilot)
                         else:
                             print("Invalid input!")
 
