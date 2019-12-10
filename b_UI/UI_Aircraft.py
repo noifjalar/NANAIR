@@ -9,6 +9,8 @@ class UI_Aircraft :
         self.la = logicAPI_in
 
     def register_aircraft_UI(self):
+        print("Register airplanes")
+        print()
         nickname = input("Plane nickname: ")
         planeTypeId = input("Plane Type ID: ")
         capacity = input("Capacity: ")
