@@ -16,7 +16,8 @@ class voyage_UI :
         departing_from = "KEF"
 
 
-
+        #voy_dest_time = ""
+        #arriving_at = ""
 
         dest_dict = self.la.voy_dest()
         counter = 1
@@ -26,6 +27,22 @@ class voyage_UI :
             else:
                 print("({}) - {}".format(counter, key))
                 counter += 1
+        val = input("Choose a destination: ")
+        #print(val)
+        counter = 1
+        for key, value in dest_dict.items():
+            if key == "Keflavik": 
+                pass
+            else:
+                if val == counter:
+                    arriving_at = value[0]
+                    voy_dest_time = value[1]
+                counter += 1
+        #arriving_at = voy_destination
+        print(voy_dest_time)
+        print(arriving_at)
+        input
+            
         
 
 
