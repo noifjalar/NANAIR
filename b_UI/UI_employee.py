@@ -105,7 +105,7 @@ class Employee_UI :
                     self.change_employee_info()
 
                 wow = self.la.print_chosen_emp(emp_ssn)
-                print("\nSSN: {}, Name: {} - Role: {}, Rank: {}, Licence: {}, Address: {}, Phonenumber: {}\n".format(emp_ssn,wow[0],wow[1],wow[2],wow[3],wow[4],wow[5]))
+                print("SSN: {}, Name: {} - Role: {}, Rank: {}, Licence: {}, Address: {}, Phonenumber: {}\n".format(emp_ssn,wow[0],wow[1],wow[2],wow[3],wow[4],wow[5]))
                 print("Do you want to change:")
                 print("(S) - More info about the same employee,")
                 print("(N) - change a new employee,")
