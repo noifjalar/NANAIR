@@ -98,12 +98,12 @@ class Employee_Data :
     def change_emp_phone_data(self, new_phonenumber, emp_ssn) :
         crew_dict = self.get_crew_dict()
         for key, value in crew_dict.items():
-            if key == emp_ssn :
+            if key == emp_ssn:
 
 
                 #Skoða, new_role, hvað er það?
 
-                value[5] = new_role
+                value[5] = new_phonenumber
                 self.overwrite_crew_file(crew_dict)
 
         ''' Choose 2 in menu ''' 
