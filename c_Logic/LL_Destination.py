@@ -11,3 +11,6 @@ class Destination_LL:
 
     def addnewdestination(self, identity, destination, flight_time):
         self.dapi.register_destination_Data(identity, destination, flight_time)
+
+    def get_dest(self) :
+        return self.dapi.get_dest()

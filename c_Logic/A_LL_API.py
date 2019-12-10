@@ -50,8 +50,8 @@ class LL_API :
     def display_voy(self):
         pass
 
-    def display_dest(self):
-        pass
+    def get_dest(self):
+        return self.dest.get_dest()
 
     def display_voy(self):
         pass

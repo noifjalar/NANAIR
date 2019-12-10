@@ -106,8 +106,12 @@ class Display_UI :
                         print("Invalid input!")
 
             elif choice == "2" :
-                self.la.display_dest()
-                pass
+                print()
+                print("Destinations: ")
+                dest_list = self.la.get_dest()
+                for destination in dest_list :
+                    print("\t{}".format(destination))
+                print()
 
             elif choice == "3" :
                 self.la.display_voy()
