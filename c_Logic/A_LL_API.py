@@ -63,7 +63,7 @@ class LL_API :
         return self.dest.get_dest()
 
     def display_voy(self):
-        pass
+        return self.voy.get_voyage()
 
     def display_status(self):
         pass

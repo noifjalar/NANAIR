@@ -18,3 +18,5 @@ class Voyage_LL :
         return self.ddata.get_dest_dict()
 
         #x = input("sdfg")
+    def get_voyage(self) :
+        self.dvoy.get_voyage()

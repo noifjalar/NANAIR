@@ -24,3 +24,7 @@ class Voyage_Data :
         for line in self.filename:
             voy_
             voy_dict = line.append()
+
+    def get_voyage(self) :
+        voy_dict = self.get_voy_dict()
+        
