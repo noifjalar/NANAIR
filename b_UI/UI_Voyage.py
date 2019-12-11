@@ -46,6 +46,7 @@ class voyage_UI :
     def create_crew_voyage(self):
         aircraftID = input("Choose an airplane: ")
         # þarf að birta lista af lausum flugvélum
+        '''
         captains = self.la.find_staff_with_chosen_rank("Captain")
         counter = 1
         for name in captains:
@@ -54,20 +55,28 @@ class voyage_UI :
         val = input("Choose a captain: ")
         self.la.pick_emp_for_voyage(val)
         x = input("pause")
-
+        '''
 
         header_list = ['Captain','Copilot','Flight Service Manager','Flight Attendant','Flight Attendant']
         header_counter = 0
         fa2 = None
         emps_picked_for_voyage = []
+        print_chosen_emps = []
         while header_counter < len(header_list):
             emps_available = self.la.find_staff_with_chosen_rank(header_list[header_counter])
             numb_of_emp = 1
+            print("{}:".format(header_list[header_counter]))
             for name in emps_available:
-                print("({}) - {}".format(numb_of_emp, name[1]))
+                print("\t({}) - {}".format(numb_of_emp, name[1]))
                 numb_of_emp += 1
             val = int(input("Choose a {}: ".format(header_list[header_counter])))
-
+            print("")
             emps_picked_for_voyage.append(emps_available[val-1][0])
+            print_chosen_emps.append(emps_available[val-1][1])
             header_counter += 1
-        
+        print("Crew you have chosen for current voyage:")
+        print("\tCaptain: {} - Copilot: {},".format(print_chosen_emps[0], print_chosen_emps[1]))
+        print("\tFlight Service Manager: {} - Flight Attendant: {} - Flight Attendant: {}.".format(print_chosen_emps[2], print_chosen_emps[3], print_chosen_emps[4]))
+        input("Press ENTER to continue..")
+
+        self.la.picked_emp_for_voyage(emps_picked_for_voyage)
