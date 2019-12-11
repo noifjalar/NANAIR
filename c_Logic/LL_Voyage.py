@@ -75,7 +75,8 @@ class Voyage_LL :
         
     def overwrite_voy_file(self):
         voy_dict = self.dvoy.get_voy_dict()
-        print(voy_dict)
+        for key, value in voy_dict:
+            print(key)
 
         
 
