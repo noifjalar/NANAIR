@@ -1,4 +1,5 @@
 from Model.voyage import Voyage
+from Model.voyage import Voyage_2
 import csv
 import re
 import os
@@ -46,4 +47,13 @@ class Voyage_Data :
         voy_dict = self.get_voy_dict()
         return voy_dict
             
-
+    def assign_crew_to_voyage(self, aircraftID, captain, copilot, fsm, fa1, fa2):
+        print(aircraftID)
+        print(captain)
+        print(copilot)
+        print(fsm)
+        print(fa1)
+        print(fa2)
+        new_crew_voy = Voyage_2(aircraftID, captain, copilot, fsm, fa1, fa2)
+        f=input("f")
+        return None

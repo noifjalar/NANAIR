@@ -62,6 +62,7 @@ class voyage_UI :
         fa2 = None
         emps_picked_for_voyage = []
         print_chosen_emps = []
+        
         while header_counter < len(header_list):
             emps_available = self.la.find_staff_with_chosen_rank(header_list[header_counter])
             numb_of_emp = 1
@@ -74,9 +75,10 @@ class voyage_UI :
             emps_picked_for_voyage.append(emps_available[val-1][0])
             print_chosen_emps.append(emps_available[val-1][1])
             header_counter += 1
+
         print("Crew you have chosen for current voyage:")
         print("\tCaptain: {} - Copilot: {},".format(print_chosen_emps[0], print_chosen_emps[1]))
         print("\tFlight Service Manager: {} - Flight Attendant: {} - Flight Attendant: {}.".format(print_chosen_emps[2], print_chosen_emps[3], print_chosen_emps[4]))
         input("Press ENTER to continue..")
 
-        self.la.picked_emp_for_voyage(emps_picked_for_voyage)
+        self.la.picked_emp_for_voyage(emps_picked_for_voyage, aircraftID)
