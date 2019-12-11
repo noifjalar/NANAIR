@@ -17,3 +17,24 @@ class Voyage_LL :
     def voy_dest(self):
         return self.ddata.get_dest_dict()
 
+        #x = input("sdfg")
+    def get_voyage(self) :
+        self.dvoy.get_voyage()
+
+    def voy_dest_and_arriving_at(self, val):
+        dest_dict = self.ddata.get_dest_dict()
+        counter = 1
+        for key, value in dest_dict.items():
+            if key == "Keflavik": 
+                pass
+            else:
+                if val == counter:
+                    arriving_at = value[0]
+                    voy_dest_time = int(value[1])
+                counter += 1
+        return arriving_at, voy_dest_time
+
+    def voy_calculating_flight_times(self):
+        #arriving_at,voy_dest_time = self.voy_dest_and_arriving_at(val)
+        print(self.voy_dest_and_arriving_at)
+        print(self.voy_dest_and_arriving_at)

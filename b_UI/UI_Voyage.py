@@ -26,18 +26,6 @@ class voyage_UI :
         val = int(input("Choose a destination: "))
         
         arriving_at, voy_dest_time = self.la.voy_dest_and_arriving_at(val)
-
-
-        counter = 1
-        for key, value in dest_dict.items():
-            if key == "Keflavik": 
-                pass
-            else:
-                if val == counter:
-                    arriving_at = value[0]
-                    voy_dest_time = int(value[1])
-                counter += 1
-       
             
         year, month, day = input("Input date of flight (YYYY MM DD): ").split()
         hour, minute = input("Input time of flight (hour minute): ").split()
@@ -47,15 +35,20 @@ class voyage_UI :
         day = int(day)
         hour = int(hour)
         minute = int(minute)
-        
+
+        flight_number_return = input("Enter a flight number for return flight: ")
+
         departure_not_iso = datetime.datetime(year, month, day, hour, minute)
+
+        
+        self.la.voy_calculating_flight_times()
+        
+        
         arrival_not_iso = departure_not_iso + timedelta(hours= voy_dest_time)
         departure = departure_not_iso.isoformat()
         arrival = arrival_not_iso.isoformat()
-   
-        #self.la.addnewvoyage(flight_number, departing_from, arriving_at, departure, arrival)
 
-        flight_number_return = input("Enter a flight number for return flight: ")
+        
 
         departure_return = (arrival_not_iso + timedelta(hours= 1)).isoformat()
         arrival_return = (arrival_not_iso + timedelta(hours= 1) + timedelta(hours= voy_dest_time)).isoformat()

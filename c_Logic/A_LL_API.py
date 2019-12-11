@@ -63,7 +63,7 @@ class LL_API :
         return self.dest.get_dest()
 
     def display_voy(self):
-        pass
+        return self.voy.get_voyage()
 
     def display_status(self):
         pass
@@ -101,3 +101,5 @@ class LL_API :
     def voy_dest_and_arriving_at(self, val):
         return self.voy.voy_dest_and_arriving_at(val)
 
+    def voy_calculating_flight_times(self):
+        self.voy.voy_calculating_flight_times()

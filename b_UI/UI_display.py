@@ -122,8 +122,9 @@ class Display_UI :
                 print()
 
             elif choice == "3" :
-                self.la.display_voy()
-                pass
+                print()
+                print("Voyages: ")
+                voyage_dict = self.la.display_voy()
 
             elif choice == "4" :
                 self.la.display_status()
