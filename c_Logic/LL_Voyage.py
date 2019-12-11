@@ -1,6 +1,7 @@
 from d_Data.A_Data_API import DataAPI
 from d_Data.Data_Voyage import Voyage_Data
 from d_Data.Data_Destination import Destination_Data
+from d_Data.Data_Employee import Employee_Data
 import datetime
 from datetime import timedelta
 
@@ -10,6 +11,7 @@ class Voyage_LL :
         #self.dapi = dapi_in
         self.dvoy = Voyage_Data()
         self.ddata = Destination_Data()
+        self.demp = Employee_Data()
 
     def addnewvoyage(self, flight_number, departing_from, arriving_at, departure, arrival):
         '''Vantar að tékka hvort emp sé til með ssn tékki'''
@@ -51,4 +53,24 @@ class Voyage_LL :
 
         return departure, arrival, departing_from_return, arriving_return, departure_return, arrival_return
 
-      
+    def create_crew_voyage(self):
+        voy_dict = self.dvoy.get_voyage
+
+    def find_staff_with_chosen_rank(self, rank):
+        crew_dict = self.demp.get_crew_dict()
+        emps_with_chosen_rank = []
+        #for line in crew_dict.items():
+        for key, value in crew_dict.items():
+            temp_list = []
+            if value[2] == rank:
+                temp_list.append(key)
+                temp_list.append(value[0])
+                emps_with_chosen_rank.append(temp_list)
+        return emps_with_chosen_rank
+
+    def pick_emp_for_voyage(self, val):
+        emps_with_chosen_rank = self.find_staff_with_chosen_rank(rank)
+
+
+
+

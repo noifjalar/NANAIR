@@ -40,8 +40,8 @@ class Manager_UI :
                 self.em.register_employee_UI()
             elif choice == "2":
                 self.em.change_employee_info()
-            #elif choice == "3":
-                #the_instance.assing_cabin_pilot_to_voyage()
+            elif choice == "3":
+                self.voyage.create_crew_voyage()
             elif choice == "4":
                 self.disp.display_info()
             elif choice == "5":

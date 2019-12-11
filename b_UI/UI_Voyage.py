@@ -42,3 +42,14 @@ class voyage_UI :
         ''' Send the input and calculated information to the model class '''
         self.la.addnewvoyage(flight_number, departing_from, arriving_at, departure, arrival)
         self.la.addnewvoyage(flight_number_return, departing_from_return, arriving_return, departure_return, arrival_return)
+
+    def create_crew_voyage(self):
+        aircraftID = input("Aircraft ID: ")
+        captains = self.la.find_staff_with_chosen_rank("Captain")
+        counter = 1
+        for name in captains:
+            print("({}) - {}".format(counter, name[1]))
+            counter += 1
+        val = input("Choose a captain: ")
+        self.la.pick_emp_for_voyage(val)
+        x = input("h")

@@ -103,3 +103,12 @@ class LL_API :
 
     def voy_calculating_flight_times(self, val, departure_not_iso, departing_from):
         return self.voy.voy_calculating_flight_times(val, departure_not_iso, departing_from)
+
+    def create_crew_voyage(self):
+        pass
+
+    def find_staff_with_chosen_rank(self, rank):
+        return self.voy.find_staff_with_chosen_rank(rank)
+
+    def pick_emp_for_voyage(self, val):
+        self.voy.pick_emp_for_voyage(val)
