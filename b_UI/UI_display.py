@@ -6,6 +6,7 @@ class Display_UI :
         self.la = logicAPI_in
     
     def display_info(self) :
+        ''' Lets the user pick which information he sees from the main menu '''
 
         choice = ""
 

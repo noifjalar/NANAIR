@@ -7,6 +7,7 @@ class UI_Destination:
         self.la = logicAPI_in
 
     def register_destination_UI(self):
+        ''' Registers destinations and appends it to CSV '''
         print("Register destination")
         print()
         identity = input("ID: ")
