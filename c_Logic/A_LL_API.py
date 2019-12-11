@@ -101,5 +101,5 @@ class LL_API :
     def voy_dest_and_arriving_at(self, val):
         return self.voy.voy_dest_and_arriving_at(val)
 
-    def voy_calculating_flight_times(self):
-        self.voy.voy_calculating_flight_times()
+    def voy_calculating_flight_times(self, val, departure_not_iso, departing_from):
+        return self.voy.voy_calculating_flight_times(val, departure_not_iso, departing_from)

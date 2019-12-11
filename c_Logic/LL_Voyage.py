@@ -2,6 +2,7 @@ from d_Data.A_Data_API import DataAPI
 from d_Data.Data_Voyage import Voyage_Data
 from d_Data.Data_Destination import Destination_Data
 import datetime
+from datetime import timedelta
 
 
 class Voyage_LL :
@@ -34,8 +35,20 @@ class Voyage_LL :
                 counter += 1
         return arriving_at, voy_dest_time
 
-    def voy_calculating_flight_times(self):
-        #arriving_at,voy_dest_time = self.voy_dest_and_arriving_at(val)
-        print(self.voy_dest_and_arriving_at)
-        print(self.voy_dest_and_arriving_at)
-        return self.dvoy.get_voyage()
+    def voy_calculating_flight_times(self, val, departure_not_iso, departing_from):
+        arriving_at,voy_dest_time = self.voy_dest_and_arriving_at(val)
+
+
+        arrival_not_iso = departure_not_iso + timedelta(hours= voy_dest_time)
+        departure = departure_not_iso.isoformat()
+        arrival = arrival_not_iso.isoformat()
+
+        departure_return = (arrival_not_iso + timedelta(hours= 1)).isoformat()
+        arrival_return = (arrival_not_iso + timedelta(hours= 1) + timedelta(hours= voy_dest_time)).isoformat()
+
+        departing_from_return = arriving_at
+        arriving_return = departing_from
+
+        return departure, arrival, departing_from_return, arriving_return, departure_return, arrival_return
+
+      

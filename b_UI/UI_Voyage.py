@@ -1,7 +1,7 @@
 from Model.voyage import Voyage
 from c_Logic.A_LL_API import LL_API
 import datetime
-from datetime import timedelta
+
 
 
 class voyage_UI :
@@ -12,7 +12,6 @@ class voyage_UI :
     def register_voyage_UI(self):
         
         flight_number = input("Enter a flight number: ")
-
         departing_from = "KEF"
 
         dest_dict = self.la.voy_dest()
@@ -37,25 +36,9 @@ class voyage_UI :
         minute = int(minute)
 
         flight_number_return = input("Enter a flight number for return flight: ")
-
         departure_not_iso = datetime.datetime(year, month, day, hour, minute)
-
-        
-        self.la.voy_calculating_flight_times()
-        
-        
-        arrival_not_iso = departure_not_iso + timedelta(hours= voy_dest_time)
-        departure = departure_not_iso.isoformat()
-        arrival = arrival_not_iso.isoformat()
-
-        
-
-        departure_return = (arrival_not_iso + timedelta(hours= 1)).isoformat()
-        arrival_return = (arrival_not_iso + timedelta(hours= 1) + timedelta(hours= voy_dest_time)).isoformat()
-
-        departing_from_return = arriving_at
-        arriving_return = departing_from
-
+        ''' Send the input information down to LL_Voyage for calculation '''
+        departure, arrival, departing_from_return, arriving_return, departure_return, arrival_return = self.la.voy_calculating_flight_times(val, departure_not_iso, departing_from)
+        ''' Send the input and calculated information to the model class '''
         self.la.addnewvoyage(flight_number, departing_from, arriving_at, departure, arrival)
-        
         self.la.addnewvoyage(flight_number_return, departing_from_return, arriving_return, departure_return, arrival_return)
