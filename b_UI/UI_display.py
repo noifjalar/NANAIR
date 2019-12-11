@@ -1,4 +1,5 @@
 from c_Logic.A_LL_API import LL_API 
+import datetime
 
 class Display_UI :
     def __init__(self, logicAPI_in ) :
@@ -125,6 +126,8 @@ class Display_UI :
                 print()
                 print("Voyages: ")
                 voyage_dict = self.la.display_voy()
+                for key, value in voyage_dict.items() :
+                    print(key, *value)
 
             elif choice == "4" :
                 self.la.display_status()

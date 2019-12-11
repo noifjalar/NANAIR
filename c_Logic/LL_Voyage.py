@@ -19,4 +19,4 @@ class Voyage_LL :
 
         #x = input("sdfg")
     def get_voyage(self) :
-        self.dvoy.get_voyage()
+        return self.dvoy.get_voyage()

@@ -44,4 +44,6 @@ class Voyage_Data :
 
     def get_voyage(self) :
         voy_dict = self.get_voy_dict()
-        print(voy_dict)
+        return voy_dict
+            
+
