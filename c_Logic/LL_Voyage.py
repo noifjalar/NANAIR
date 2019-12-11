@@ -38,3 +38,4 @@ class Voyage_LL :
         #arriving_at,voy_dest_time = self.voy_dest_and_arriving_at(val)
         print(self.voy_dest_and_arriving_at)
         print(self.voy_dest_and_arriving_at)
+        return self.dvoy.get_voyage()
