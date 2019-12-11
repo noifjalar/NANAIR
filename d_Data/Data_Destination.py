@@ -5,6 +5,7 @@ class Destination_Data :
         self.filename = "./a_csv/Destinations.csv"
 
     def register_destination_Data(self,identity, destination, flight_time):
+        ''' Opens the CSV file and appends input from user '''
         new_destination= Destination(identity, destination, flight_time)
         try :
             with open( self.filename ,"a") as destination_file:
@@ -16,6 +17,7 @@ class Destination_Data :
 
        
     def get_dest_dict(self) :
+        ''' Reads the file and returns the contents in a dictionary '''
         dest_dict = {}
         try :
             with open( self.filename , "r" ) as dest_file:
@@ -36,6 +38,7 @@ class Destination_Data :
             return None
 
     def get_dest(self) :
+        ''' Uses the dictionary and returns the key (destination) in a sorted list '''
         dest_list = [] 
         dest_dict = self.get_dest_dict()
         for key in dest_dict.keys() :

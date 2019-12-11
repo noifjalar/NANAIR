@@ -15,6 +15,7 @@ class Manager_UI :
         
         
     def main_menu(self) :
+        ''' Displays main menu and lets the user traverse the program '''
     
         choice = ""
 
