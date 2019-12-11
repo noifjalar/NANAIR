@@ -126,8 +126,11 @@ class Display_UI :
                 print()
                 print("Voyages: ")
                 voyage_dict = self.la.display_voy()
+                counter = 1
                 for key, value in voyage_dict.items() :
-                    print(key, *value)
+                    if counter > 1 :
+                        print(key, *value)
+                    counter += 1
 
             elif choice == "4" :
                 self.la.display_status()
