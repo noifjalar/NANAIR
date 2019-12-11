@@ -69,7 +69,8 @@ class Voyage_LL :
         return emps_with_chosen_rank
 
     def pick_emp_for_voyage(self, val):
-        emps_with_chosen_rank = self.find_staff_with_chosen_rank(rank)
+        pass
+        #emps_with_chosen_rank = self.find_staff_with_chosen_rank(rank)
 
 
 

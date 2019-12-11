@@ -44,7 +44,8 @@ class voyage_UI :
         self.la.addnewvoyage(flight_number_return, departing_from_return, arriving_return, departure_return, arrival_return)
 
     def create_crew_voyage(self):
-        aircraftID = input("Aircraft ID: ")
+        aircraftID = input("Choose an airplane: ")
+        # þarf að birta lista af lausum flugvélum
         captains = self.la.find_staff_with_chosen_rank("Captain")
         counter = 1
         for name in captains:
@@ -52,4 +53,21 @@ class voyage_UI :
             counter += 1
         val = input("Choose a captain: ")
         self.la.pick_emp_for_voyage(val)
-        x = input("h")
+        x = input("pause")
+
+
+        header_list = ['Captain','Copilot','Flight Service Manager','Flight Attendant','Flight Attendant']
+        header_counter = 0
+        fa2 = None
+        emps_picked_for_voyage = []
+        while header_counter < len(header_list):
+            emps_available = self.la.find_staff_with_chosen_rank(header_list[header_counter])
+            numb_of_emp = 1
+            for name in emps_available:
+                print("({}) - {}".format(numb_of_emp, name[1]))
+                numb_of_emp += 1
+            val = int(input("Choose a {}: ".format(header_list[header_counter])))
+
+            emps_picked_for_voyage.append(emps_available[val-1][0])
+            header_counter += 1
+        
