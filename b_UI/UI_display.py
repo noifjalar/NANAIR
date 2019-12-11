@@ -78,23 +78,25 @@ class Display_UI :
                         print()
                         pick = input("Choose licence: ")
                         print()
-                        if pick == "1":
-                            nabae_list = self.la.get_pilots_with_NABAE146() 
-                            print("Pilots with NABAE146 licence: \n")
-                            for pilot in nabae_list:
-                                print("\t",pilot)
-                        elif pick == "2":
-                            nafokkerf28_list = self.la.get_pilots_with_NAFokkerF28()
-                            print("Pilots with NAFokkerF28 licence: \n")
-                            for pilot in nafokkerf28_list:
-                                print("\t",pilot)
-                        elif pick == "3":
-                            nafokker100_list = self.la.get_pilots_with_NAFokker100()
-                            print("Pilots with NAFokkerF100 licence: \n")
-                            for pilot in nafokker100_list:
-                                print("\t",pilot)
-                        else:
-                            print("Invalid input!")
+                        while pick != "q" :
+                            if pick == "1":
+                                nabae_list = self.la.get_pilots_with_NABAE146() 
+                                print("Pilots with NABAE146 licence: \n")
+                                for pilot in nabae_list:
+                                    print("\t",pilot)
+                            elif pick == "2":
+                                nafokkerf28_list = self.la.get_pilots_with_NAFokkerF28()
+                                print("Pilots with NAFokkerF28 licence: \n")
+                                for pilot in nafokkerf28_list:
+                                    print("\t",pilot)
+                            elif pick == "3":
+                                nafokker100_list = self.la.get_pilots_with_NAFokker100()
+                                print("Pilots with NAFokkerF100 licence: \n")
+                                for pilot in nafokker100_list:
+                                    print("\t",pilot)
+                        
+                            else:
+                                print("Invalid input!")
 
                         
                     elif next_choice == "9" :
@@ -110,7 +112,8 @@ class Display_UI :
                         print("\nPilots with NAFokkerF100 licence: \n")
                         for pilot in nafokker100_list :
                             print("\t{}".format(pilot))
-                            
+                    elif next_choice == "q" :
+                        pass       
                     else: 
                         print("Invalid input!")
 
@@ -136,6 +139,8 @@ class Display_UI :
                 self.la.display_status()
                 pass
 
-            else:
+            elif choice == "q" :
                 pass
+            else :
+                print("Invalid input")
  
