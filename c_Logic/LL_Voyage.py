@@ -20,7 +20,7 @@ class Voyage_LL :
 
         #x = input("sdfg")
     def get_voyage(self) :
-        self.dvoy.get_voyage()
+        return self.dvoy.get_voyage()
 
     def voy_dest_and_arriving_at(self, val):
         dest_dict = self.ddata.get_dest_dict()
