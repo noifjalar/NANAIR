@@ -123,7 +123,7 @@ class Display_UI :
 
             elif choice == "3" :
                 print()
-                print(Voyages: )
+                print("Voyages: ")
                 voyage_dict = self.la.display_voy()
 
             elif choice == "4" :

@@ -19,12 +19,29 @@ class Voyage_Data :
             except FileNotFoundError :
                 return None    
 
-    def get_voy_dict():
-        voy_dict = []
-        for line in self.filename:
-            voy_
-            voy_dict = line.append()
+    def get_voy_dict(self) :
+        voy_dict = {}
+        try: 
+            with open(self.filename, "r" ) as voy_file:
+                for line in voy_file :
+                    chline.split(",")
+                    # if len(line) == 5 :
+                    #     flightNumber, departingFrom, arrivingAt, departure, arrival =  line.strip().split(",")
+                    #     voy = Voyage(flightNumber, departingFrom, arrivingAt, departure, arrival)  
+                    #     voy_list = [voy.departingFrom, voy.arrivingAt, voy.departure, voy.arrival]  
+                    #     key = voy.flightNumber
+                    #     voy_dict[key] = (voy_list) 
+                    # elif len(line) == 11 :
+                    #     flightNumber, departingFrom, arrivingAt, departure, arrival, aircraftID,captain,copilot,fsm,fa1,fa2 = line.strip().split(",")
+                    #     voy = Voyage(flightNumber, departingFrom, arrivingAt, departure, arrival)
+                    #     voy_list = [voy.departingFrom, voy.arrivingAt, voy.departure, voy.arrival, aircraftID, captain, copilot, fsm, fa1, fa2]
+                    #     key = voy.flightNumber
+                    #     voy_dict[key] = (voy_list)
+                return voy_dict
+                voy_file.close()  
+        except FileNotFoundError :
+            return None     
 
     def get_voyage(self) :
         voy_dict = self.get_voy_dict()
-        
+        print(voy_dict)
