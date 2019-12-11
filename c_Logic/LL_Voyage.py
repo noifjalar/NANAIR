@@ -34,8 +34,8 @@ class Voyage_LL :
                 counter += 1
         return arriving_at, voy_dest_time
 
-    def voy_calculating_flight_times(self):
-        #arriving_at,voy_dest_time = self.voy_dest_and_arriving_at(val)
-        print(self.voy_dest_and_arriving_at)
-        print(self.voy_dest_and_arriving_at)
-        return self.dvoy.get_voyage()
+    def voy_calculating_flight_times(self, val):
+        arriving_at,voy_dest_time = self.voy_dest_and_arriving_at()
+        print(arriving_at)
+        print(voy_dest_time)
+        #return self.dvoy.get_voyage()

@@ -41,7 +41,7 @@ class voyage_UI :
         departure_not_iso = datetime.datetime(year, month, day, hour, minute)
 
         
-        self.la.voy_calculating_flight_times()
+        self.la.voy_calculating_flight_times(val)
         
         
         arrival_not_iso = departure_not_iso + timedelta(hours= voy_dest_time)
