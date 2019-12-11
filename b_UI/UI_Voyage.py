@@ -25,6 +25,9 @@ class voyage_UI :
                 counter += 1
         val = int(input("Choose a destination: "))
         
+        arriving_at, voy_dest_time = self.la.voy_dest_and_arriving_at(val)
+
+
         counter = 1
         for key, value in dest_dict.items():
             if key == "Keflavik": 

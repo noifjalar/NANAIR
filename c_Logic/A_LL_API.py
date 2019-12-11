@@ -98,3 +98,6 @@ class LL_API :
     def display_pilot_by_aircraft(self):
         self.disp.disp_pilot_by_aircraft()
 
+    def voy_dest_and_arriving_at(self, val):
+        return self.voy.voy_dest_and_arriving_at(val)
+

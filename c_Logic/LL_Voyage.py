@@ -17,4 +17,3 @@ class Voyage_LL :
     def voy_dest(self):
         return self.ddata.get_dest_dict()
 
-        #x = input("sdfg")
