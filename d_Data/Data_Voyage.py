@@ -24,19 +24,19 @@ class Voyage_Data :
         try: 
             with open(self.filename, "r" ) as voy_file:
                 for line in voy_file :
-                    chline.split(",")
-                    # if len(line) == 5 :
-                    #     flightNumber, departingFrom, arrivingAt, departure, arrival =  line.strip().split(",")
-                    #     voy = Voyage(flightNumber, departingFrom, arrivingAt, departure, arrival)  
-                    #     voy_list = [voy.departingFrom, voy.arrivingAt, voy.departure, voy.arrival]  
-                    #     key = voy.flightNumber
-                    #     voy_dict[key] = (voy_list) 
-                    # elif len(line) == 11 :
-                    #     flightNumber, departingFrom, arrivingAt, departure, arrival, aircraftID,captain,copilot,fsm,fa1,fa2 = line.strip().split(",")
-                    #     voy = Voyage(flightNumber, departingFrom, arrivingAt, departure, arrival)
-                    #     voy_list = [voy.departingFrom, voy.arrivingAt, voy.departure, voy.arrival, aircraftID, captain, copilot, fsm, fa1, fa2]
-                    #     key = voy.flightNumber
-                    #     voy_dict[key] = (voy_list)
+                    check_len = line.split(",")
+                    if len(check_len) == 5 :
+                        flightNumber, departingFrom, arrivingAt, departure, arrival =  line.strip().split(",")
+                        voy = Voyage(flightNumber, departingFrom, arrivingAt, departure, arrival)  
+                        voy_list = [voy.departingFrom, voy.arrivingAt, voy.departure, voy.arrival]  
+                        key = voy.flightNumber
+                        voy_dict[key] = (voy_list) 
+                    elif len(check_len) == 11 :
+                        flightNumber, departingFrom, arrivingAt, departure, arrival, aircraftID,captain,copilot,fsm,fa1,fa2 = line.strip().split(",")
+                        voy = Voyage(flightNumber, departingFrom, arrivingAt, departure, arrival)
+                        voy_list = [voy.departingFrom, voy.arrivingAt, voy.departure, voy.arrival, aircraftID, captain, copilot, fsm, fa1, fa2]
+                        key = voy.flightNumber
+                        voy_dict[key] = (voy_list)
                 return voy_dict
                 voy_file.close()  
         except FileNotFoundError :
