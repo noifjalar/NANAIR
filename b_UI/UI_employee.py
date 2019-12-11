@@ -6,8 +6,9 @@ from d_Data.Data_Employee import Employee_Data
 class Employee_UI :
     def __init__(self, logicAPI_in ) :
         self.la = logicAPI_in
-
-    def register_employee_UI(self):
+    
+    def register_employee_UI(self):       
+    '''Prints out inputs or a selection when registering a new employee???? '''
         ssn = input("SSN: ")
         name = input("Name: ")
         print("Available roles: ")
@@ -40,7 +41,7 @@ class Employee_UI :
                 rank = "Copilot"
         print()        
         print("Available licences: ")
-        print("\t(1) - NAFokkerF100") 
+        print("\t(1) - NAFokkerF100") #ef við registerum nýja flugvél þarf húna að koma hér inn(megum ekki harð kóða)
         print("\t(2) - NABAE146")
         print("\t(3) - NAFokkerF28") 
         print("\t(4) - N/A") 
@@ -61,7 +62,10 @@ class Employee_UI :
         phonenumber = input("Mobile: ")
         self.la.addnewemplyee(ssn, name, role, rank, licence, address, phonenumber)
 
+
+    
     def change_employee_info(self) :
+        '''Prints out inputs or a selection when changing a employee info???? '''
         choice = ""
         pick = "n"
         while pick == "n" :

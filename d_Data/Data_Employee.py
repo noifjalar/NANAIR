@@ -12,6 +12,7 @@ class Employee_Data :
         ''' Choose 1 in menu '''
 
     def register_employee_Data(self, ssn, name, role, rank, licence, address, phonenumber):
+        '''appends new employee information into the crew csv file'''
         new_emp = Employee(ssn, name, role, rank, licence, address, phonenumber)
         try :
             with open( self.filename ,"a") as crew_file:
@@ -31,6 +32,7 @@ class Employee_Data :
         ''' Choose 2 in menu '''
 
     def get_crew_dict(self) :
+        '''creates a dictionary with all the crew members'''
         crew_dict = {}
         try :
             with open( self.filename ,"r") as crew_file:
@@ -50,6 +52,8 @@ class Employee_Data :
 
     def get_chosen_emp(self, emp_ssn) :
         ''' ath þurfum að senda þetta upp en ekki prenta hér! '''
+
+        '''gets the employee from the user ssn input for changing employees info'''
         crew_dict = self.get_crew_dict()
         for key, value in crew_dict.items():
             if key == emp_ssn :
@@ -58,6 +62,7 @@ class Employee_Data :
         ''' Choose 2 in menu ''' 
 
     def change_emp_addr_data(self, new_address, emp_ssn) :
+        '''changes the address of a chosen employee'''
         crew_dict = self.get_crew_dict()
         for key, value in crew_dict.items():
             if key == emp_ssn :
@@ -72,6 +77,7 @@ class Employee_Data :
         ''' Choose 2 in menu ''' 
 
     def change_emp_role_rank_data(self, new_role, new_rank, emp_ssn) :
+        '''changes the role of a chosen employee'''
         crew_dict = self.get_crew_dict()
         for key, value in crew_dict.items():
             if key == emp_ssn :
@@ -82,6 +88,7 @@ class Employee_Data :
         ''' Choose 2 in menu ''' 
         
     def change_emp_lice_data(self, new_licence, emp_ssn) :
+        '''changes the licence of a chosen employee'''
         crew_dict = self.get_crew_dict()
         for key, value in crew_dict.items():
             if key == emp_ssn :
@@ -91,6 +98,7 @@ class Employee_Data :
         ''' Choose 2 in menu ''' 
         
     def change_emp_phone_data(self, new_phonenumber, emp_ssn) :
+        '''changes the phone number of a chosen employee'''
         crew_dict = self.get_crew_dict()
         for key, value in crew_dict.items():
             if key == emp_ssn:
@@ -104,6 +112,8 @@ class Employee_Data :
         ''' Choose 2 in menu ''' 
     
     def overwrite_crew_file(self, crew_dict):
+        '''Creates a backup crew csv file, then overwrites the original file with the new information
+        and deletes the backup file after overwriting'''
         string = ""
 
         dest = self.trash_file
@@ -119,7 +129,8 @@ class Employee_Data :
         
         os.remove(self.trash_file)
         
-    def get_all_emp(self) :
+    def get_all_emp(self) :# þarf kannski að færa upp í LL_Employee?
+        '''gets a list with all employees names, returns sorted'''
         crew_list = []
         crew_dict = self.get_crew_dict()
         for value in crew_dict.values() :
@@ -127,7 +138,9 @@ class Employee_Data :
         new_crew_list = crew_list[1:]
         return sorted(new_crew_list)
 
-    def get_pilots(self):
+    def get_pilots(self):# þarf kannski að færa upp í LL_Employee?
+        '''gets a list with all pilots names, returns sorted'''
+
         pilot_list = []
         pilot_dict = self.get_crew_dict()
         for value in pilot_dict.values():
@@ -138,7 +151,8 @@ class Employee_Data :
         # input("nice")
         # return sorted(pilot_list)
 
-    def get_cabin(self):
+    def get_cabin(self):# þarf kannski að færa upp í LL_Employee?
+        '''gets a list with all cabincrew names, returns sorted'''
         cabin_list = []
         cabin_dict = self.get_crew_dict()
         for value in cabin_dict.values() :
@@ -155,7 +169,9 @@ class Employee_Data :
     def get_cert_worksheet(self):
         pass
 
-    def get_pilots_with_NABAE146(self):
+    def get_pilots_with_NABAE146(self):# þarf kannski að færa upp í LL_Employee?
+        '''gets a list with all pilots names that have NABAE146 licence, returns sorted'''
+
         nabae146_list = []
         nabae146_dict = self.get_crew_dict()
         for value in nabae146_dict.values() :
@@ -163,7 +179,8 @@ class Employee_Data :
                 nabae146_list.append(value[0])
         return sorted(nabae146_list)
 
-    def get_pilots_with_NAFokkerF28(self):
+    def get_pilots_with_NAFokkerF28(self):# þarf kannski að færa upp í LL_Employee?
+        '''gets a list with all pilots names that have NAFokkerF28 licence, returns sorted'''
         nafokkerf28_list = []
         nafokkerf28_dict = self.get_crew_dict()
         for value in nafokkerf28_dict.values() :
@@ -171,7 +188,9 @@ class Employee_Data :
                 nafokkerf28_list.append(value[0])
         return sorted(nafokkerf28_list)
 
-    def get_pilots_with_NAFokker100(self):
+    def get_pilots_with_NAFokker100(self):# þarf kannski að færa upp í LL_Employee?
+        '''gets a list with all pilots names that have NAFokker100 licence, returns sorted'''
+
         nafokker100_list = []
         nafokker100_dict = self.get_crew_dict()
         for value in nafokker100_dict.values() :
@@ -179,7 +198,7 @@ class Employee_Data :
                 nafokker100_list.append(value[0])
         return sorted(nafokker100_list)
 
-    def get_pilot_by_aircraft(self):
+    def get_pilot_by_aircraft(self): # þarf kannski að færa upp í LL_Employee?
         pass
 
     
