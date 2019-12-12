@@ -9,6 +9,7 @@ class voyage_UI :
 
 
     def register_voyage_UI(self):
+    ''' Registers new flights for voyages and adds it to CSV '''
         
         flight_number = input("Enter a flight number: ")
         departing_from = "KEF"
@@ -42,7 +43,8 @@ class voyage_UI :
         self.la.addnewvoyage(flight_number, departing_from, arriving_at, departure, arrival)
         self.la.addnewvoyage(flight_number_return, departing_from_return, arriving_return, departure_return, arrival_return)
 
-    def create_crew_voyage(self):
+    def create_crew_air_voyage(self):
+        ''' allows us to append planes and employees to flights to create voyages'''
         flightNumber = input("Input flight number (e.g. NA1234): ")
         aircraftID = input("Choose an airplane: ")
         # þarf að birta lista af lausum flugvélum

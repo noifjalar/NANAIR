@@ -25,7 +25,7 @@ class Manager_UI :
             print("Shift manager:")
             print("\t(1) - Register employee") #1
             print("\t(2) - Change employee info") #2
-            print("\t(3) - Assign cabin/pilot to voyage") #3 #4
+            print("\t(3) - Assign cabin/pilot and aircraft to voyage") #3 #4
             print("\t(4) - Display information")
             print("")
             print("Registration manager:")
@@ -42,7 +42,7 @@ class Manager_UI :
             elif choice == "2":
                 self.em.change_employee_info()
             elif choice == "3":
-                self.voyage.create_crew_voyage()
+                self.voyage.create_crew_air_voyage()
             elif choice == "4":
                 self.disp.display_info()
             elif choice == "5":
