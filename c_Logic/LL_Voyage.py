@@ -2,6 +2,7 @@ from d_Data.A_Data_API import DataAPI
 from d_Data.Data_Voyage import Voyage_Data
 from d_Data.Data_Destination import Destination_Data
 from d_Data.Data_Employee import Employee_Data
+from d_Data.Data_Aircraft import Aircraft_Data
 import datetime
 from datetime import timedelta
 
@@ -12,6 +13,7 @@ class Voyage_LL :
         self.dvoy = Voyage_Data()
         self.ddata = Destination_Data()
         self.demp = Employee_Data()
+        self.dair = Aircraft_Data()
 
     def addnewvoyage(self, flight_number, departing_from, arriving_at, departure, arrival):
         '''Vantar að tékka hvort emp sé til með ssn tékki'''
@@ -87,3 +89,7 @@ class Voyage_LL :
         
         self.dvoy.overwrite_voy_file(voy_dict)
         #return voy_dict
+
+    def find_aircrafts(self):
+        print("ll voyage")
+        return self.dair.get_aircraft_dict()

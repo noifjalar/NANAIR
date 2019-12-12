@@ -102,3 +102,6 @@ class LL_API :
     def picked_emp_for_voyage(self, picked, aircraftID, flightNumber):
         self.voy.picked_emp_for_voyage(picked, aircraftID, flightNumber)
         
+    def find_aircrafts(self):
+        print("ll api")
+        return self.voy.find_aircrafts()
