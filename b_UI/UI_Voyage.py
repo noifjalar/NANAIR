@@ -1,7 +1,5 @@
 from Model.voyage import Voyage
 from c_Logic.A_LL_API import LL_API
-import datetime
-
 
 
 class voyage_UI :
