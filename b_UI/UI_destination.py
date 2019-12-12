@@ -6,8 +6,9 @@ class UI_Destination:
 
     def register_destination_UI(self):
         ''' Registers destinations and appends it to CSV '''
-        print("Register destination")
-        print()
+        print("-=x="*15)
+        print(" "*20 + "Register destination")
+        print("-=x="*15 + "\n")
         identity = input("ID: ")
         destination = input("Destination: ")
         flight_time = input("Flight time: ")
