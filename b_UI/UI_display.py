@@ -11,8 +11,9 @@ class Display_UI :
         choice = ""
 
         while choice != "q" : 
-            print("Display information")
-            print("")
+            print("\n" + "-=x="*15)
+            print(" "*20 +"Display information")
+            print("-=x="*15 + "\n")
             print("\t(1) - Display employee information")
             print("\t(2) - Display destinations")
             print("\t(3) - Display voyages")
@@ -25,7 +26,9 @@ class Display_UI :
             if choice == "1" :
                 next_choice = ""
                 while next_choice != "q" :
-                    print("\nEmployee information")
+                    print("\n" + "-=x="*15)
+                    print(" "*20 +"Employee information")
+                    print("-=x="*15 + "\n")
                     print("\t(1) - Display all employees") 
                     print("\t(2) - Display pilots") 
                     print("\t(3) - Display cabin crew") 
@@ -114,13 +117,17 @@ class Display_UI :
                         print("Invalid input!")
 
             elif choice == "2" :
-                print("\nDestinations: \n")
+                print("\n" + "-=x="*15)
+                print(" "*24 +"Destinations")
+                print("-=x="*15 + "\n")
                 dest_list = self.la.get_dest()
                 for destination in dest_list :
                     print("\t{}\n".format(destination))
 
             elif choice == "3" :
-                print("\nVoyages: ")
+                print("\n" + "-=x="*15)
+                print(" "*26 +"Voyages")
+                print("-=x="*15 + "\n")
                 voyage_dict = self.la.display_voy()
                 counter = 1
                 for key, value in voyage_dict.items() :
