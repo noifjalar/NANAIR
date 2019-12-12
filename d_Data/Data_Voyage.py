@@ -57,3 +57,18 @@ class Voyage_Data :
         new_crew_voy = Voyage_2(aircraftID, captain, copilot, fsm, fa1, fa2)
         f=input("f")
         return None
+
+    
+
+
+    def overwrite_voy_file(self, voy_dict):
+
+        dest = self.trash_file
+        source = self.filename
+        os.rename(source, dest)
+        print(voy_dict)
+        for key, value in voy_dict.items():
+            if len(value) == 4:
+                pass
+            elif len(value) == 10:
+                pass

@@ -71,13 +71,12 @@ class Voyage_LL :
     def picked_emp_for_voyage(self, picked, aircraftID, flightNumber):
         captain, copilot, fsm, fa1, fa2 = picked
         self.dvoy.assign_crew_to_voyage(aircraftID, captain, copilot, fsm, fa1, fa2)
-        self.overwrite_voy_file(flightNumber, aircraftID, captain, copilot, fsm, fa1, fa2)
+        self.overwrite_voy_dict(flightNumber, aircraftID, captain, copilot, fsm, fa1, fa2)
         
-    def overwrite_voy_file(self, flightNumber, aircraftID, captain, copilot, fsm, fa1, fa2):
+    def overwrite_voy_dict(self, flightNumber, aircraftID, captain, copilot, fsm, fa1, fa2):
         voy_dict = self.dvoy.get_voy_dict()
         for key, value in voy_dict.items():
             if key == flightNumber:
-                value.append(flightNumber)
                 value.append(aircraftID)
                 value.append(captain)
                 value.append(copilot)
@@ -86,5 +85,5 @@ class Voyage_LL :
                 value.append(fa2)
                 print(value)
         
-        
-        print(voy_dict)
+        self.dvoy.overwrite_voy_file(voy_dict)
+        #return voy_dict
