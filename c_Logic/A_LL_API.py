@@ -103,5 +103,4 @@ class LL_API :
         self.voy.picked_emp_for_voyage(picked, aircraftID, flightNumber)
         
     def find_aircrafts(self):
-        print("ll api")
         return self.voy.find_aircrafts()
