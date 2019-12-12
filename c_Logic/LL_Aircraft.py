@@ -1,9 +1,7 @@
-from d_Data.A_Data_API import DataAPI
 from d_Data.Data_Aircraft import Aircraft_Data
 
 class Aircraft_LL :
     def __init__ (self):
-        #self.dapi = dapi_in
         self.dapi = Aircraft_Data()
 
     def addnewaircraft(self, nickname,planeTypeId,capacity,manufacturer):
