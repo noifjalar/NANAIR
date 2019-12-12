@@ -1,4 +1,3 @@
-from Model.voyage import Voyage
 from c_Logic.A_LL_API import LL_API
 import datetime
 
@@ -10,6 +9,7 @@ class voyage_UI :
 
 
     def register_voyage_UI(self):
+    ''' Registers new flights for voyages and adds it to CSV '''
         
         flight_number = input("Enter a flight number: ")
         departing_from = "KEF"
@@ -43,20 +43,11 @@ class voyage_UI :
         self.la.addnewvoyage(flight_number, departing_from, arriving_at, departure, arrival)
         self.la.addnewvoyage(flight_number_return, departing_from_return, arriving_return, departure_return, arrival_return)
 
-    def create_crew_voyage(self):
+    def create_crew_air_voyage(self):
+        ''' allows us to append planes and employees to flights to create voyages'''
         flightNumber = input("Input flight number (e.g. NA1234): ")
         aircraftID = input("Choose an airplane: ")
         # þarf að birta lista af lausum flugvélum
-        '''
-        captains = self.la.find_staff_with_chosen_rank("Captain")
-        counter = 1
-        for name in captains:
-            print("({}) - {}".format(counter, name[1]))
-            counter += 1
-        val = input("Choose a captain: ")
-        self.la.pick_emp_for_voyage(val)
-        x = input("pause")
-        '''
 
         header_list = ['Captain','Copilot','Flight Service Manager','Flight Attendant','Flight Attendant']
         header_counter = 0
