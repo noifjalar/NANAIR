@@ -83,7 +83,7 @@ class Voyage_LL :
                 value.append(fsm)
                 value.append(fa1)
                 value.append(fa2)
-                print(value)
+                #print(value)
         
         self.dvoy.overwrite_voy_file(voy_dict)
         #return voy_dict

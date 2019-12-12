@@ -48,27 +48,25 @@ class Voyage_Data :
         return voy_dict
             
     def assign_crew_to_voyage(self, aircraftID, captain, copilot, fsm, fa1, fa2):
-        print(aircraftID)
-        print(captain)
-        print(copilot)
-        print(fsm)
-        print(fa1)
-        print(fa2)
         new_crew_voy = Voyage_2(aircraftID, captain, copilot, fsm, fa1, fa2)
-        f=input("f")
         return None
 
     
 
 
     def overwrite_voy_file(self, voy_dict):
+        string = ""
 
         dest = self.trash_file
         source = self.filename
         os.rename(source, dest)
-        print(voy_dict)
+        #print(voy_dict)
         for key, value in voy_dict.items():
             if len(value) == 4:
-                pass
+                string = ''.join('{},{},{},{},{}'.format(key, value[0], value[1], value[2], value[3]))
             elif len(value) == 10:
-                pass
+                string = ''.join('{},{},{},{},{},{},{},{},{},{},{}'.format(key, value[0], value[1], value[2], value[3], value[4], value[5], value[6], value[7], value[8], value[9]))
+            with open(self.filename, "a") as voy_dict:
+                voy_dict.write(string)
+                voy_dict.write("\n")
+        os.remove(self.trash_file)
