@@ -1,4 +1,4 @@
-nickname,aircraftId,planeTypeId,capacity,manufacturer
+nickname,aircraftID,planeTypeId,capacity,manufacturer
 BAGG,TF-EPG,NAFokkerF100,100,Fokker
 BETOFTHEDAY,TF-UVR,NAFokkerF28,65,Fokker
 RAGGI,TF-XZR,NABAE146,82,BAE
