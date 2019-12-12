@@ -110,5 +110,5 @@ class LL_API :
     def find_staff_with_chosen_rank(self, rank):
         return self.voy.find_staff_with_chosen_rank(rank)
 
-    def picked_emp_for_voyage(self, picked, aircraftID):
-        self.voy.picked_emp_for_voyage(picked, aircraftID)
+    def picked_emp_for_voyage(self, picked, aircraftID, flightNumber):
+        self.voy.picked_emp_for_voyage(picked, aircraftID, flightNumber)

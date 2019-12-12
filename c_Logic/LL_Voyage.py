@@ -68,18 +68,23 @@ class Voyage_LL :
                 emps_with_chosen_rank.append(temp_list)
         return emps_with_chosen_rank
 
-    def picked_emp_for_voyage(self, picked, aircraftID):
+    def picked_emp_for_voyage(self, picked, aircraftID, flightNumber):
         captain, copilot, fsm, fa1, fa2 = picked
         self.dvoy.assign_crew_to_voyage(aircraftID, captain, copilot, fsm, fa1, fa2)
-        self.overwrite_voy_file()
+        self.overwrite_voy_file(flightNumber, aircraftID, captain, copilot, fsm, fa1, fa2)
         
-    def overwrite_voy_file(self):
+    def overwrite_voy_file(self, flightNumber, aircraftID, captain, copilot, fsm, fa1, fa2):
         voy_dict = self.dvoy.get_voy_dict()
-        for key, value in voy_dict:
-            print(key)
-
+        for key, value in voy_dict.items():
+            if key == flightNumber:
+                value.append(flightNumber)
+                value.append(aircraftID)
+                value.append(captain)
+                value.append(copilot)
+                value.append(fsm)
+                value.append(fa1)
+                value.append(fa2)
+                print(value)
         
-
-
-
-
+        
+        print(voy_dict)

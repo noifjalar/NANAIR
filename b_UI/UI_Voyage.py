@@ -44,6 +44,7 @@ class voyage_UI :
         self.la.addnewvoyage(flight_number_return, departing_from_return, arriving_return, departure_return, arrival_return)
 
     def create_crew_voyage(self):
+        flightNumber = input("Input flight number (e.g. NA1234): ")
         aircraftID = input("Choose an airplane: ")
         # þarf að birta lista af lausum flugvélum
         '''
@@ -81,4 +82,4 @@ class voyage_UI :
         print("\tFlight Service Manager: {} - Flight Attendant: {} - Flight Attendant: {}.".format(print_chosen_emps[2], print_chosen_emps[3], print_chosen_emps[4]))
         input("Press ENTER to continue..")
 
-        self.la.picked_emp_for_voyage(emps_picked_for_voyage, aircraftID)
+        self.la.picked_emp_for_voyage(emps_picked_for_voyage, aircraftID, flightNumber)
