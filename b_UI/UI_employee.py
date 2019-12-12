@@ -8,21 +8,19 @@ class Employee_UI :
         self.la = logicAPI_in
     
     def register_employee_UI(self):       
-        '''Prints out inputs or a selection when registering a new employee???? '''
+        ''' Registers employees and adds them to CSV '''
         ssn = input("SSN: ")
         name = input("Name: ")
         print("Available roles: ")
         print("\t(1) - Cabin") 
-        print("\t(2) - Pilot")
-        print()
+        print("\t(2) - Pilot\n")
         pick = input("Pick a new role: ")
         print()
         if pick == "1":
             role = "Cabincrew"
             print("\nAvailable ranks: ")
             print("\t(1) - Flight Service Manager") 
-            print("\t(2) - Flight Attendant")
-            print()
+            print("\t(2) - Flight Attendant\n")
             new_pick = input("Pick a new rank: ")
             if new_pick == "1":
                 rank = "Flight Service Manager"
@@ -32,20 +30,17 @@ class Employee_UI :
             role = "Pilot"
             print("Available ranks: ")
             print("\t(1) - Captain") 
-            print("\t(2) - Copilot")
-            print()
+            print("\t(2) - Copilot\n")
             pick = input("Pick a new rank: ")
             if pick == "1":
                 rank = "Captain"
             elif pick == "2":
-                rank = "Copilot"
-        print()        
-        print("Available licences: ")
+                rank = "Copilot"       
+        print("\nAvailable licences: ")
         print("\t(1) - NAFokkerF100") #ef við registerum nýja flugvél þarf húna að koma hér inn(megum ekki harð kóða)
         print("\t(2) - NABAE146")
         print("\t(3) - NAFokkerF28") 
-        print("\t(4) - N/A") 
-        print()
+        print("\t(4) - N/A\n") 
         pick = input("Pick a new licence: ") 
         print()
         if pick == "1":
@@ -65,7 +60,7 @@ class Employee_UI :
 
     
     def change_employee_info(self) :
-        '''Prints out inputs or a selection when changing a employee info???? '''
+        '''Allows you to change certain informations about an employee, tho not his name or ssn'''
         choice = ""
         pick = "n"
         while pick == "n" :
@@ -76,10 +71,7 @@ class Employee_UI :
             
             pick = "s"
 
-            while pick == "s" :
-        
-                #print(*wow)
-                
+            while pick == "s" :                
                 print("Change employee info:")
                 print("\t(1) - Address") 
                 print("\t(2) - Role and Rank")

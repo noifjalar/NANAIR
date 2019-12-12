@@ -1,6 +1,4 @@
-from Model.destination import Destination
 from c_Logic.A_LL_API import LL_API
-from d_Data.Data_Destination import Destination_Data
 
 class UI_Destination:
     def __init__(self, logicAPI_in ) :

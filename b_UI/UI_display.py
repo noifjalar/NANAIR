@@ -6,7 +6,7 @@ class Display_UI :
         self.la = logicAPI_in
     
     def display_info(self) :
-        ''' Lets the user pick which information he sees from the main menu '''
+        ''' Lets the user pick which information he wants to see from the main menu '''
 
         choice = ""
 
@@ -17,8 +17,7 @@ class Display_UI :
             print("\t(2) - Display destinations")
             print("\t(3) - Display voyages")
             print("\t(4) - Display aircraft's status")
-            print("\tPress Q to go back")
-            print()
+            print("\tPress Q to go back\n")
             
             choice = input("Select an operation with a corresponding number: ").lower()
             print()
@@ -26,8 +25,7 @@ class Display_UI :
             if choice == "1" :
                 next_choice = ""
                 while next_choice != "q" :
-                    print()
-                    print("Employee information")
+                    print("\nEmployee information")
                     print("\t(1) - Display all employees") 
                     print("\t(2) - Display pilots") 
                     print("\t(3) - Display cabin crew") 
@@ -37,8 +35,7 @@ class Display_UI :
                     print("\t(7) - Display certain employees weekly worksheet")
                     print("\t(8) - Display pilots with certain licences")
                     print("\t(9) - Display pilots ordered by aircraft type")
-                    print("\tPress Q to go back")
-                    print()
+                    print("\tPress Q to go back\n")
                     next_choice = input("Select an operation with a corresponding number: ").lower()
                     print()
                 
@@ -46,8 +43,7 @@ class Display_UI :
                         print("Employee list: \n")
                         all_emp = self.la.get_all_emp()
                         for name in all_emp :
-                            print("\t",name)
-                        print()    
+                            print("\t",name)  
                     elif next_choice == "2" :
                         print("Pilot list: \n")
                         pilot_list = self.la.get_pilots()
@@ -75,8 +71,7 @@ class Display_UI :
                         print("Available licences: ")
                         print("\t(1) - NABAE146")
                         print("\t(2) - NAFokkerF28")
-                        print("\t(3) - NAFokkerF100")
-                        print()
+                        print("\t(3) - NAFokkerF100\n")
                         pick = input("Choose licence: ")
                         print()
                         while pick != "q" :
@@ -119,16 +114,13 @@ class Display_UI :
                         print("Invalid input!")
 
             elif choice == "2" :
-                print()
-                print("Destinations: \n")
+                print("\nDestinations: \n")
                 dest_list = self.la.get_dest()
                 for destination in dest_list :
-                    print("\t{}".format(destination))
-                print()
+                    print("\t{}\n".format(destination))
 
             elif choice == "3" :
-                print()
-                print("Voyages: ")
+                print("\nVoyages: ")
                 voyage_dict = self.la.display_voy()
                 counter = 1
                 for key, value in voyage_dict.items() :
