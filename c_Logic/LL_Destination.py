@@ -12,6 +12,13 @@ class Destination_LL:
     def addnewdestination(self, identity, destination, flight_time):
         self.dapi.register_destination_Data(identity, destination, flight_time)
 
+    def check_id(self, identity) :
+        des_dict = self.dapi.get_dest_dict()
+        for key, value in des_dict.items() :
+            if value[0] == identity :
+                return True
+        return False
+
     def get_dest(self) :
         return self.dapi.get_dest()
 
