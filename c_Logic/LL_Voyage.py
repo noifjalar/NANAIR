@@ -74,6 +74,10 @@ class Voyage_LL :
         captain, copilot, fsm, fa1, fa2 = picked
         self.dvoy.assign_crew_to_voyage(aircraftID, captain, copilot, fsm, fa1, fa2)
         self.overwrite_voy_dict(flightNumber, aircraftID, captain, copilot, fsm, fa1, fa2)
+        flightNumber = self.find_next_flightnumber(flightNumber)
+        self.dvoy.assign_crew_to_voyage(aircraftID, captain, copilot, fsm, fa1, fa2)
+        self.overwrite_voy_dict(flightNumber, aircraftID, captain, copilot, fsm, fa1, fa2)
+
         
     def overwrite_voy_dict(self, flightNumber, aircraftID, captain, copilot, fsm, fa1, fa2):
         voy_dict = self.dvoy.get_voy_dict()
@@ -89,3 +93,13 @@ class Voyage_LL :
 
     def find_aircrafts(self):
         return self.dair.get_aircraft_dict()
+
+    def find_next_flightnumber(self, flightNumber):
+        voy_dict = self.dvoy.get_voy_dict()
+        return_flight = False
+        for key, value in voy_dict.items():
+            if return_flight == True:
+                return key
+            if key == flightNumber:
+                return_flight = True
+        return None
