@@ -81,6 +81,8 @@ class voyage_UI :
         
         while header_counter < len(header_list):
             emps_available = self.la.find_staff_with_chosen_rank(header_list[header_counter], flightNumber)
+            if len(emps_picked_for_voyage) == 4:
+                emps_available.remove(emps_available[val-1])
             numb_of_emp = 1
             print("{}:".format(header_list[header_counter]))
             for name in emps_available:
@@ -90,6 +92,9 @@ class voyage_UI :
             print("")
             emps_picked_for_voyage.append(emps_available[val-1][0])
             print_chosen_emps.append(emps_available[val-1][1])
+            #if len(emps_picked_for_voyage) == 5:
+                #emps_available.remove(val-1)
+                #emps_available[val-1].remove()
             header_counter += 1
 
         print("Crew you have chosen for current voyage:")
