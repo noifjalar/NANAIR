@@ -20,6 +20,15 @@ class LL_API :
     def addnewemplyee( self, ssn, name, role, rank, licence, address, phonenumber):
         self.empll.addnewemployee( ssn, name, role, rank, licence, address, phonenumber ) 
     
+    def check_name(self, name) :
+        return self.empll.check_name(name)
+
+    def check_phonenumber(self,phonenumber) :
+        return self.empll.check_phonenumber(phonenumber)
+
+    def check_ssn(self,ssn) :
+        return self.empll.check_ssn(ssn)
+    
     def check_emp_ssn(self,ssn) :
         return self.empll.check_emp_ssn(ssn) 
 

@@ -38,6 +38,23 @@ class Employee_LL :
             counter += 1        
         return True
 
+    def check_name(self, name) :
+        for cha in name :
+            if cha.isdigit() :
+                return False 
+        return True
+
+    def check_phonenumber(self,phonenumber) :
+        for cha in phonenumber :
+            if cha.isalpha() or len(phonenumber) != 7 :
+                return False 
+        return True
+
+    def check_ssn(self,ssn) :
+        for cha in ssn :
+            if cha.isalpha() or len(ssn) != 10 :
+                return False 
+        return True 
               
     def change_employee_address(self, new_address, emp_ssn) :
         '''passa að employeeinn sé til'''

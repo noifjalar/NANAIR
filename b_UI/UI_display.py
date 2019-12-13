@@ -72,20 +72,29 @@ class Display_UI :
                         print(" "*22 +"Certain employee")
                         print("-=x="*15 + "\n")
                         emp_ssn = input("Input the employee's ssn: ")
-                        print()
-                        wow = self.la.print_chosen_emp(emp_ssn)
-                        print("\tSSN: {}\n\tName: {} \n\tRole: {}\n\tRank: {}\n\tLicence: {}\n\tAddress: {}\n\tPhonenumber: {}\n".format(emp_ssn,wow[0],wow[1],wow[2],wow[3],wow[4],wow[5]))  
+                        if self.la.check_emp_ssn(emp_ssn) == False :
+                            print()
+                            wow = self.la.print_chosen_emp(emp_ssn)
+                            print("\tSSN: {}\n\tName: {} \n\tRole: {}\n\tRank: {}\n\tLicence: {}\n\tAddress: {}\n\tPhonenumber: {}\n".format(emp_ssn,wow[0],wow[1],wow[2],wow[3],wow[4],wow[5])) 
+                        else :
+                            print("\nNot a registered employee")     
                         input("\nPress ENTER to continue..")
                     elif next_choice == "5" :
-                        # self.la.get_off_emp(date) #VANTAR 
                         print("-=x="*15)
                         print(" "*21 +"Employees off-duty")
                         print("-=x="*15 + "\n")
                         date = input("Input date to see who are off-duty that day (YYYY-MM-DD): ")
+                        if len(date.split("-")) != 3 :
+                            print("\nNot a valid date-form")
+                            break
+                        else:
+                            one, two, three = date.split("-") 
+                            if len(one) != 4 or len(two) != 2 or len(three) != 2 :
+                                print("\nNot a valid date-form")
+                                break
                         off_list = self.la.get_off_emp(date)
                         print("\nEmployees that are off-duty for chosen date: ")
                         for elem in off_list:
-                            # print("\nEmployees that are off-duty for chosen date: ")
                             print(elem)
                         input("\nPress ENTER to continue..")
 
@@ -95,6 +104,14 @@ class Display_UI :
                         print(" "*21 +"Employees on-duty")
                         print("-=x="*15 + "\n")
                         date = input("Input date to look up working employees (YYYY-MM-DD): ")
+                        if len(date.split("-")) != 3 :
+                            print("\nNot a valid date-form")
+                            break
+                        else:
+                            one, two, three = date.split("-") 
+                            if len(one) != 4 or len(two) != 2 or len(three) != 2 :
+                                print("\nNot a valid date-form")
+                                break
                         on_list, name_list = self.la.get_on_emp(date)
                         counter = 0
                         while counter < len(on_list):
@@ -114,13 +131,21 @@ class Display_UI :
                         print(" "*20 +"Employees worksheet")
                         print("-=x="*15 + "\n")
                         ssn = input("Enter an employee ssn: ")
-                        week = int(input("Input a desired week for employees voyage: "))
-                        employee_voy_dict, name = self.la.display_cert_worksheet(week, ssn)
+                        if self.la.check_emp_ssn(ssn) == False :
+                            print()
+                            week = input("Input a desired week for employees voyage: ")
+                            if week.isalpha():
+                                print("\nNot a valid week!")
+                                break
+                            employee_voy_dict, name = self.la.display_cert_worksheet(week, ssn)
 
-                        print("\nVoyage(s) for {} in week {} are as follows:\n".format(name, week))
-                        for line in employee_voy_dict:
-                            for i in line:
-                                print(*i)
+                            print("\nVoyage(s) for {} in week {} are as follows:\n".format(name, week))
+                            for line in employee_voy_dict:
+                                for i in line:
+                                    print(*i)  
+                        else :
+                            print("\nNot a registered employee") 
+                    
                         
                         input("\nPress ENTER to continue..")
 
