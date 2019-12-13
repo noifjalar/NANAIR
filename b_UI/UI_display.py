@@ -17,7 +17,6 @@ class Display_UI :
             print("\t(1) - Display employee information")
             print("\t(2) - Display destinations")
             print("\t(3) - Display voyages")
-            print("\t(4) - Display aircraft's status")
             print("\tPress Q to go back\n")
             
             choice = input("Select an operation with a corresponding number: ").lower()
@@ -257,8 +256,9 @@ class Display_UI :
 
                 elif next_choice == "3" :
                     counter = 1
-                    week = input("Input the number of the week for desired voyages: ")
-                    if week.isalpha():
+                    try:
+                        week = int(input("Input the number of the week for desired voyages: "))
+                    except ValueError :
                         print("\nNot a valid week!\n")
                         break
                     manned_voy_list, unmanned_voy_list = self.la.certain_week_voy(week)

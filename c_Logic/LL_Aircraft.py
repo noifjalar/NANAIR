@@ -6,12 +6,3 @@ class Aircraft_LL :
 
     def addnewaircraft(self, nickname, aircraftID, planeTypeId,capacity,manufacturer):
         self.dapi.register_aircraft_Data(nickname,aircraftID,planeTypeId,capacity,manufacturer)
-
-
-
-    # def register_destination(self):
-    #     pass
-    # def register_airplanes(self):
-    #     pass
-    # def create_voyage(self):
-    #     pass

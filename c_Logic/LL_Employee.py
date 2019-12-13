@@ -73,13 +73,6 @@ class Employee_LL :
         self.demp.change_emp_phone_data(new_phonenumber, emp_ssn)
 
     
-
-        
-
-    def assign_cabin_pilot_to_voyage(self):
-        pass
-
-    
     def get_pilots(self):
         return self.demp.get_pilots()
 
