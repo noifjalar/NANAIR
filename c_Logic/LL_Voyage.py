@@ -108,30 +108,35 @@ class Voyage_LL :
         return self.dvoy.get_date_voy(date)
 
     def get_on_emp(self, date) :
-        return self.dvoy.get_on_emp(date)
+        name_list = []
+        onEmps = self.dvoy.get_on_emp(date)
+        allEmps =Employee_Data().get_crew_dict()
+        for key, value in allEmps.items():
+            temp_list = []
+            for onemp in onEmps:
+                if key in onemp:
+                    temp_list.append(value[0])
+            if temp_list != [] :
+                name_list.append(temp_list)
+        return self.dvoy.get_on_emp(date), name_list
 
     def get_off_emp(self,date):
         allEmps =Employee_Data().get_crew_dict()
-        # print(allEmps)
-        #allEmps = Employee_Data().get_all_emp()
+        
         onEmps = self.get_on_emp(date)
         # print(onEmps)
         offEmps = []
         i = 0
-        for emp in allEmps:
+        for emp, value in allEmps.items():
             if i != 0:
                 isOff = True
                 
                 for onemp in onEmps:
-                    # print("emp", end=" ")
-                    # print(emp)
-                    # print(type(emp))
-                    # print("onemp", end=" ")
-                    # print(onemp)
-                    # print(type(onemp))
                     if emp in onemp:
                         isOff = False
                 if isOff == True:
-                    offEmps.append(emp)
+
+                    offEmps.append(value[0])
             i+=1
+
         return offEmps

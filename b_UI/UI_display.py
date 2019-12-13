@@ -90,14 +90,15 @@ class Display_UI :
                         print(" "*21 +"Employees on-duty")
                         print("-=x="*15 + "\n")
                         date = input("Input date to look up working employees (YYYY-MM-DD): ")
-                        on_list = self.la.get_on_emp(date)
+                        on_list, name_list = self.la.get_on_emp(date)
                         for listinn in on_list :
                             print("\nEmployees flying to {}:".format(listinn[5]))
-                            print("Employee: {} is flying to {}".format(listinn[0],listinn[5]))
-                            print("Employee: {} is flying to {}".format(listinn[1],listinn[5]))
-                            print("Employee: {} is flying to {}".format(listinn[2],listinn[5]))
-                            print("Employee: {} is flying to {}".format(listinn[3],listinn[5]))
-                            print("Employee: {} is flying to {}".format(listinn[4],listinn[5]))
+                            for namelist in name_list:
+                                print("Employee: {} is flying to {}".format(namelist[0],listinn[5]))
+                                print("Employee: {} is flying to {}".format(namelist[1],listinn[5]))
+                                print("Employee: {} is flying to {}".format(namelist[2],listinn[5]))
+                                print("Employee: {} is flying to {}".format(namelist[3],listinn[5]))
+                                print("Employee: {} is flying to {}".format(namelist[4],listinn[5]))
                             
 
                     elif next_choice == "7" :

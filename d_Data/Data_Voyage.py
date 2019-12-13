@@ -101,6 +101,7 @@ class Voyage_Data :
                 if date == dep_date or date == ar_date :
                     if len(value) == 10 :
                         temp_list = [value[5], value[6], value[7], value[8], value[9], value[1]]
+                        
                         on_list.append(temp_list)
             counter += 1
         return on_list
