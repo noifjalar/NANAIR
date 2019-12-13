@@ -25,6 +25,7 @@ class UI_Destination:
                 break
 
     def change_em_info(self) :
+        ''' Function that let's the user select info to change about an employee '''
         choice = ""
         pick = "n"
         while pick == "n" :
