@@ -89,5 +89,22 @@ class Voyage_Data :
             counter += 1
         return manned_voy_list, unmanned_voy_list
 
+    def get_on_emp(self, date) :
+        on_list = []
+        counter = 1 
+        voy_dict = self.get_voy_dict()
+        for key, value in voy_dict.items() :
+            if counter > 1 :
+                dep_date, dep_time = value[2].split("T")
+                ar_date,ar_time = value[3].split("T")
+                if date == dep_date or date == ar_date :
+                    if len(value) == 10 :
+                        temp_list = [value[5], value[6], value[7], value[8], value[9], value[1]]
+                        on_list.append(temp_list)
+            counter += 1
+        return on_list
+
+
+
 
 

@@ -66,12 +66,6 @@ class LL_API :
     def get_cabin(self):
         return self.empll.get_cabin()
 
-    def display_off_emp(self):
-        self.disp.disp_off_emp()
-
-    def display_on_emp(self):
-        self.disp.disp_on_emp()
-
     def display_cert_worksheet(self):
         self.disp.disp_cert_worksheet()
 
@@ -107,3 +101,6 @@ class LL_API :
 
     def certain_date_voy(self, date) :
         return self.voy.certain_date_voy(date)
+    
+    def get_on_emp(self, date) :
+        return self.voy.get_on_emp(date)

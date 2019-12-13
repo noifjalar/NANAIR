@@ -77,11 +77,23 @@ class Display_UI :
                         print("-=x="*15)
                         print(" "*21 +"Employees off-duty")
                         print("-=x="*15 + "\n")
+                        off_list = [] = self.la.get_off_emp()
+
                     elif next_choice == "6" :
-                        self.la.display_on_emp() #VANTAR 
                         print("-=x="*15)
                         print(" "*21 +"Employees on-duty")
                         print("-=x="*15 + "\n")
+                        date = input("Input date to look up working employees (YYYY-MM-DD): ")
+                        on_list = self.la.get_on_emp(date)
+                        for listinn in on_list :
+                            print("\nEmployees flying to {}:".format(listinn[5]))
+                            print("Employee: {} is flying to {}".format(listinn[0],listinn[5]))
+                            print("Employee: {} is flying to {}".format(listinn[1],listinn[5]))
+                            print("Employee: {} is flying to {}".format(listinn[2],listinn[5]))
+                            print("Employee: {} is flying to {}".format(listinn[3],listinn[5]))
+                            print("Employee: {} is flying to {}".format(listinn[4],listinn[5]))
+                            
+
                     elif next_choice == "7" :
                         self.la.display_cert_worksheet() #VANTAR 
                         print("-=x="*15)
@@ -162,16 +174,27 @@ class Display_UI :
                             print(key, *value)
                         counter += 1
                 elif next_choice == "2" :
+                    counter = 1
                     date = input("Input date to look up voyages (YYYY-MM-DD): ")
                     manned_voy_list, unmanned_voy_list = self.la.certain_date_voy(date)
                     print("\nVoyages with assigned crew: ")
                     for listinn in manned_voy_list :
                         print(*listinn)
+                        if counter % 2 == 0 :
+                            print()
+                        counter +=1
+                    counter = 1
                     print("\nVoyages without assigned crew: ")
                     for listinn in unmanned_voy_list :
                         print(*listinn)
+                        if counter % 2 == 0 :
+                            print()
+                        counter +=1
+                        
+
                 elif next_choice == "3" :
-                    pass
+                    counter = 1 
+                    
 
                 else: 
                     print("Invalid input!")    
