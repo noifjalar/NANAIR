@@ -5,6 +5,7 @@ import re
 import os
 
 
+
 class Voyage_Data :
     def __init__(self):
         self.filename = "./a_csv/UpcomingFlights.csv"
@@ -103,6 +104,25 @@ class Voyage_Data :
                         on_list.append(temp_list)
             counter += 1
         return on_list
+
+    def get_off_emp(self,date):
+        allEmps = self
+        off_list = []
+        counter = 1
+        voy_dict = self.get_voy_dict()
+        for key, value in voy_dict.items():
+            if counter > 1 :
+                dep_date, dep_time = value[2].split("T")
+                ar_date,ar_time = value[3].split("T")
+                if date != dep_date or date != ar_date :
+                    print("No voyages on this day!")
+                if date == dep_date or date == ar_date:
+                    if len(value) == 10:
+                        temp_list = [value[5], value[6], value[7], value[8], value[9], value[1]]
+                        off_list.append(temp_list)
+                        # compare off_list to crew.csv and print out those who are not on the list
+            counter += 1
+        return off_list
 
 
 

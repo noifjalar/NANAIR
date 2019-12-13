@@ -73,11 +73,17 @@ class Display_UI :
                         wow = self.la.print_chosen_emp(emp_ssn)
                         print("\tSSN: {}\n\tName: {} \n\tRole: {}\n\tRank: {}\n\tLicence: {}\n\tAddress: {}\n\tPhonenumber: {}\n".format(emp_ssn,wow[0],wow[1],wow[2],wow[3],wow[4],wow[5]))  
                     elif next_choice == "5" :
-                        self.la.display_off_emp() #VANTAR 
+                        # self.la.get_off_emp(date) #VANTAR 
                         print("-=x="*15)
                         print(" "*21 +"Employees off-duty")
                         print("-=x="*15 + "\n")
-                        off_list = [] = self.la.get_off_emp()
+                        date = input("Input date to see who are off-duty that day (YYYY-MM-DD): ")
+                        off_list = self.la.get_off_emp(date)
+                        print("\nEmployees that are off-duty for chosen date: ")
+                        for elem in off_list:
+                            # print("\nEmployees that are off-duty for chosen date: ")
+                            print(elem)
+
 
                     elif next_choice == "6" :
                         print("-=x="*15)

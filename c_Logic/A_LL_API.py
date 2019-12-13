@@ -104,3 +104,6 @@ class LL_API :
     
     def get_on_emp(self, date) :
         return self.voy.get_on_emp(date)
+
+    def get_off_emp(self,date):
+        return self.voy.get_off_emp(date)
