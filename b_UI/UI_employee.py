@@ -27,12 +27,11 @@ class Employee_UI :
                 print("\t(1) - Cabin") 
                 print("\t(2) - Pilot")
                 pick = input("Pick a new role: ")
-                print()
                 if pick == "1":
                     role = "Cabincrew"
                     print("\nAvailable ranks: ")
                     print("\t(1) - Flight Service Manager") 
-                    print("\t(2) - Flight Attendant\n")
+                    print("\t(2) - Flight Attendant")
                     new_pick = input("Pick a new rank: ")
                     if new_pick == "1":
                         rank = "Flight Service Manager"
@@ -40,32 +39,34 @@ class Employee_UI :
                         rank = "Flight Attendant"
                 elif pick == "2":
                     role = "Pilot"
-                    print("Available ranks: ")
+                    print("\nAvailable ranks: ")
                     print("\t(1) - Captain") 
-                    print("\t(2) - Copilot\n")
+                    print("\t(2) - Copilot")
                     pick = input("Pick a new rank: ")
                     if pick == "1":
                         rank = "Captain"
                     elif pick == "2":
-                        rank = "Copilot"       
-                print("\nAvailable licences: ")
-                print("\t(1) - NAFokkerF100") #ef við registerum nýja flugvél þarf húna að koma hér inn(megum ekki harð kóða)
-                print("\t(2) - NABAE146")
-                print("\t(3) - NAFokkerF28") 
-                print("\t(4) - N/A\n") 
-                pick = input("Pick a new licence: ") 
-                print()
-                if pick == "1":
-                    licence = "NAFokkerF100"
-                elif pick == "2":
-                    licence = "NABAE146"
-                elif pick == "3":
-                    licence = "NAFokkerF28"
-                elif pick == "4":
+                        rank = "Copilot"   
+                if role == "Cabincrew":
                     licence = "N/A"
-                else:
-                    print("Invalid input!")   
+                    print("\nLicence: N/A\n")
+                elif role == "Pilot":
+                    print("\nAvailable licences: ")
+                    print("\t(1) - NAFokkerF100") #ef við registerum nýja flugvél þarf húna að koma hér inn(megum ekki harð kóða)
+                    print("\t(2) - NABAE146")
+                    print("\t(3) - NAFokkerF28") 
+                    pick = input("Pick a new licence: ") 
+                    print()
+                    if pick == "1":
+                        licence = "NAFokkerF100"
+                    elif pick == "2":
+                        licence = "NABAE146"
+                    elif pick == "3":
+                        licence = "NAFokkerF28"
+                    else:
+                        print("Invalid input!")   
                 address = input("Address: ")
+                print()
                 phonenumber = input("Mobile: ")
                 if self.la.check_phonenumber(phonenumber) == False :
                     print("\nInvalid phonenumber!\n")
