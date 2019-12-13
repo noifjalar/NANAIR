@@ -55,6 +55,23 @@ class Voyage_LL :
 
         return departure, arrival, departing_from_return, arriving_return, departure_return, arrival_return
 
+    def check_flight_number(self, flight_number):
+        if len(flight_number) != 6 :
+            return False
+        elif flight_number[0:2] != "NA" or flight_number[2:].isalpha() :
+            return False
+        else :
+            return True
+
+    def flight_number(self, flight_number) :
+        voy_dict = self.dvoy.get_voy_dict()
+        for key, items in voy_dict.items() :
+            if key == flight_number :
+                return False 
+        return True 
+
+        
+
     def create_crew_voyage(self):
         voy_dict = self.dvoy.get_voyage
 

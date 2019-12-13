@@ -62,6 +62,12 @@ class LL_API :
 
     def voy_dest(self):
         return self.voy.voy_dest()
+    
+    def check_flight_number(self,flight_number):
+        return self.voy.check_flight_number(flight_number)
+    
+    def flight_number(self, flight_number) :
+        return self.voy.flight_number(flight_number)
 
     def get_dest(self):
         return self.dest.get_dest()

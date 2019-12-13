@@ -1,8 +1,3 @@
-# VIRKAAAAAAAAR!
-# its true
-# omg
-
-#from Model import *
 from d_Data.Data_Employee import Employee_Data
 from d_Data.Data_Destination import Destination_Data
 
@@ -14,12 +9,6 @@ class DataAPI :
 
     def storenewemplyee (self, new_empl ):
         return self.demp.register_employee_Data ( new_empl )
-
-    def getemployee(self) :
-        pass
-
-    def myprint(self):
-        return "datamanager str"
 
     def new_emp_id(self):
         the_new_emp_id = new_emp_id()
