@@ -24,8 +24,15 @@ class Employee_LL :
         return self.demp.get_chosen_emp(emp_ssn)
         
     def addnewemployee(self, ssn, name, role, rank, licence, address, phonenumber):
-        '''Vantar að tékka hvort emp sé til með ssn tékki'''
+        '''Áfram senda skipun um að skrifa í csv skjal'''
         self.demp.register_employee_Data(ssn, name, role, rank, licence, address, phonenumber)
+
+    def check emp_ssn(self,ssn) :
+        '''Tékka hvort emp sé til með ssn tékki'''
+        crew_dict = self.demp.get_crew_dict()
+        for key in crew_dict.keys() :
+            if key = ssn :
+                return False)
               
     def change_employee_address(self, new_address, emp_ssn) :
         '''passa að employeeinn sé til'''

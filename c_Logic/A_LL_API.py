@@ -19,6 +19,8 @@ class LL_API :
     #  Main menu selected 1
     def addnewemplyee( self, ssn, name, role, rank, licence, address, phonenumber):
         self.empll.addnewemployee( ssn, name, role, rank, licence, address, phonenumber ) 
+    
+    def check emp_ssn(self,ssn) :
 
     def print_chosen_emp(self, emp_ssn) :
         return self.empll.get_chosen_emp(emp_ssn)

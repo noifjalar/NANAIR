@@ -48,7 +48,8 @@ class Display_UI :
                         print("-=x="*15 + "\n")
                         all_emp = self.la.get_all_emp()
                         for name in all_emp :
-                            print("\t",name)  
+                            print("\t",name)
+                        input("\nPress ENTER to continue..")  
                     elif next_choice == "2" :
                         print("-=x="*15)
                         print(" "*25 +"Pilot list")
@@ -56,6 +57,7 @@ class Display_UI :
                         pilot_list = self.la.get_pilots()
                         for name in pilot_list:
                             print("\t",name)
+                        input("\nPress ENTER to continue..")
                     elif next_choice == "3" :
                         print("-=x="*15)
                         print(" "*25 +"Cabin list")
@@ -64,6 +66,7 @@ class Display_UI :
                         cabin_list = self.la.get_cabin()
                         for name in cabin_list:
                             print("\t",name)
+                        input("\nPress ENTER to continue..") 
                     elif next_choice == "4" :
                         print("-=x="*15)
                         print(" "*22 +"Certain employee")
@@ -72,6 +75,7 @@ class Display_UI :
                         print()
                         wow = self.la.print_chosen_emp(emp_ssn)
                         print("\tSSN: {}\n\tName: {} \n\tRole: {}\n\tRank: {}\n\tLicence: {}\n\tAddress: {}\n\tPhonenumber: {}\n".format(emp_ssn,wow[0],wow[1],wow[2],wow[3],wow[4],wow[5]))  
+                        input("\nPress ENTER to continue..")
                     elif next_choice == "5" :
                         # self.la.get_off_emp(date) #VANTAR 
                         print("-=x="*15)
@@ -83,6 +87,7 @@ class Display_UI :
                         for elem in off_list:
                             # print("\nEmployees that are off-duty for chosen date: ")
                             print(elem)
+                        input("\nPress ENTER to continue..")
 
 
                     elif next_choice == "6" :
@@ -101,7 +106,7 @@ class Display_UI :
                                 print("Employee: {} is flying to {}".format(name_list[counter][3],listinn[5]))
                                 print("Employee: {} is flying to {}".format(name_list[counter][4],listinn[5]))
                                 counter +=1
-                            
+                        input("\nPress ENTER to continue..")    
 
                     elif next_choice == "7" :
                         
@@ -146,6 +151,7 @@ class Display_UI :
                                 print("\t",pilot)
                         else:
                             print("Invalid input!")
+                        input("\nPress ENTER to continue..")
 
                         
                     elif next_choice == "9" :
@@ -164,6 +170,7 @@ class Display_UI :
                         print("\nPilots with NAFokkerF100 licence: \n")
                         for pilot in nafokker100_list :
                             print("\t{}".format(pilot))
+                        input("\nPress ENTER to continue..")
                     elif next_choice == "q" :
                         pass       
                     else: 
@@ -176,6 +183,7 @@ class Display_UI :
                 dest_list = self.la.get_dest()
                 for destination in dest_list :
                     print("\t{}\n".format(destination))
+                
 
             elif choice == "3" :
                 print("\n" + "-=x="*15)
@@ -193,6 +201,7 @@ class Display_UI :
                         if counter > 1 :
                             print(key, *value)
                         counter += 1
+                    input("\nPress ENTER to continue..")    
                 elif next_choice == "2" :
                     counter = 1
                     date = input("Input date to look up voyages (YYYY-MM-DD): ")
@@ -210,7 +219,7 @@ class Display_UI :
                         if counter % 2 == 0 :
                             print()
                         counter +=1
-                        
+                    input("\nPress ENTER to continue..")    
 
                 elif next_choice == "3" :
                     counter = 1
@@ -229,7 +238,7 @@ class Display_UI :
                         if counter % 2 == 0 :
                             print()
                         counter +=1
-                    
+                    input("\nPress ENTER to continue..")
 
                 else: 
                     print("Invalid input!")    
