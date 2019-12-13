@@ -79,12 +79,12 @@ class Voyage_Data :
             if counter > 1:
                 dep_date, dep_time = value[2].split("T")
                 ar_date,ar_time = value[3].split("T")
-                counter += 1
                 if date == dep_date or date == ar_date :
                     if len(value) == 11 :
                         manned_voy_list.append(key, value[0:])
                     else: 
                         unmanned_voy_list.append(key,value[0:])
+            counter += 1
         return manned_voy_list, unmanned_voy_list
 
 
