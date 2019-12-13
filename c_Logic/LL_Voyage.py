@@ -111,11 +111,12 @@ class Voyage_LL :
         name_list = []
         onEmps = self.dvoy.get_on_emp(date)
         allEmps =Employee_Data().get_crew_dict()
-        for key, value in allEmps.items():
+        for onemp in onEmps:
             temp_list = []
-            for onemp in onEmps:
-                if key in onemp:
-                    temp_list.append(value[0])
+            for key, value in allEmps.items():
+                for ssn in onemp :
+                    if key == ssn:
+                        temp_list.append(value[0])
             if temp_list != [] :
                 name_list.append(temp_list)
         return self.dvoy.get_on_emp(date), name_list
@@ -123,7 +124,7 @@ class Voyage_LL :
     def get_off_emp(self,date):
         allEmps =Employee_Data().get_crew_dict()
         
-        onEmps = self.get_on_emp(date)
+        onEmps, name_list = self.get_on_emp(date)
         # print(onEmps)
         offEmps = []
         i = 0
