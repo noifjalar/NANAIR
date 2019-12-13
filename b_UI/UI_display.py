@@ -230,6 +230,14 @@ class Display_UI :
                 elif next_choice == "2" :
                     counter = 1
                     date = input("Input date to look up voyages (YYYY-MM-DD): ")
+                    if len(date.split("-")) != 3 :
+                            print("\nNot a valid date-form")
+                            break
+                    else:
+                        one, two, three = date.split("-") 
+                        if len(one) != 4 or len(two) != 2 or len(three) != 2 :
+                            print("\nNot a valid date-form\n")
+                            break
                     manned_voy_list, unmanned_voy_list = self.la.certain_date_voy(date)
                     print("\nVoyages with assigned crew: ")
                     for listinn in manned_voy_list :
@@ -248,7 +256,10 @@ class Display_UI :
 
                 elif next_choice == "3" :
                     counter = 1
-                    week = int(input("Input the number of the week for desired voyages: "))
+                    week = input("Input the number of the week for desired voyages: ")
+                    if week.isalpha():
+                        print("\nNot a valid week!\n")
+                        break
                     manned_voy_list, unmanned_voy_list = self.la.certain_week_voy(week)
                     print("\nVoyages with assigned crew: ")
                     for listinn in manned_voy_list :
