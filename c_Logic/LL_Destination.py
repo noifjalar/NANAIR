@@ -3,16 +3,13 @@ from d_Data.Data_Destination import Destination_Data
 
 class Destination_LL:
     def __init__ (self):
-        #self.dapi = dapi_in
         self.dapi = Destination_Data()
-
-    # def addnewdestination(self, identity, destination, flight_time)):
-    #     new_destination_ready_for_print = new_destination.dest_comma_to_string
 
     def addnewdestination(self, identity, destination, flight_time):
         self.dapi.register_destination_Data(identity, destination, flight_time)
 
     def check_id(self, identity) :
+        ''' Checks if '''
         des_dict = self.dapi.get_dest_dict()
         for key, value in des_dict.items() :
             if value[0] == identity :

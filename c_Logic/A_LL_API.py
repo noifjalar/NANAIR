@@ -16,7 +16,7 @@ class LL_API :
         
     def addnewvoyage( self, flight_number, departing_from, arriving_at, departure, arrival):
         self.voy.addnewvoyage(flight_number, departing_from, arriving_at, departure, arrival ) 
-    #  Main menu selected 1
+
     def addnewemplyee( self, ssn, name, role, rank, licence, address, phonenumber):
         self.empll.addnewemployee( ssn, name, role, rank, licence, address, phonenumber ) 
     
@@ -49,7 +49,6 @@ class LL_API :
 
     def addnewdestination(self, identity, destination, flight_time):
         self.dest.addnewdestination(identity, destination, flight_time)
-    #  Main menu selected 6 
 
     def check_id(self, identity) :
         return self.dest.check_id(identity)
