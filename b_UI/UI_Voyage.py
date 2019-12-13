@@ -57,13 +57,22 @@ class voyage_UI :
 
         print("Aircrafts:")
         print(aircrafts)
-        numb_of_airc = 1
+        numb_of_airc = 0
         for key, value in aircrafts.items():
-            print("\t({}) - {}, {}".format(numb_of_airc, key, value[0]))
+            if numb_of_airc == 0:
+                pass
+            else:
+                print("\t({}) - {}, {}".format(numb_of_airc, key, value[0]))
             numb_of_airc += 1
         airc_val = int(input("Choose an aircraft: "))
-        print("")
-        aircraftID = aircrafts[airc_val-1][0]
+        counter = 0
+        val = 1
+        for key, value in aircrafts.items():
+            if airc_val == counter:
+                val = key
+            counter += 1
+        print(val)
+        aircraftID = aircrafts[val][0]
         #val = int(input("Choose a {}: ".format(header_list[header_counter])))
 
         # þarf að birta lista af lausum flugvélum
