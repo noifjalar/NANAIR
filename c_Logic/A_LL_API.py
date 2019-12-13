@@ -107,3 +107,12 @@ class LL_API :
 
     def check_time(self,year, month, day, hour,minute) :
         return self.voy.check_time(year, month, day,hour,minute)
+
+    def print_chosen_emer(self, des_id) :
+        return self.dest.get_chosen_emer(des_id)
+
+    def change_emer_name(self, new_name, des_id) :
+        return self.dest.change_emer_name(new_name, des_id)
+
+    def change_emer_number(self,new_number, des_id) :
+        return self.dest.change_emer_number(new_number, des_id)
