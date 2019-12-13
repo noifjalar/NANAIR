@@ -19,13 +19,13 @@ class Employee_UI :
                 print("\nInvalid SSN!\n")
                 break 
             if self.la.check_emp_ssn(ssn) == True :
-                name = input("Name: ")
+                name = input("\nName: ")
                 if self.la.check_name(name) == False :
                     print("Name can not contain a number\n")
                     break
-                print("Available roles: ")
+                print("\nAvailable roles: ")
                 print("\t(1) - Cabin") 
-                print("\t(2) - Pilot\n")
+                print("\t(2) - Pilot")
                 pick = input("Pick a new role: ")
                 print()
                 if pick == "1":
@@ -70,8 +70,10 @@ class Employee_UI :
                 if self.la.check_phonenumber(phonenumber) == False :
                     print("\nInvalid phonenumber!\n")
                     break
-                input("\nPress ENTER to continue..\n")
+                input("\nPress ENTER to continue..")
+                print()
                 self.la.addnewemplyee(ssn, name, role, rank, licence, address, phonenumber)
+                Register = False
             else: 
                 print("Employee already exists\n")
 
