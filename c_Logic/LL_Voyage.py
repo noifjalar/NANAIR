@@ -70,6 +70,22 @@ class Voyage_LL :
                 emps_with_chosen_rank.append(temp_list)
         return emps_with_chosen_rank
 
+    def find_available_staff_with_chosen_rank(self, rank, flightNumber):
+        available_staff = []
+        emps_with_chosen_rank = self.find_staff_with_chosen_rank(rank)
+        dep_date, ar_date = self.get_date(flightNumber)
+        dep_offemps = self.get_off_emp(dep_date)
+        ar_offemps = self.get_off_emp(ar_date)
+        for emp in emps_with_chosen_rank :
+            if emp[1] in dep_offemps and emp[1] in ar_offemps : 
+                available_staff.append(emp)
+        return available_staff
+
+
+    def get_date(self, flightnumber) :
+        return self.dvoy.get_date(flightnumber)
+
+
     def picked_emp_for_voyage(self, picked, aircraftID, flightNumber):
         captain, copilot, fsm, fa1, fa2 = picked
         self.dvoy.assign_crew_to_voyage(aircraftID, captain, copilot, fsm, fa1, fa2)
@@ -111,30 +127,36 @@ class Voyage_LL :
         return self.dvoy.get_week_voy(week)
 
     def get_on_emp(self, date) :
-        return self.dvoy.get_on_emp(date)
+        name_list = []
+        onEmps = self.dvoy.get_on_emp(date)
+        allEmps =Employee_Data().get_crew_dict()
+        for onemp in onEmps:
+            temp_list = []
+            for key, value in allEmps.items():
+                for ssn in onemp :
+                    if key == ssn:
+                        temp_list.append(value[0])
+            if temp_list != [] :
+                name_list.append(temp_list)
+        return self.dvoy.get_on_emp(date), name_list
 
     def get_off_emp(self,date):
         allEmps =Employee_Data().get_crew_dict()
-        # print(allEmps)
-        #allEmps = Employee_Data().get_all_emp()
-        onEmps = self.get_on_emp(date)
+        
+        onEmps, name_list = self.get_on_emp(date)
         # print(onEmps)
         offEmps = []
         i = 0
-        for emp in allEmps:
+        for emp, value in allEmps.items():
             if i != 0:
                 isOff = True
                 
                 for onemp in onEmps:
-                    # print("emp", end=" ")
-                    # print(emp)
-                    # print(type(emp))
-                    # print("onemp", end=" ")
-                    # print(onemp)
-                    # print(type(onemp))
                     if emp in onemp:
                         isOff = False
                 if isOff == True:
-                    offEmps.append(emp)
+
+                    offEmps.append(value[0])
             i+=1
+
         return offEmps

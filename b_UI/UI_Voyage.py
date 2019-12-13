@@ -80,7 +80,7 @@ class voyage_UI :
         print_chosen_emps = []
         
         while header_counter < len(header_list):
-            emps_available = self.la.find_staff_with_chosen_rank(header_list[header_counter])
+            emps_available = self.la.find_staff_with_chosen_rank(header_list[header_counter], flightNumber)
             numb_of_emp = 1
             print("{}:".format(header_list[header_counter]))
             for name in emps_available:
