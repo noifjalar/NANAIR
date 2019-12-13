@@ -126,6 +126,14 @@ class Voyage_Data :
         return off_list
 
 
+    def get_date(self, flightnumber) :
+        voy_dict = self.get_voy_dict()
+        for key, value in voy_dict.items() :
+            if flightnumber == key :
+                dep_time, dep_hour = value[2].split("T")
+                ar_time, ar_hour = value[2].split("T")
+        return dep_time, ar_time
+        
 
 
 

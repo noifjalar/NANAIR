@@ -70,6 +70,22 @@ class Voyage_LL :
                 emps_with_chosen_rank.append(temp_list)
         return emps_with_chosen_rank
 
+    def find_available_staff_with_chosen_rank(self, rank, flightNumber):
+        available_staff = []
+        emps_with_chosen_rank = self.find_staff_with_chosen_rank(rank)
+        dep_date, ar_date = self.get_date(flightNumber)
+        dep_offemps = self.get_off_emp(dep_date)
+        ar_offemps = self.get_off_emp(ar_date)
+        for emp in emps_with_chosen_rank :
+            if emp[1] in dep_offemps and emp[1] in ar_offemps : 
+                available_staff.append(emp)
+        return available_staff
+
+
+    def get_date(self, flightnumber) :
+        return self.dvoy.get_date(flightnumber)
+
+
     def picked_emp_for_voyage(self, picked, aircraftID, flightNumber):
         captain, copilot, fsm, fa1, fa2 = picked
         self.dvoy.assign_crew_to_voyage(aircraftID, captain, copilot, fsm, fa1, fa2)

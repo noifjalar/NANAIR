@@ -90,8 +90,8 @@ class LL_API :
     def create_crew_voyage(self):
         pass
 
-    def find_staff_with_chosen_rank(self, rank):
-        return self.voy.find_staff_with_chosen_rank(rank)
+    def find_staff_with_chosen_rank(self, rank, flightNumber):
+        return self.voy.find_available_staff_with_chosen_rank(rank,flightNumber)
 
     def picked_emp_for_voyage(self, picked, aircraftID, flightNumber):
         self.voy.picked_emp_for_voyage(picked, aircraftID, flightNumber)
