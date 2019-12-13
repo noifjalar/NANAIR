@@ -14,3 +14,12 @@ class Destination_LL:
 
     def get_dest(self) :
         return self.dapi.get_dest()
+
+    def get_chosen_emer(self, des_id):
+        return self.dapi.get_chosen_emer(des_id)
+
+    def change_emer_name(self, new_name, des_id):
+        return self.dapi.change_emer_name(new_name, des_id)
+    
+    def change_emer_number(self, new_number, des_id) :
+        return self.dapi.change_emer_number(new_number, des_id)

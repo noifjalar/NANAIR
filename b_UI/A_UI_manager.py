@@ -71,8 +71,8 @@ class Manager_UI :
                    """)
 
         
-        print("""\
-                                _   _          _   _            _____ _____   
+        print("\033[94m""""\
+                                 _   _          _   _            _____ _____   
                                 | \ | |   /\   | \ | |     /\   |_   _|  __ \  
                                 |  \| |  /  \  |  \| |    /  \    | | | |__) | 
                                 | . ` | / /\ \ | . ` |   / /\ \   | | |  _  /  
@@ -80,7 +80,7 @@ class Manager_UI :
                                 |_| \_/_/    \_\_| \_| /_/    \_\_____|_|  \_\ 
                                                     
                                                     
-""")
+""""\033[0m")
         choice = ""
         while choice != "q" :
             print("-=x="*15)
@@ -95,6 +95,7 @@ class Manager_UI :
             print("\t(5) - Register destination") #5
             print("\t(6) - Register airplanes") #6
             print("\t(7) - Create voyage") #7
+            print("\t(8) - Change emergency contact")
             print("\t Press Q to quit\n")
             choice = input("Select an operation with a corresponding number: ").lower()
             print()
@@ -113,6 +114,8 @@ class Manager_UI :
                 self.aircraft.register_aircraft_UI()
             elif choice == "7":
                 self.voyage.register_voyage_UI()
+            elif choice == "8" :
+                self.destination.change_em_info()
             elif choice == "q" :
                 quit
             else:
