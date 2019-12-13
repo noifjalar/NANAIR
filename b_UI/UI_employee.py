@@ -52,7 +52,7 @@ class Employee_UI :
                     print("\nLicence: N/A\n")
                 elif role == "Pilot":
                     print("\nAvailable licences: ")
-                    print("\t(1) - NAFokkerF100") #ef við registerum nýja flugvél þarf húna að koma hér inn(megum ekki harð kóða)
+                    print("\t(1) - NAFokkerF100") 
                     print("\t(2) - NABAE146")
                     print("\t(3) - NAFokkerF28") 
                     pick = input("Pick a new licence: ") 

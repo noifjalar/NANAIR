@@ -25,6 +25,7 @@ class UI_Destination:
                 break
 
     def change_em_info(self) :
+        ''' Function that let's the user select info to change about an employee '''
         choice = ""
         pick = "n"
         while pick == "n" :
@@ -57,8 +58,8 @@ class UI_Destination:
                 des_info = self.la.print_chosen_emer(des_id)
                 print("\tDestination ID: {}\n\tName: {} \n\tPhonenumber: {}\n".format(des_id,des_info[0],des_info[1]))
                 print("Do you want to change:")
-                print("(S) - More info about the same employee,")
-                print("(N) - change a new employee,")
+                print("(S) - More emergency info about the same airport")
+                print("(N) - change a new airports emergency information")
                 print("(R) - or return to main menu")
                 pick = input("Select: ").lower()
                 print()    

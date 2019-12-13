@@ -121,6 +121,52 @@ class voyage_UI :
                     #emps_available.remove(val-1)
                     #emps_available[val-1].remove()
                 header_counter += 1
+        ''' Allows us to append planes and employees to flights to create voyages '''
+        print("-=x="*15)
+        print(" "*9 + "Assign cabin/pilot and aircraft to voyage")
+        print("-=x="*15 + "\n")
+        flightNumber = input("Input flight number (e.g. NA1234): ")
+        aircrafts = self.la.find_aircrafts()
+        print("\nAircrafts:")
+        numb_of_airc = 0
+        for key, value in aircrafts.items():
+            if numb_of_airc == 0:
+                pass
+            else:
+                
+                print("\t({}) - {:<15} {}".format(numb_of_airc, key, value[0]))
+            numb_of_airc += 1
+        airc_val = int(input("Choose an aircraft: "))
+        print("")
+        counter = 0
+        val = 1
+        for key, value in aircrafts.items():
+            if airc_val == counter:
+                val = key
+            counter += 1
+        
+        aircraftID = aircrafts[val][0]
+
+        header_list = ['Captain','Copilot','Flight Service Manager','Flight Attendant','Flight Attendant']
+        header_counter = 0
+        fa2 = None
+        emps_picked_for_voyage = []
+        print_chosen_emps = []
+        
+        while header_counter < len(header_list):
+            emps_available = self.la.find_staff_with_chosen_rank(header_list[header_counter], flightNumber)
+            if len(emps_picked_for_voyage) == 4:
+                emps_available.remove(emps_available[val-1])
+            numb_of_emp = 1
+            print("{}:".format(header_list[header_counter]))
+            for name in emps_available:
+                print("\t({}) - {}".format(numb_of_emp, name[1]))
+                numb_of_emp += 1
+            val = int(input("Choose a {}: ".format(header_list[header_counter])))
+            print("")
+            emps_picked_for_voyage.append(emps_available[val-1][0])
+            print_chosen_emps.append(emps_available[val-1][1])
+            header_counter += 1
 
             print("Crew you have chosen for current voyage:")
             print("\tCaptain: {} - Copilot: {},".format(print_chosen_emps[0], print_chosen_emps[1]))

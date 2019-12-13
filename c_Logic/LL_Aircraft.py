@@ -8,6 +8,7 @@ class Aircraft_LL :
         self.dapi.register_aircraft_Data(nickname,aircraftID,planeTypeId,capacity,manufacturer)
 
     def check_aircraftid(self, aircraftID) :
+        ''' Checks if aircraft ID is valid '''
         if len(aircraftID.split("-")) != 2 :
             return False 
         else :
