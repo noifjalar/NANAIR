@@ -103,3 +103,6 @@ class Voyage_LL :
             if key == flightNumber:
                 return_flight = True
         return None
+
+    def certain_date_voy(self, date) :
+        return self.dvoy.get_date_voy(date)

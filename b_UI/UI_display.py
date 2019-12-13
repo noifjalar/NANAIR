@@ -149,12 +149,29 @@ class Display_UI :
                 print("\n" + "-=x="*15)
                 print(" "*26 +"Voyages")
                 print("-=x="*15 + "\n")
-                voyage_dict = self.la.display_voy()
-                counter = 1
-                for key, value in voyage_dict.items() :
-                    if counter > 1 :
-                        print(key, *value)
-                    counter += 1
+                print("\t(1) - Display all voyages") 
+                print("\t(2) - Display voyages on a certain date") 
+                print("\t(3) - Display voyages in a certain week\n") 
+                next_choice = input("Select an operation with a corresponding number: ").lower()
+                print()
+                if next_choice == "1" :
+                    voyage_dict = self.la.display_voy()
+                    counter = 1
+                    for key, value in voyage_dict.items() :
+                        if counter > 1 :
+                            print(key, *value)
+                        counter += 1
+                elif next_choice == "2" :
+                    date = input("Input date to look up voyages (YYYY-MM-DD): ").split()
+                    # year = int(year)
+                    # month = int(month)
+                    # day = int(day)
+                    emp_list = self.la.certain_date_voy(date)
+                elif next_choice == "3" :
+                    pass
+
+                else: 
+                    print("Invalid input!")    
 
             elif choice == "4" :
                 print("-=x="*15)

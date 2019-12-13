@@ -70,3 +70,20 @@ class Voyage_Data :
                 voy_dict.write(string)
                 voy_dict.write("\n")
         os.remove(self.trash_file)
+
+    
+    def get_date_voy(self, date) :
+        manned_voy_list = []
+        unmanned_voy_list = []
+        voy_dict = self.get_voy_dict()
+        for key, value in voy_dict.value() :
+            dep_date, dep_time = value[2].split("T")
+            ar_date,ar_time = value[3].split("T")
+            if date == dep_date or date == ar_date :
+                if len(value) == 11 :
+                    manned_voy_list.append(key, value[0:])
+                else: 
+                    unmanned_voy_list.append(key,value[0:])
+        return manned_voy_list, unmanned_voy_list
+
+

@@ -104,3 +104,6 @@ class LL_API :
         
     def find_aircrafts(self):
         return self.voy.find_aircrafts()
+
+    def certain_date_voy(self, date) :
+        return self.voy.certain_date_voy(date)
