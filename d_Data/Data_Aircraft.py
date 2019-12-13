@@ -5,9 +5,9 @@ class Aircraft_Data :
         self.filename = "./a_csv/Aircraft.csv"
         self.trash_file = "./a_csv/Aircraft_Trash.csv"
 
-    def register_aircraft_Data(self,nickname,planeTypeId,capacity,manufacturer):
+    def register_aircraft_Data(self,nickname,aircraftID, planeTypeId,capacity,manufacturer):
         ''' Opens the CSV file and appends input from user '''
-        new_aircraft = Aircraft(nickname,planeTypeId,capacity,manufacturer)
+        new_aircraft = Aircraft(nickname,aircraftID, planeTypeId,capacity,manufacturer)
         try :
             with open( self.filename ,"a") as aircraft_file:
                 aircraft_file.write("\n")

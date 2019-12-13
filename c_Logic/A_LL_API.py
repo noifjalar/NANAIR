@@ -39,8 +39,8 @@ class LL_API :
         self.dest.addnewdestination(identity, destination, flight_time)
     #  Main menu selected 6   
 
-    def addnewaircraft(self, nickname,planeTypeId,capacity,manufacturer):
-        self.airc.addnewaircraft(nickname,planeTypeId,capacity,manufacturer)
+    def addnewaircraft(self, nickname,aircraftID,planeTypeId,capacity,manufacturer):
+        self.airc.addnewaircraft(nickname,aircraftID,planeTypeId,capacity,manufacturer)
 
     def voy_dest(self):
         return self.voy.voy_dest()

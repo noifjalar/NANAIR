@@ -10,8 +10,9 @@ class UI_Aircraft :
         print(" "*21 +"Register airplanes")
         print("-=x="*15 + "\n")
         nickname = input("Plane nickname: ")
+        aircraftID = input("Aircraft ID: ")
         planeTypeId = input("Plane Type ID: ")
         capacity = input("Capacity: ")
         manufacturer = input("Manufacturer: ")
 
-        self.la.addnewaircraft(nickname,planeTypeId,capacity,manufacturer)
+        self.la.addnewaircraft(nickname,aircraftID,planeTypeId,capacity,manufacturer)
