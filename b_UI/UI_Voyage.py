@@ -31,20 +31,23 @@ class voyage_UI :
             
         year, month, day = input("Input date of flight (YYYY MM DD): ").split()
         hour, minute = input("Input time of flight (hour minute): ").split()
+        if self.la.check_time(year, month, day, hour,minute) == True :
 
-        year = int(year)
-        month = int(month)
-        day = int(day)
-        hour = int(hour)
-        minute = int(minute)
+            year = int(year)
+            month = int(month)
+            day = int(day)
+            hour = int(hour)
+            minute = int(minute)
 
-        flight_number_return = input("Enter a flight number for return flight: ")
-        departure_not_iso = datetime.datetime(year, month, day, hour, minute)
-        ''' Send the input information down to LL_Voyage for calculation '''
-        departure, arrival, departing_from_return, arriving_return, departure_return, arrival_return = self.la.voy_calculating_flight_times(val, departure_not_iso, departing_from)
-        ''' Send the input and calculated information to the model class '''
-        self.la.addnewvoyage(flight_number, departing_from, arriving_at, departure, arrival)
-        self.la.addnewvoyage(flight_number_return, departing_from_return, arriving_return, departure_return, arrival_return)
+            flight_number_return = input("Enter a flight number for return flight: ")
+            departure_not_iso = datetime.datetime(year, month, day, hour, minute)
+            ''' Send the input information down to LL_Voyage for calculation '''
+            departure, arrival, departing_from_return, arriving_return, departure_return, arrival_return = self.la.voy_calculating_flight_times(val, departure_not_iso, departing_from)
+            ''' Send the input and calculated information to the model class '''
+            self.la.addnewvoyage(flight_number, departing_from, arriving_at, departure, arrival)
+            self.la.addnewvoyage(flight_number_return, departing_from_return, arriving_return, departure_return, arrival_return)
+        else: 
+            print("\nOccupied time! Another voyage has reserved the runway.")
 
     def create_crew_air_voyage(self):
         ''' allows us to append planes and employees to flights to create voyages '''

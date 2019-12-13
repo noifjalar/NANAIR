@@ -160,3 +160,13 @@ class Voyage_LL :
             i+=1
 
         return offEmps
+
+    def check_time(self,year, month, day, hour, minute) :
+        time = "{}-{}-{}T{}:{}:00".format(year, month, day, hour, minute)
+        print(time)
+        voy_dict = self.dvoy.get_voy_dict()
+        for key, value in voy_dict.items(): 
+            time_str = value[2]
+            if time == time_str :
+                return False
+        return True

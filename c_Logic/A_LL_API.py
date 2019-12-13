@@ -45,9 +45,6 @@ class LL_API :
     def voy_dest(self):
         return self.voy.voy_dest()
 
-    def display_voy(self):
-        pass
-
     def get_dest(self):
         return self.dest.get_dest()
 
@@ -87,9 +84,6 @@ class LL_API :
     def voy_calculating_flight_times(self, val, departure_not_iso, departing_from):
         return self.voy.voy_calculating_flight_times(val, departure_not_iso, departing_from)
 
-    def create_crew_voyage(self):
-        pass
-
     def find_staff_with_chosen_rank(self, rank, flightNumber):
         return self.voy.find_available_staff_with_chosen_rank(rank,flightNumber)
 
@@ -110,3 +104,6 @@ class LL_API :
 
     def get_off_emp(self,date):
         return self.voy.get_off_emp(date)
+
+    def check_time(self,year, month, day, hour,minute) :
+        return self.voy.check_time(year, month, day,hour,minute)
