@@ -23,7 +23,7 @@ class voyage_UI :
             if key == "Keflavik":
                 pass
             else:
-                print("({}) - {}".format(counter, key))
+                print("\t({}) - {}".format(counter, key))
                 counter += 1
         val = int(input("Choose a destination: "))
         

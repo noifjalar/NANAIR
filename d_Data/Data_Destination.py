@@ -6,8 +6,9 @@ import re
 class Destination_Data :
     def __init__(self):
         self.filename = "./a_csv/Destinations.csv"
+        self.trash_file = "./a_csv/Destinations_Trash.csv"
         self.file = "./a_csv/Emergency_contacts.csv"
-        self.trash_file = "./a_csv/Emergency_Trash.csv"
+        self.em_file_trash = "./a_csv/Emergency_Trash.csv"
 
     def register_destination_Data(self,identity, destination, flight_time):
         ''' Opens the CSV file and appends input from user '''
@@ -70,7 +71,7 @@ class Destination_Data :
         and deletes the backup file after overwriting'''
         string = ""
 
-        dest = self.trash_file
+        dest = self.em_file_trash
         source = self.file
         os.rename(source, dest)
 
@@ -81,7 +82,7 @@ class Destination_Data :
                 emer_file.write(string)
                 emer_file.write("\n")
         
-        os.remove(self.trash_file)
+        os.remove(self.em_file_trash)
 
     def get_chosen_emer(self, des_id) :
         '''gets the countyr id from user input for changing emergency info'''
