@@ -55,8 +55,7 @@ class voyage_UI :
         #aircraftID = input("Choose an airplane: ")
         aircrafts = self.la.find_aircrafts()
 
-        print("Aircrafts:")
-        print(aircrafts)
+        print("\nAircrafts:")
         numb_of_airc = 0
         for key, value in aircrafts.items():
             if numb_of_airc == 0:
@@ -65,13 +64,14 @@ class voyage_UI :
                 print("\t({}) - {}, {}".format(numb_of_airc, key, value[0]))
             numb_of_airc += 1
         airc_val = int(input("Choose an aircraft: "))
+        print("")
         counter = 0
         val = 1
         for key, value in aircrafts.items():
             if airc_val == counter:
                 val = key
             counter += 1
-        print(val)
+        
         aircraftID = aircrafts[val][0]
         #val = int(input("Choose a {}: ".format(header_list[header_counter])))
 
@@ -99,6 +99,6 @@ class voyage_UI :
         print("Crew you have chosen for current voyage:")
         print("\tCaptain: {} - Copilot: {},".format(print_chosen_emps[0], print_chosen_emps[1]))
         print("\tFlight Service Manager: {} - Flight Attendant: {} - Flight Attendant: {}.".format(print_chosen_emps[2], print_chosen_emps[3], print_chosen_emps[4]))
-        input("Press ENTER to continue..")
+        input("Press ENTER to continue..\n")
 
         self.la.picked_emp_for_voyage(emps_picked_for_voyage, aircraftID, flightNumber)
