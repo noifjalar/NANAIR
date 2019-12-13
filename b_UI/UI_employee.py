@@ -9,6 +9,9 @@ class Employee_UI :
     
     def register_employee_UI(self):       
         ''' Registers employees and adds them to CSV '''
+        print("-=x="*15)
+        print(" "*21 + "Register employee")
+        print("-=x="*15 + "\n")
         ssn = input("SSN: ")
         name = input("Name: ")
         print("Available roles: ")
@@ -60,15 +63,17 @@ class Employee_UI :
 
     
     def change_employee_info(self) :
-        '''Allows you to change certain informations about an employee, tho not his name or ssn'''
+        '''Allows you to change certain informations about an employee, though not his name or ssn'''
         choice = ""
         pick = "n"
         while pick == "n" :
+            print("-=x="*15)
+            print(" "*17 + "Change employee information")
+            print("-=x="*15 + "\n")
             emp_ssn = input("Input the employee's ssn: ")
             print()
             wow = self.la.print_chosen_emp(emp_ssn)
-            print("SSN: {}, Name: {} - Role: {}, Rank: {}, Licence: {}, Address: {}, Phonenumber: {}\n".format(emp_ssn,wow[0],wow[1],wow[2],wow[3],wow[4],wow[5]))
-            
+            print("\tSSN: {}\n\tName: {} \n\tRole: {}\n\tRank: {}\n\tLicence: {}\n\tAddress: {}\n\tPhonenumber: {}\n".format(emp_ssn,wow[0],wow[1],wow[2],wow[3],wow[4],wow[5]))
             pick = "s"
 
             while pick == "s" :                
