@@ -49,7 +49,10 @@ class LL_API :
 
     def addnewdestination(self, identity, destination, flight_time):
         self.dest.addnewdestination(identity, destination, flight_time)
-    #  Main menu selected 6   
+    #  Main menu selected 6 
+
+    def check_id(self, identity) :
+        return self.dest.check_id(identity)
 
     def addnewaircraft(self, nickname,aircraftID,planeTypeId,capacity,manufacturer):
         self.airc.addnewaircraft(nickname,aircraftID,planeTypeId,capacity,manufacturer)

@@ -9,11 +9,20 @@ class UI_Destination:
         print("-=x="*15)
         print(" "*20 + "Register destination")
         print("-=x="*15 + "\n")
-        identity = input("ID: ")
-        destination = input("Destination: ")
-        flight_time = input("Flight time: ")
-        # new_destination = Destination(identity, destination, flight_time)
-        self.la.addnewdestination(identity, destination, flight_time)
+        use = True
+        while use == True :
+            destination = input("Destination: ")
+            identity = input("Destination ID: ").upper()
+            if self.la.check_id(identity) == False :
+                if len(identity) != 3 :
+                    print("\nInvalid identity form!\n")
+                    break
+                flight_time = input("Flight time in hours: ")
+                self.la.addnewdestination(identity, destination, flight_time)
+                break
+            else :
+                print("\nDestination already exists!\n")
+                break
 
     def change_em_info(self) :
         choice = ""
