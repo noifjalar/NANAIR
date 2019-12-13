@@ -13,53 +13,56 @@ class Employee_UI :
         print(" "*21 + "Register employee")
         print("-=x="*15 + "\n")
         ssn = input("SSN: ")
-        name = input("Name: ")
-        print("Available roles: ")
-        print("\t(1) - Cabin") 
-        print("\t(2) - Pilot\n")
-        pick = input("Pick a new role: ")
-        print()
-        if pick == "1":
-            role = "Cabincrew"
-            print("\nAvailable ranks: ")
-            print("\t(1) - Flight Service Manager") 
-            print("\t(2) - Flight Attendant\n")
-            new_pick = input("Pick a new rank: ")
-            if new_pick == "1":
-                rank = "Flight Service Manager"
-            elif new_pick == "2":
-                rank = "Flight Attendant"
-        elif pick == "2":
-            role = "Pilot"
-            print("Available ranks: ")
-            print("\t(1) - Captain") 
-            print("\t(2) - Copilot\n")
-            pick = input("Pick a new rank: ")
+        if self.la.check_emp_ssn(ssn) == True :
+            name = input("Name: ")
+            print("Available roles: ")
+            print("\t(1) - Cabin") 
+            print("\t(2) - Pilot\n")
+            pick = input("Pick a new role: ")
+            print()
             if pick == "1":
-                rank = "Captain"
+                role = "Cabincrew"
+                print("\nAvailable ranks: ")
+                print("\t(1) - Flight Service Manager") 
+                print("\t(2) - Flight Attendant\n")
+                new_pick = input("Pick a new rank: ")
+                if new_pick == "1":
+                    rank = "Flight Service Manager"
+                elif new_pick == "2":
+                    rank = "Flight Attendant"
             elif pick == "2":
-                rank = "Copilot"       
-        print("\nAvailable licences: ")
-        print("\t(1) - NAFokkerF100") #ef við registerum nýja flugvél þarf húna að koma hér inn(megum ekki harð kóða)
-        print("\t(2) - NABAE146")
-        print("\t(3) - NAFokkerF28") 
-        print("\t(4) - N/A\n") 
-        pick = input("Pick a new licence: ") 
-        print()
-        if pick == "1":
-            licence = "NAFokkerF100"
-        elif pick == "2":
-            licence = "NABAE146"
-        elif pick == "3":
-            licence = "NAFokkerF28"
-        elif pick == "4":
-            licence = "N/A"
-        else:
-            print("Invalid input!")   
-        address = input("Address: ")
-        phonenumber = input("Mobile: ")
-        self.la.addnewemplyee(ssn, name, role, rank, licence, address, phonenumber)
-
+                role = "Pilot"
+                print("Available ranks: ")
+                print("\t(1) - Captain") 
+                print("\t(2) - Copilot\n")
+                pick = input("Pick a new rank: ")
+                if pick == "1":
+                    rank = "Captain"
+                elif pick == "2":
+                    rank = "Copilot"       
+            print("\nAvailable licences: ")
+            print("\t(1) - NAFokkerF100") #ef við registerum nýja flugvél þarf húna að koma hér inn(megum ekki harð kóða)
+            print("\t(2) - NABAE146")
+            print("\t(3) - NAFokkerF28") 
+            print("\t(4) - N/A\n") 
+            pick = input("Pick a new licence: ") 
+            print()
+            if pick == "1":
+                licence = "NAFokkerF100"
+            elif pick == "2":
+                licence = "NABAE146"
+            elif pick == "3":
+                licence = "NAFokkerF28"
+            elif pick == "4":
+                licence = "N/A"
+            else:
+                print("Invalid input!")   
+            address = input("Address: ")
+            phonenumber = input("Mobile: ")
+            input("\nPress ENTER to continue..\n")
+            self.la.addnewemplyee(ssn, name, role, rank, licence, address, phonenumber)
+        else: 
+            print("Employee already exists\n")
 
     
     def change_employee_info(self) :

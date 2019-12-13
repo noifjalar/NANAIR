@@ -27,12 +27,17 @@ class Employee_LL :
         '''Áfram senda skipun um að skrifa í csv skjal'''
         self.demp.register_employee_Data(ssn, name, role, rank, licence, address, phonenumber)
 
-    def check emp_ssn(self,ssn) :
-        '''Tékka hvort emp sé til með ssn tékki'''
+    def check_emp_ssn(self,ssn) :
+        '''check if emp already exists by checkin curretn employees ssn'''
+        counter = 1 
         crew_dict = self.demp.get_crew_dict()
         for key in crew_dict.keys() :
-            if key = ssn :
-                return False)
+            if counter > 1 :
+                if key == ssn :
+                    return False
+            counter += 1        
+        return True
+
               
     def change_employee_address(self, new_address, emp_ssn) :
         '''passa að employeeinn sé til'''
