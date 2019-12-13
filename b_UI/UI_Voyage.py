@@ -52,16 +52,15 @@ class voyage_UI :
         print(" "*9 + "Assign cabin/pilot and aircraft to voyage")
         print("-=x="*15 + "\n")
         flightNumber = input("Input flight number (e.g. NA1234): ")
-        #aircraftID = input("Choose an airplane: ")
         aircrafts = self.la.find_aircrafts()
-
         print("\nAircrafts:")
         numb_of_airc = 0
         for key, value in aircrafts.items():
             if numb_of_airc == 0:
                 pass
             else:
-                print("\t({}) - {}, {}".format(numb_of_airc, key, value[0]))
+                
+                print("\t({}) - {:<15} {}".format(numb_of_airc, key, value[0]))
             numb_of_airc += 1
         airc_val = int(input("Choose an aircraft: "))
         print("")
@@ -73,9 +72,6 @@ class voyage_UI :
             counter += 1
         
         aircraftID = aircrafts[val][0]
-        #val = int(input("Choose a {}: ".format(header_list[header_counter])))
-
-        # þarf að birta lista af lausum flugvélum
 
         header_list = ['Captain','Copilot','Flight Service Manager','Flight Attendant','Flight Attendant']
         header_counter = 0
