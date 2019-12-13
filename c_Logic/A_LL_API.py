@@ -101,6 +101,9 @@ class LL_API :
 
     def certain_date_voy(self, date) :
         return self.voy.certain_date_voy(date)
+
+    def certain_week_voy(self, week):
+        return self.voy.certain_week_voy(week)
     
     def get_on_emp(self, date) :
         return self.voy.get_on_emp(date)

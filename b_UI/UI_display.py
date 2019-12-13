@@ -199,7 +199,22 @@ class Display_UI :
                         
 
                 elif next_choice == "3" :
-                    counter = 1 
+                    counter = 1
+                    week = int(input("Input the number of the week for desired voyages: "))
+                    manned_voy_list, unmanned_voy_list = self.la.certain_week_voy(week)
+                    print("\nVoyages with assigned crew: ")
+                    for listinn in manned_voy_list :
+                        print(*listinn)
+                        if counter % 2 == 0 :
+                            print()
+                        counter +=1
+                    counter = 1
+                    print("\nVoyages without assigned crew: ")
+                    for listinn in unmanned_voy_list :
+                        print(*listinn)
+                        if counter % 2 == 0 :
+                            print()
+                        counter +=1
                     
 
                 else: 

@@ -1,5 +1,7 @@
 from Model.voyage import Voyage
 from Model.voyage import Voyage_2
+import datetime
+from datetime import timedelta
 import csv
 import re
 import os
@@ -72,6 +74,7 @@ class Voyage_Data :
 
     
     def get_date_voy(self, date) :
+        ''' Get voyages for a selected date '''
         manned_voy_list = []
         unmanned_voy_list = []
         counter = 1 
@@ -79,7 +82,7 @@ class Voyage_Data :
         for key, value in voy_dict.items() :
             if counter > 1:
                 dep_date, dep_time = value[2].split("T")
-                ar_date,ar_time = value[3].split("T")
+                ar_date, ar_time = value[3].split("T")
                 if date == dep_date or date == ar_date :
                     if len(value) == 10 :
                         temp_list = [key,value[0],value[1],value[2],value[3],value[4],value[5],value[6],value[7],value[8],value[9]]
@@ -89,6 +92,44 @@ class Voyage_Data :
                         unmanned_voy_list.append(temp_list)
             counter += 1
         return manned_voy_list, unmanned_voy_list
+
+
+    def get_week_voy(self, week):
+        ''' Get voyages for a selected week '''
+        manned_voy_list = []
+        unmanned_voy_list = []
+        counter = 1 
+        voy_dict = self.get_voy_dict()
+        for key, value in voy_dict.items():
+            if counter > 1:
+                monday, sunday = self.get_selected_week_days(week)
+                dep_date, dep_time = value[2].split("T")
+                ar_date, ar_time = value[3].split("T")
+                if dep_date >= monday and dep_date <= sunday:
+                    if len(value) == 10 :
+                        temp_list = [key,value[0],value[1],value[2],value[3],value[4],value[5],value[6],value[7],value[8],value[9]]
+                        manned_voy_list.append(temp_list)
+                    else: 
+                        temp_list = [key,value[0],value[1],value[2],value[3]]
+                        unmanned_voy_list.append(temp_list)
+                if dep_date < monday or dep_date > sunday:
+                    if ar_date >= monday and ar_date <= sunday:
+                        if len(value) == 10 :
+                            temp_list = [key,value[0],value[1],value[2],value[3],value[4],value[5],value[6],value[7],value[8],value[9]]
+                            manned_voy_list.append(temp_list)
+                        else: 
+                            temp_list = [key,value[0],value[1],value[2],value[3]]
+                            unmanned_voy_list.append(temp_list)
+            counter += 1
+        return manned_voy_list, unmanned_voy_list
+
+    def get_selected_week_days(self, week):
+        start_of_year = datetime.datetime(2018, 12, 31)
+        monday = start_of_year + timedelta(days=week*7)
+        sunday = start_of_year + timedelta(days=(week*7)+6)
+        monday, na = str(monday).split()
+        sunday, na = str(sunday).split()
+        return monday, sunday
 
     def get_on_emp(self, date) :
         on_list = []

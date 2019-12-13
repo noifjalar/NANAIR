@@ -107,6 +107,9 @@ class Voyage_LL :
     def certain_date_voy(self, date) :
         return self.dvoy.get_date_voy(date)
 
+    def certain_week_voy(self, week):
+        return self.dvoy.get_week_voy(week)
+
     def get_on_emp(self, date) :
         return self.dvoy.get_on_emp(date)
 
