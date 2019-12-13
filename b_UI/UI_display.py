@@ -104,10 +104,21 @@ class Display_UI :
                             
 
                     elif next_choice == "7" :
-                        self.la.display_cert_worksheet() #VANTAR 
+                        
                         print("-=x="*15)
                         print(" "*20 +"Employees worksheet")
                         print("-=x="*15 + "\n")
+                        ssn = input("Enter an employee ssn: ")
+                        week = int(input("Input a desired week for employees voyage: "))
+                        employee_voy_dict, name = self.la.display_cert_worksheet(week, ssn)
+
+                        print("\nVoyage(s) for {} in week {} are as follows:\n".format(name, week))
+                        for line in employee_voy_dict:
+                            for i in line:
+                                print(*i)
+                        
+                        input("\nPress ENTER to continue..")
+
                     elif next_choice == "8" :
                         print("-=x="*15)
                         print(" "*16 +"Pilots with certain licences")

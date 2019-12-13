@@ -66,8 +66,8 @@ class LL_API :
     def get_cabin(self):
         return self.empll.get_cabin()
 
-    def display_cert_worksheet(self):
-        self.disp.disp_cert_worksheet()
+    def display_cert_worksheet(self, week, ssn):
+        return self.voy.emp_voy_for_week(week, ssn)
 
     def get_pilots_with_NABAE146(self):
         return self.empll.get_pilots_with_NABAE146()

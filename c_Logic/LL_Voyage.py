@@ -160,3 +160,24 @@ class Voyage_LL :
             i+=1
 
         return offEmps
+
+
+    def emp_voy_for_week(self, week, ssn):
+        manned_voy_list, na = self.dvoy.get_week_voy(week)
+        
+        employee_voy_dict = []
+        for line in manned_voy_list:
+            man_counter = 6
+            while man_counter <= 10:
+                temp_employee_voy_dict = []
+                if line[man_counter] == ssn:
+                    temp_employee_voy_dict.append(line[:5])
+                    employee_voy_dict.append(temp_employee_voy_dict)
+                man_counter += 1
+        name = self.get_name_for_ssn(ssn)
+        return employee_voy_dict, name
+    
+    def get_name_for_ssn(self, ssn):
+        emp_values = self.demp.get_chosen_emp(ssn)
+        return emp_values[0]
+    
