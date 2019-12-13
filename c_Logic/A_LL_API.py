@@ -57,6 +57,9 @@ class LL_API :
     def addnewaircraft(self, nickname,aircraftID,planeTypeId,capacity,manufacturer):
         self.airc.addnewaircraft(nickname,aircraftID,planeTypeId,capacity,manufacturer)
 
+    def check_aircraftid(self, aircraftID) :
+        return self.airc.check_aircraftid(aircraftID)
+
     def voy_dest(self):
         return self.voy.voy_dest()
 
