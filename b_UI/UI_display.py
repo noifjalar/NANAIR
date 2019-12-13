@@ -163,11 +163,13 @@ class Display_UI :
                         counter += 1
                 elif next_choice == "2" :
                     date = input("Input date to look up voyages (YYYY-MM-DD): ")
-                    # year = int(year)
-                    # month = int(month)
-                    # day = int(day)
                     manned_voy_list, unmanned_voy_list = self.la.certain_date_voy(date)
-                    print(manned_voy_list)
+                    print("\nVoyages with assigned crew: ")
+                    for listinn in manned_voy_list :
+                        print(*listinn)
+                    print("\nVoyages without assigned crew: ")
+                    for listinn in unmanned_voy_list :
+                        print(*listinn)
                 elif next_choice == "3" :
                     pass
 

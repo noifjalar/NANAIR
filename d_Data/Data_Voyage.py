@@ -73,7 +73,6 @@ class Voyage_Data :
     def get_date_voy(self, date) :
         manned_voy_list = []
         unmanned_voy_list = []
-        temp_list = []
         counter = 1 
         voy_dict = self.get_voy_dict()
         for key, value in voy_dict.items() :
@@ -81,11 +80,11 @@ class Voyage_Data :
                 dep_date, dep_time = value[2].split("T")
                 ar_date,ar_time = value[3].split("T")
                 if date == dep_date or date == ar_date :
-                    if len(value) == 11 :
-                        temp_list(key,value[0:])
+                    if len(value) == 10 :
+                        temp_list = [key,value[0],value[1],value[2],value[3],value[4],value[5],value[6],value[7],value[8],value[9]]
                         manned_voy_list.append(temp_list)
                     else: 
-                        temp_list(key,value[0:])
+                        temp_list = [key,value[0],value[1],value[2],value[3]]
                         unmanned_voy_list.append(temp_list)
             counter += 1
         return manned_voy_list, unmanned_voy_list
