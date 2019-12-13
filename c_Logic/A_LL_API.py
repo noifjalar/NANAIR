@@ -63,9 +63,6 @@ class LL_API :
     def display_voy(self):
         return self.voy.get_voyage()
 
-    def display_status(self):
-        pass
-
     def get_all_emp(self):
         return self.demp.get_all_emp()
 
