@@ -133,9 +133,10 @@ class Display_UI :
                         ssn = input("Enter an employee ssn: ")
                         if self.la.check_emp_ssn(ssn) == False :
                             print()
-                            week = input("Input a desired week for employees voyage: ")
-                            if week.isalpha():
-                                print("\nNot a valid week!")
+                            try :
+                                week = int(input("Input a desired week for employees voyage: "))
+                            except ValueError :
+                                print("Not a valid week!")
                                 break
                             employee_voy_dict, name = self.la.display_cert_worksheet(week, ssn)
 
@@ -278,13 +279,6 @@ class Display_UI :
 
                 else: 
                     print("Invalid input!")    
-
-            elif choice == "4" :
-                print("-=x="*15)
-                print(" "*17 + "Display aircraft's status")
-                print("-=x="*15 + "\n")
-                self.la.display_status()
-                pass
 
             elif choice == "q" :
                 pass
