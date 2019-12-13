@@ -106,3 +106,4 @@ class Voyage_LL :
 
     def certain_date_voy(self, date) :
         return self.dvoy.get_date_voy(date)
+

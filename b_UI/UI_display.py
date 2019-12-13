@@ -166,7 +166,8 @@ class Display_UI :
                     # year = int(year)
                     # month = int(month)
                     # day = int(day)
-                    emp_list = self.la.certain_date_voy(date)
+                    manned_voy_list, unmanned_voy_list = self.la.certain_date_voy(date)
+                    print(manned_voy_list)
                 elif next_choice == "3" :
                     pass
 

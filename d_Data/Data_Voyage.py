@@ -51,8 +51,6 @@ class Voyage_Data :
         new_crew_voy = Voyage_2(aircraftID, captain, copilot, fsm, fa1, fa2)
         return None
 
-    
-
 
     def overwrite_voy_file(self, voy_dict):
         string = ""
@@ -75,15 +73,19 @@ class Voyage_Data :
     def get_date_voy(self, date) :
         manned_voy_list = []
         unmanned_voy_list = []
+        counter = 1 
         voy_dict = self.get_voy_dict()
-        for key, value in voy_dict.value() :
-            dep_date, dep_time = value[2].split("T")
-            ar_date,ar_time = value[3].split("T")
-            if date == dep_date or date == ar_date :
-                if len(value) == 11 :
-                    manned_voy_list.append(key, value[0:])
-                else: 
-                    unmanned_voy_list.append(key,value[0:])
+        for key, value in voy_dict.items() :
+            if counter > 1:
+                dep_date, dep_time = value[2].split("T")
+                ar_date,ar_time = value[3].split("T")
+                counter += 1
+                if date == dep_date or date == ar_date :
+                    if len(value) == 11 :
+                        manned_voy_list.append(key, value[0:])
+                    else: 
+                        unmanned_voy_list.append(key,value[0:])
         return manned_voy_list, unmanned_voy_list
+
 
 
